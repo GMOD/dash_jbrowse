@@ -1,0 +1,11 @@
+include dash_jbrowse/dash_jbrowse.min.js
+include dash_jbrowse/dash_jbrowse.min.js.map
+include dash_jbrowse/async-*.js
+include dash_jbrowse/async-*.js.map
+include dash_jbrowse/*-shared.js
+include dash_jbrowse/*-shared.js.map
+include dash_jbrowse/metadata.json
+include dash_jbrowse/package-info.json
+include README.md
+include LICENSE
+include package.json

@@ -1,0 +1,1 @@
+export const DashJbrowse = React.lazy(() => import(/* webpackChunkName: "DashJbrowse" */ './fragments/DashJbrowse.react'));

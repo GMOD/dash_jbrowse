@@ -1,0 +1,27 @@
+.dashJbrowse_js_metadata <- function() {
+deps_metadata <- list(`dash_jbrowse` = structure(list(name = "dash_jbrowse",
+version = "0.0.1", src = list(href = NULL,
+file = "deps"), meta = NULL,
+script = 'async-DashJbrowse.js',
+stylesheet = NULL, head = NULL, attachment = NULL, package = "dashJbrowse",
+all_files = FALSE, async = TRUE), class = "html_dependency"),
+`dash_jbrowse` = structure(list(name = "dash_jbrowse",
+version = "0.0.1", src = list(href = NULL,
+file = "deps"), meta = NULL,
+script = 'async-DashJbrowse.js.map',
+stylesheet = NULL, head = NULL, attachment = NULL, package = "dashJbrowse",
+all_files = FALSE, dynamic = TRUE), class = "html_dependency"),
+`dash_jbrowse` = structure(list(name = "dash_jbrowse",
+version = "0.0.1", src = list(href = NULL,
+file = "deps"), meta = NULL,
+script = 'dash_jbrowse.min.js',
+stylesheet = NULL, head = NULL, attachment = NULL, package = "dashJbrowse",
+all_files = FALSE), class = "html_dependency"),
+`dash_jbrowse` = structure(list(name = "dash_jbrowse",
+version = "0.0.1", src = list(href = NULL,
+file = "deps"), meta = NULL,
+script = 'dash_jbrowse.min.js.map',
+stylesheet = NULL, head = NULL, attachment = NULL, package = "dashJbrowse",
+all_files = FALSE, dynamic = TRUE), class = "html_dependency"))
+return(deps_metadata)
+}
