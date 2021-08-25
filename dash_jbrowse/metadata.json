@@ -25,6 +25,20 @@
         "required": false,
         "description": "The tracks to use for the browser."
       },
+      "defaultSession": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "The default session to use for the browser."
+      },
+      "location": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "The location to use for the browser."
+      },
       "setProps": {
         "type": {
           "name": "func"

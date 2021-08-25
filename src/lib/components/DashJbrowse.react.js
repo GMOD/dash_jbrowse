@@ -38,6 +38,16 @@ DashJbrowse.propTypes = {
     tracks: PropTypes.array,
 
     /**
+     * The default session to use for the browser.
+     */
+    defaultSession: PropTypes.object,
+
+    /**
+     * The location to use for the browser.
+     */
+    location: PropTypes.string,
+
+    /**
      * Dash-assigned callback that should be called to report property changes
      * to Dash, to make them available for callbacks.
      */

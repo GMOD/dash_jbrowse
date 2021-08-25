@@ -55,9 +55,47 @@ my_tracks = [
     },
 ]
 
+my_default_session = {
+    "name": "My session",
+    "view": {
+        "id": "linearGenomeView",
+        "type": "LinearGenomeView",
+        "tracks": [
+            {
+                "type": "ReferenceSequenceTrack",
+                "configuration": "GRCh38-ReferenceSequenceTrack",
+                "displays": [
+                    {
+                        "type": "LinearReferenceSequenceDisplay",
+                        "configuration": "GRCh38-ReferenceSequenceTrack-LinearReferenceSequenceDisplay",
+                    },
+                ],
+            },
+            {
+                "type": "FeatureTrack",
+                "configuration": "ncbi_refseq_109_hg38",
+                "displays": [
+                    {
+                        "type": "LinearBasicDisplay",
+                        "configuration": "ncbi_refseq_109_hg38-LinearBasicDisplay",
+                    },
+                ],
+            },
+        ],
+    },
+}
+
+my_location = "10:29,838,737..29,838,819"
+
 app.layout = html.Div(
     [
-        dash_jbrowse.DashJbrowse(id="input", assembly=my_assembly, tracks=my_tracks),
+        dash_jbrowse.DashJbrowse(
+            id="input",
+            assembly=my_assembly,
+            tracks=my_tracks,
+            defaultSession=my_default_session,
+            location=my_location,
+        ),
     ]
 )
 

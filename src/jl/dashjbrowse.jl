@@ -14,10 +14,12 @@ which is editable by the user.
 Keyword arguments:
 - `id` (String; optional): The ID used to identify this component in Dash callbacks.
 - `assembly` (Dict; optional): The configuration for the assembly to use for the browser.
+- `defaultSession` (Dict; optional): The default session to use for the browser.
+- `location` (String; optional): The location to use for the browser.
 - `tracks` (Array; optional): The tracks to use for the browser.
 """
 function dashjbrowse(; kwargs...)
-        available_props = Symbol[:id, :assembly, :tracks]
+        available_props = Symbol[:id, :assembly, :defaultSession, :location, :tracks]
         wild_props = Symbol[]
         return Component("dashjbrowse", "DashJbrowse", "dash_jbrowse", available_props, wild_props; kwargs...)
 end
