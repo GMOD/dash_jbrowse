@@ -10,15 +10,15 @@ ExampleComponent is an example component. It takes a property, `label`, and disp
 }
 
 \usage{
-dashJbrowse(id=NULL, label=NULL, value=NULL)
+dashJbrowse(id=NULL, assembly=NULL, tracks=NULL)
 }
 
 \arguments{
 \item{id}{Character. The ID used to identify this component in Dash callbacks.}
 
-\item{label}{Character. A label that will be printed when this component is rendered.}
+\item{assembly}{Named list. The configuration for the assembly to use for the browser.}
 
-\item{value}{Character. The value displayed in the input.}
+\item{tracks}{Unnamed list. The tracks to use for the browser.}
 }
 
 \value{named list of JSON elements corresponding to React.js properties and their values}

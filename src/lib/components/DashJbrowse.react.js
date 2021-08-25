@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import { DashJbrowse as RealComponent } from '../LazyLoader';
+import {DashJbrowse as RealComponent} from '../LazyLoader';
 
 /**
  * ExampleComponent is an example component.
@@ -13,7 +13,7 @@ export default class DashJbrowse extends Component {
     render() {
         return (
             <React.Suspense fallback={null}>
-                <RealComponent {...this.props}/>
+                <RealComponent {...this.props} />
             </React.Suspense>
         );
     }
@@ -28,22 +28,21 @@ DashJbrowse.propTypes = {
     id: PropTypes.string,
 
     /**
-     * A label that will be printed when this component is rendered.
+     * The configuration for the assembly to use for the browser.
      */
-    label: PropTypes.string.isRequired,
+    assembly: PropTypes.object,
 
     /**
-     * The value displayed in the input.
+     * The tracks to use for the browser.
      */
-    value: PropTypes.string,
+    tracks: PropTypes.array,
 
     /**
      * Dash-assigned callback that should be called to report property changes
      * to Dash, to make them available for callbacks.
      */
-    setProps: PropTypes.func
+    setProps: PropTypes.func,
 };
-
 
 export const defaultProps = DashJbrowse.defaultProps;
 export const propTypes = DashJbrowse.propTypes;

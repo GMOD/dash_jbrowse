@@ -13,11 +13,11 @@ It renders an input with the property `value`
 which is editable by the user.
 Keyword arguments:
 - `id` (String; optional): The ID used to identify this component in Dash callbacks.
-- `label` (String; required): A label that will be printed when this component is rendered.
-- `value` (String; optional): The value displayed in the input.
+- `assembly` (Dict; optional): The configuration for the assembly to use for the browser.
+- `tracks` (Array; optional): The tracks to use for the browser.
 """
 function dashjbrowse(; kwargs...)
-        available_props = Symbol[:id, :label, :value]
+        available_props = Symbol[:id, :assembly, :tracks]
         wild_props = Symbol[]
         return Component("dashjbrowse", "DashJbrowse", "dash_jbrowse", available_props, wild_props; kwargs...)
 end

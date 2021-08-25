@@ -1,8 +1,8 @@
 # AUTO GENERATED FILE - DO NOT EDIT
 
-dashJbrowse <- function(id=NULL, label=NULL, value=NULL) {
+dashJbrowse <- function(id=NULL, assembly=NULL, tracks=NULL) {
     
-    props <- list(id=id, label=label, value=value)
+    props <- list(id=id, assembly=assembly, tracks=tracks)
     if (length(props) > 0) {
         props <- props[!vapply(props, is.null, logical(1))]
     }
@@ -10,7 +10,7 @@ dashJbrowse <- function(id=NULL, label=NULL, value=NULL) {
         props = props,
         type = 'DashJbrowse',
         namespace = 'dash_jbrowse',
-        propNames = c('id', 'label', 'value'),
+        propNames = c('id', 'assembly', 'tracks'),
         package = 'dashJbrowse'
         )
 
