@@ -7,11 +7,9 @@ import {
 import {defaultProps, propTypes} from '../components/DashJbrowse.react';
 
 /**
- * ExampleComponent is an example component.
- * It takes a property, `label`, and
- * displays it.
- * It renders an input with the property `value`
- * which is editable by the user.
+ * DashJbrowse renders the JBrowse 2 React Linear Genome View.
+ * Any JB2 LGV configuration is also valid configuration for this
+ * component.
  */
 export default class DashJbrowse extends Component {
     render() {
