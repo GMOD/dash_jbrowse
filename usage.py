@@ -1,6 +1,5 @@
 import dash_jbrowse
 import dash
-from dash.dependencies import Input, Output
 import dash_html_components as html
 
 app = dash.Dash(__name__)
