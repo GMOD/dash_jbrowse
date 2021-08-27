@@ -1,3 +1,5 @@
+⚠️ WARNING: this is still an experimental project, WIP. Not *yet* a published package. ⚠️
+
 # Dash JBrowse Component
 
 Dash JBrowse Component is a Dash component library.
