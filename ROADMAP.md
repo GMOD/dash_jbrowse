@@ -2,7 +2,6 @@
 
 ## Minimum Viable Package
 
--   Move the repo from my account to GMOD, make it public
 -   docs (maybe website like readthedocs)
 -   tests (Dash has integration test examples)
 -   Maybe some clean up (not much)
