@@ -14,7 +14,7 @@
                 "type": "TwoBitAdapter",
                 "twoBitLocation": {
                     "uri": "volvox.2bit",
-                    "baseUri": "http://localhost:6006/test_data/volvox/config.json"
+                    "baseUri": "https://s3.amazonaws.com/jbrowse.org/genomes/volvox/config.json"
                 }
             }
         },
@@ -58,12 +58,12 @@
                 "type": "VcfTabixAdapter",
                 "vcfGzLocation": {
                     "uri": "volvox.dup.vcf.gz",
-                    "baseUri": "http://localhost:6006/test_data/volvox/config.json"
+                    "baseUri": "https://github.com/GMOD/jbrowse-components/main/test_data/volvox/config.json"
                 },
                 "index": {
                     "location": {
                         "uri": "volvox.dup.vcf.gz.tbi",
-                        "baseUri": "http://localhost:6006/test_data/volvox/config.json"
+                        "baseUri": "https://github.com/GMOD/jbrowse-components/main/test_data/volvox/config.json"
                     }
                 }
             }
@@ -82,12 +82,12 @@
                 "type": "VcfTabixAdapter",
                 "vcfGzLocation": {
                     "uri": "volvox.dup.renamed.vcf.gz",
-                    "baseUri": "http://localhost:6006/test_data/volvox/config.json"
+                    "baseUri": "https://github.com/GMOD/jbrowse-components/main/test_data/volvox/config.json"
                 },
                 "index": {
                     "location": {
                         "uri": "volvox.dup.renamed.vcf.gz.tbi",
-                        "baseUri": "http://localhost:6006/test_data/volvox/config.json"
+                        "baseUri": "https://github.com/GMOD/jbrowse-components/main/test_data/volvox/config.json"
                     }
                 }
             }
@@ -106,17 +106,17 @@
                 "type": "CramAdapter",
                 "cramLocation": {
                     "uri": "volvox-sorted-altname.cram",
-                    "baseUri": "http://localhost:6006/test_data/volvox/config.json"
+                    "baseUri": "https://github.com/GMOD/jbrowse-components/main/test_data/volvox/config.json"
                 },
                 "craiLocation": {
                     "uri": "volvox-sorted-altname.cram.crai",
-                    "baseUri": "http://localhost:6006/test_data/volvox/config.json"
+                    "baseUri": "https://github.com/GMOD/jbrowse-components/main/test_data/volvox/config.json"
                 },
                 "sequenceAdapter": {
                     "type": "TwoBitAdapter",
                     "twoBitLocation": {
                         "uri": "volvox.2bit",
-                        "baseUri": "http://localhost:6006/test_data/volvox/config.json"
+                        "baseUri": "https://github.com/GMOD/jbrowse-components/main/test_data/volvox/config.json"
                     }
                 }
             }
@@ -138,17 +138,17 @@
                 "type": "CramAdapter",
                 "cramLocation": {
                     "uri": "volvox-sorted-altname.cram",
-                    "baseUri": "http://localhost:6006/test_data/volvox/config.json"
+                    "baseUri": "https://github.com/GMOD/jbrowse-components/main/test_data/volvox/config.json"
                 },
                 "craiLocation": {
                     "uri": "volvox-sorted-altname.cram.crai",
-                    "baseUri": "http://localhost:6006/test_data/volvox/config.json"
+                    "baseUri": "https://github.com/GMOD/jbrowse-components/main/test_data/volvox/config.json"
                 },
                 "sequenceAdapter": {
                     "type": "TwoBitAdapter",
                     "twoBitLocation": {
                         "uri": "volvox.2bit",
-                        "baseUri": "http://localhost:6006/test_data/volvox/config.json"
+                        "baseUri": "https://github.com/GMOD/jbrowse-components/main/test_data/volvox/config.json"
                     }
                 }
             },
@@ -173,17 +173,17 @@
                 "type": "CramAdapter",
                 "cramLocation": {
                     "uri": "volvox-sorted-altname.cram",
-                    "baseUri": "http://localhost:6006/test_data/volvox/config.json"
+                    "baseUri": "https://github.com/GMOD/jbrowse-components/main/test_data/volvox/config.json"
                 },
                 "craiLocation": {
                     "uri": "volvox-sorted-altname.cram.crai",
-                    "baseUri": "http://localhost:6006/test_data/volvox/config.json"
+                    "baseUri": "https://s3.amazonaws.com/jbrowse.org/genomes/volvox/config.json"
                 },
                 "sequenceAdapter": {
                     "type": "TwoBitAdapter",
                     "twoBitLocation": {
                         "uri": "volvox.2bit",
-                        "baseUri": "http://localhost:6006/test_data/volvox/config.json"
+                        "baseUri": "https://github.com/GMOD/jbrowse-components/main/test_data/volvox/config.json"
                     }
                 }
             },
@@ -208,17 +208,17 @@
                 "type": "CramAdapter",
                 "cramLocation": {
                     "uri": "volvox-sorted.cram",
-                    "baseUri": "http://localhost:6006/test_data/volvox/config.json"
+                    "baseUri": "https://github.com/GMOD/jbrowse-components/main/test_data/volvox/config.json"
                 },
                 "craiLocation": {
                     "uri": "volvox-sorted.cram.crai",
-                    "baseUri": "http://localhost:6006/test_data/volvox/config.json"
+                    "baseUri": "https://s3.amazonaws.com/jbrowse.org/genomes/volvox/config.json"
                 },
                 "sequenceAdapter": {
                     "type": "TwoBitAdapter",
                     "twoBitLocation": {
                         "uri": "volvox.2bit",
-                        "baseUri": "http://localhost:6006/test_data/volvox/config.json"
+                        "baseUri": "https://s3.amazonaws.com/jbrowse.org/genomes/volvox/config.json"
                     }
                 }
             }
@@ -237,17 +237,17 @@
                 "type": "CramAdapter",
                 "cramLocation": {
                     "uri": "volvox-sorted.cram",
-                    "baseUri": "http://localhost:6006/test_data/volvox/config.json"
+                    "baseUri": "https://s3.amazonaws.com/jbrowse.org/genomes/volvox/config.json"
                 },
                 "craiLocation": {
                     "uri": "volvox-sorted.cram.crai",
-                    "baseUri": "http://localhost:6006/test_data/volvox/config.json"
+                    "baseUri": "https://s3.amazonaws.com/jbrowse.org/genomes/volvox/config.json"
                 },
                 "sequenceAdapter": {
                     "type": "TwoBitAdapter",
                     "twoBitLocation": {
                         "uri": "volvox.2bit",
-                        "baseUri": "http://localhost:6006/test_data/volvox/config.json"
+                        "baseUri": "https://s3.amazonaws.com/jbrowse.org/genomes/volvox/config.json"
                     }
                 }
             },
@@ -272,17 +272,17 @@
                 "type": "CramAdapter",
                 "cramLocation": {
                     "uri": "volvox-sorted.cram",
-                    "baseUri": "http://localhost:6006/test_data/volvox/config.json"
+                    "baseUri": "https://s3.amazonaws.com/jbrowse.org/genomes/volvox/config.json"
                 },
                 "craiLocation": {
                     "uri": "volvox-sorted.cram.crai",
-                    "baseUri": "http://localhost:6006/test_data/volvox/config.json"
+                    "baseUri": "https://s3.amazonaws.com/jbrowse.org/genomes/volvox/config.json"
                 },
                 "sequenceAdapter": {
                     "type": "TwoBitAdapter",
                     "twoBitLocation": {
                         "uri": "volvox.2bit",
-                        "baseUri": "http://localhost:6006/test_data/volvox/config.json"
+                        "baseUri": "https://s3.amazonaws.com/jbrowse.org/genomes/volvox/config.json"
                     }
                 }
             },
@@ -308,12 +308,12 @@
                 "type": "BamAdapter",
                 "bamLocation": {
                     "uri": "volvox-sorted.bam",
-                    "baseUri": "http://localhost:6006/test_data/volvox/config.json"
+                    "baseUri": "https://s3.amazonaws.com/jbrowse.org/genomes/volvox/config.json"
                 },
                 "index": {
                     "location": {
                         "uri": "volvox-sorted.bam.bai",
-                        "baseUri": "http://localhost:6006/test_data/volvox/config.json"
+                        "baseUri": "https://s3.amazonaws.com/jbrowse.org/genomes/volvox/config.json"
                     }
                 }
             },
@@ -343,12 +343,12 @@
                 "type": "BamAdapter",
                 "bamLocation": {
                     "uri": "volvox-sorted-altname.bam",
-                    "baseUri": "http://localhost:6006/test_data/volvox/config.json"
+                    "baseUri": "https://s3.amazonaws.com/jbrowse.org/genomes/volvox/config.json"
                 },
                 "index": {
                     "location": {
                         "uri": "volvox-sorted-altname.bam.bai",
-                        "baseUri": "http://localhost:6006/test_data/volvox/config.json"
+                        "baseUri": "https://s3.amazonaws.com/jbrowse.org/genomes/volvox/config.json"
                     }
                 }
             },
@@ -373,12 +373,12 @@
                 "type": "BamAdapter",
                 "bamLocation": {
                     "uri": "volvox-sorted-altname.bam",
-                    "baseUri": "http://localhost:6006/test_data/volvox/config.json"
+                    "baseUri": "https://s3.amazonaws.com/jbrowse.org/genomes/volvox/config.json"
                 },
                 "index": {
                     "location": {
                         "uri": "volvox-sorted-altname.bam.bai",
-                        "baseUri": "http://localhost:6006/test_data/volvox/config.json"
+                        "baseUri": "https://s3.amazonaws.com/jbrowse.org/genomes/volvox/config.json"
                     }
                 }
             },
@@ -403,12 +403,12 @@
                 "type": "BamAdapter",
                 "bamLocation": {
                     "uri": "volvox-sorted.bam",
-                    "baseUri": "http://localhost:6006/test_data/volvox/config.json"
+                    "baseUri": "https://s3.amazonaws.com/jbrowse.org/genomes/volvox/config.json"
                 },
                 "index": {
                     "location": {
                         "uri": "volvox-sorted.bam.bai",
-                        "baseUri": "http://localhost:6006/test_data/volvox/config.json"
+                        "baseUri": "https://s3.amazonaws.com/jbrowse.org/genomes/volvox/config.json"
                     }
                 }
             }
@@ -427,12 +427,12 @@
                 "type": "BamAdapter",
                 "bamLocation": {
                     "uri": "volvox-sorted-altname.bam",
-                    "baseUri": "http://localhost:6006/test_data/volvox/config.json"
+                    "baseUri": "https://s3.amazonaws.com/jbrowse.org/genomes/volvox/config.json"
                 },
                 "index": {
                     "location": {
                         "uri": "volvox-sorted-altname.bam.bai",
-                        "baseUri": "http://localhost:6006/test_data/volvox/config.json"
+                        "baseUri": "https://s3.amazonaws.com/jbrowse.org/genomes/volvox/config.json"
                     }
                 }
             },
@@ -462,12 +462,12 @@
                 "type": "BamAdapter",
                 "bamLocation": {
                     "uri": "volvox-sorted.bam",
-                    "baseUri": "http://localhost:6006/test_data/volvox/config.json"
+                    "baseUri": "https://s3.amazonaws.com/jbrowse.org/genomes/volvox/config.json"
                 },
                 "index": {
                     "location": {
                         "uri": "volvox-sorted.bam.bai",
-                        "baseUri": "http://localhost:6006/test_data/volvox/config.json"
+                        "baseUri": "https://s3.amazonaws.com/jbrowse.org/genomes/volvox/config.json"
                     }
                 }
             },
@@ -502,12 +502,12 @@
                 "type": "VcfTabixAdapter",
                 "vcfGzLocation": {
                     "uri": "volvox.test.vcf.gz",
-                    "baseUri": "http://localhost:6006/test_data/volvox/config.json"
+                    "baseUri": "https://s3.amazonaws.com/jbrowse.org/genomes/volvox/config.json"
                 },
                 "index": {
                     "location": {
                         "uri": "volvox.test.vcf.gz.tbi",
-                        "baseUri": "http://localhost:6006/test_data/volvox/config.json"
+                        "baseUri": "https://s3.amazonaws.com/jbrowse.org/genomes/volvox/config.json"
                     }
                 }
             }
@@ -526,12 +526,12 @@
                 "type": "BamAdapter",
                 "bamLocation": {
                     "uri": "volvox-sorted.bam.nonexist",
-                    "baseUri": "http://localhost:6006/test_data/volvox/config.json"
+                    "baseUri": "https://s3.amazonaws.com/jbrowse.org/genomes/volvox/config.json"
                 },
                 "index": {
                     "location": {
                         "uri": "volvox-sorted.bam.bai",
-                        "baseUri": "http://localhost:6006/test_data/volvox/config.json"
+                        "baseUri": "https://s3.amazonaws.com/jbrowse.org/genomes/volvox/config.json"
                     }
                 }
             }
@@ -550,12 +550,12 @@
                 "type": "BamAdapter",
                 "bamLocation": {
                     "uri": "volvox-sorted.bam",
-                    "baseUri": "http://localhost:6006/test_data/volvox/config.json"
+                    "baseUri": "https://s3.amazonaws.com/jbrowse.org/genomes/volvox/config.json"
                 },
                 "index": {
                     "location": {
                         "uri": "volvox-sorted.bam.bai.nonexist",
-                        "baseUri": "http://localhost:6006/test_data/volvox/config.json"
+                        "baseUri": "https://s3.amazonaws.com/jbrowse.org/genomes/volvox/config.json"
                     }
                 }
             }
@@ -574,12 +574,12 @@
                 "type": "BamAdapter",
                 "bamLocation": {
                     "uri": "volvox-long-reads-sv.bam",
-                    "baseUri": "http://localhost:6006/test_data/volvox/config.json"
+                    "baseUri": "https://s3.amazonaws.com/jbrowse.org/genomes/volvox/config.json"
                 },
                 "index": {
                     "location": {
                         "uri": "volvox-long-reads-sv.bam.bai",
-                        "baseUri": "http://localhost:6006/test_data/volvox/config.json"
+                        "baseUri": "https://s3.amazonaws.com/jbrowse.org/genomes/volvox/config.json"
                     }
                 }
             }
@@ -598,17 +598,17 @@
                 "type": "CramAdapter",
                 "cramLocation": {
                     "uri": "volvox-long-reads-sv.cram",
-                    "baseUri": "http://localhost:6006/test_data/volvox/config.json"
+                    "baseUri": "https://s3.amazonaws.com/jbrowse.org/genomes/volvox/config.json"
                 },
                 "craiLocation": {
                     "uri": "volvox-long-reads-sv.cram.crai",
-                    "baseUri": "http://localhost:6006/test_data/volvox/config.json"
+                    "baseUri": "https://s3.amazonaws.com/jbrowse.org/genomes/volvox/config.json"
                 },
                 "sequenceAdapter": {
                     "type": "TwoBitAdapter",
                     "twoBitLocation": {
                         "uri": "volvox.2bit",
-                        "baseUri": "http://localhost:6006/test_data/volvox/config.json"
+                        "baseUri": "https://s3.amazonaws.com/jbrowse.org/genomes/volvox/config.json"
                     }
                 }
             }
@@ -627,17 +627,17 @@
                 "type": "CramAdapter",
                 "cramLocation": {
                     "uri": "volvox-long-reads.fastq.sorted.cram",
-                    "baseUri": "http://localhost:6006/test_data/volvox/config.json"
+                    "baseUri": "https://s3.amazonaws.com/jbrowse.org/genomes/volvox/config.json"
                 },
                 "craiLocation": {
                     "uri": "volvox-long-reads.fastq.sorted.cram.crai",
-                    "baseUri": "http://localhost:6006/test_data/volvox/config.json"
+                    "baseUri": "https://s3.amazonaws.com/jbrowse.org/genomes/volvox/config.json"
                 },
                 "sequenceAdapter": {
                     "type": "TwoBitAdapter",
                     "twoBitLocation": {
                         "uri": "volvox.2bit",
-                        "baseUri": "http://localhost:6006/test_data/volvox/config.json"
+                        "baseUri": "https://s3.amazonaws.com/jbrowse.org/genomes/volvox/config.json"
                     }
                 }
             }
@@ -656,12 +656,12 @@
                 "type": "BamAdapter",
                 "bamLocation": {
                     "uri": "volvox-long-reads.fastq.sorted.bam",
-                    "baseUri": "http://localhost:6006/test_data/volvox/config.json"
+                    "baseUri": "https://s3.amazonaws.com/jbrowse.org/genomes/volvox/config.json"
                 },
                 "index": {
                     "location": {
                         "uri": "volvox-long-reads.fastq.sorted.bam.bai",
-                        "baseUri": "http://localhost:6006/test_data/volvox/config.json"
+                        "baseUri": "https://s3.amazonaws.com/jbrowse.org/genomes/volvox/config.json"
                     }
                 }
             }
@@ -680,17 +680,17 @@
                 "type": "CramAdapter",
                 "cramLocation": {
                     "uri": "volvox-samspec.cram",
-                    "baseUri": "http://localhost:6006/test_data/volvox/config.json"
+                    "baseUri": "https://s3.amazonaws.com/jbrowse.org/genomes/volvox/config.json"
                 },
                 "craiLocation": {
                     "uri": "volvox-samspec.cram.crai",
-                    "baseUri": "http://localhost:6006/test_data/volvox/config.json"
+                    "baseUri": "https://s3.amazonaws.com/jbrowse.org/genomes/volvox/config.json"
                 },
                 "sequenceAdapter": {
                     "type": "TwoBitAdapter",
                     "twoBitLocation": {
                         "uri": "volvox.2bit",
-                        "baseUri": "http://localhost:6006/test_data/volvox/config.json"
+                        "baseUri": "https://s3.amazonaws.com/jbrowse.org/genomes/volvox/config.json"
                     }
                 }
             }
@@ -709,12 +709,12 @@
                 "type": "BamAdapter",
                 "bamLocation": {
                     "uri": "volvox-samspec.bam",
-                    "baseUri": "http://localhost:6006/test_data/volvox/config.json"
+                    "baseUri": "https://s3.amazonaws.com/jbrowse.org/genomes/volvox/config.json"
                 },
                 "index": {
                     "location": {
                         "uri": "volvox-samspec.bam.bai",
-                        "baseUri": "http://localhost:6006/test_data/volvox/config.json"
+                        "baseUri": "https://s3.amazonaws.com/jbrowse.org/genomes/volvox/config.json"
                     }
                 }
             }
@@ -733,17 +733,17 @@
                 "type": "CramAdapter",
                 "cramLocation": {
                     "uri": "volvox-sv.cram",
-                    "baseUri": "http://localhost:6006/test_data/volvox/config.json"
+                    "baseUri": "https://s3.amazonaws.com/jbrowse.org/genomes/volvox/config.json"
                 },
                 "craiLocation": {
                     "uri": "volvox-sv.cram.crai",
-                    "baseUri": "http://localhost:6006/test_data/volvox/config.json"
+                    "baseUri": "https://s3.amazonaws.com/jbrowse.org/genomes/volvox/config.json"
                 },
                 "sequenceAdapter": {
                     "type": "TwoBitAdapter",
                     "twoBitLocation": {
                         "uri": "volvox.2bit",
-                        "baseUri": "http://localhost:6006/test_data/volvox/config.json"
+                        "baseUri": "https://s3.amazonaws.com/jbrowse.org/genomes/volvox/config.json"
                     }
                 }
             }
@@ -762,12 +762,12 @@
                 "type": "BamAdapter",
                 "bamLocation": {
                     "uri": "volvox-sv.bam",
-                    "baseUri": "http://localhost:6006/test_data/volvox/config.json"
+                    "baseUri": "https://s3.amazonaws.com/jbrowse.org/genomes/volvox/config.json"
                 },
                 "index": {
                     "location": {
                         "uri": "volvox-sv.bam.bai",
-                        "baseUri": "http://localhost:6006/test_data/volvox/config.json"
+                        "baseUri": "https://s3.amazonaws.com/jbrowse.org/genomes/volvox/config.json"
                     }
                 }
             }
@@ -786,17 +786,17 @@
                 "type": "CramAdapter",
                 "cramLocation": {
                     "uri": "volvox-sorted.cram",
-                    "baseUri": "http://localhost:6006/test_data/volvox/config.json"
+                    "baseUri": "https://s3.amazonaws.com/jbrowse.org/genomes/volvox/config.json"
                 },
                 "craiLocation": {
                     "uri": "volvox-sorted.cram.crai",
-                    "baseUri": "http://localhost:6006/test_data/volvox/config.json"
+                    "baseUri": "https://s3.amazonaws.com/jbrowse.org/genomes/volvox/config.json"
                 },
                 "sequenceAdapter": {
                     "type": "TwoBitAdapter",
                     "twoBitLocation": {
                         "uri": "volvox.2bit",
-                        "baseUri": "http://localhost:6006/test_data/volvox/config.json"
+                        "baseUri": "https://s3.amazonaws.com/jbrowse.org/genomes/volvox/config.json"
                     }
                 }
             }
@@ -815,12 +815,12 @@
                 "type": "BamAdapter",
                 "bamLocation": {
                     "uri": "volvox-sorted.bam",
-                    "baseUri": "http://localhost:6006/test_data/volvox/config.json"
+                    "baseUri": "https://s3.amazonaws.com/jbrowse.org/genomes/volvox/config.json"
                 },
                 "index": {
                     "location": {
                         "uri": "volvox-sorted.bam.bai",
-                        "baseUri": "http://localhost:6006/test_data/volvox/config.json"
+                        "baseUri": "https://s3.amazonaws.com/jbrowse.org/genomes/volvox/config.json"
                     }
                 }
             }
@@ -839,12 +839,12 @@
                 "type": "VcfTabixAdapter",
                 "vcfGzLocation": {
                     "uri": "volvox.filtered.vcf.gz",
-                    "baseUri": "http://localhost:6006/test_data/volvox/config.json"
+                    "baseUri": "https://s3.amazonaws.com/jbrowse.org/genomes/volvox/config.json"
                 },
                 "index": {
                     "location": {
                         "uri": "volvox.filtered.vcf.gz.tbi",
-                        "baseUri": "http://localhost:6006/test_data/volvox/config.json"
+                        "baseUri": "https://s3.amazonaws.com/jbrowse.org/genomes/volvox/config.json"
                     }
                 }
             }
@@ -863,7 +863,7 @@
                 "type": "VcfAdapter",
                 "vcfLocation": {
                     "uri": "volvox.filtered.vcf",
-                    "baseUri": "http://localhost:6006/test_data/volvox/config.json"
+                    "baseUri": "https://s3.amazonaws.com/jbrowse.org/genomes/volvox/config.json"
                 }
             }
         },
@@ -881,12 +881,12 @@
                 "type": "VcfTabixAdapter",
                 "vcfGzLocation": {
                     "uri": "volvox.filtered.vcf.gz",
-                    "baseUri": "http://localhost:6006/test_data/volvox/config.json"
+                    "baseUri": "https://s3.amazonaws.com/jbrowse.org/genomes/volvox/config.json"
                 },
                 "index": {
                     "location": {
                         "uri": "volvox.filtered.vcf.gz.tbi",
-                        "baseUri": "http://localhost:6006/test_data/volvox/config.json"
+                        "baseUri": "https://s3.amazonaws.com/jbrowse.org/genomes/volvox/config.json"
                     }
                 }
             }
@@ -905,12 +905,12 @@
                 "type": "BamAdapter",
                 "bamLocation": {
                     "uri": "volvox-rg.bam",
-                    "baseUri": "http://localhost:6006/test_data/volvox/config.json"
+                    "baseUri": "https://s3.amazonaws.com/jbrowse.org/genomes/volvox/config.json"
                 },
                 "index": {
                     "location": {
                         "uri": "volvox-rg.bam.bai",
-                        "baseUri": "http://localhost:6006/test_data/volvox/config.json"
+                        "baseUri": "https://s3.amazonaws.com/jbrowse.org/genomes/volvox/config.json"
                     },
                     "indexType": "BAI"
                 },
@@ -918,7 +918,7 @@
                     "type": "TwoBitAdapter",
                     "twoBitLocation": {
                         "uri": "volvox.2bit",
-                        "baseUri": "http://localhost:6006/test_data/volvox/config.json"
+                        "baseUri": "https://s3.amazonaws.com/jbrowse.org/genomes/volvox/config.json"
                     }
                 }
             }
@@ -937,17 +937,17 @@
                 "type": "CramAdapter",
                 "cramLocation": {
                     "uri": "volvox-rg.cram",
-                    "baseUri": "http://localhost:6006/test_data/volvox/config.json"
+                    "baseUri": "https://s3.amazonaws.com/jbrowse.org/genomes/volvox/config.json"
                 },
                 "craiLocation": {
                     "uri": "volvox-rg.cram.crai",
-                    "baseUri": "http://localhost:6006/test_data/volvox/config.json"
+                    "baseUri": "https://s3.amazonaws.com/jbrowse.org/genomes/volvox/config.json"
                 },
                 "sequenceAdapter": {
                     "type": "TwoBitAdapter",
                     "twoBitLocation": {
                         "uri": "volvox.2bit",
-                        "baseUri": "http://localhost:6006/test_data/volvox/config.json"
+                        "baseUri": "https://s3.amazonaws.com/jbrowse.org/genomes/volvox/config.json"
                     }
                 }
             }
@@ -966,12 +966,12 @@
                 "type": "VcfTabixAdapter",
                 "vcfGzLocation": {
                     "uri": "volvox.filtered.vcf.gz",
-                    "baseUri": "http://localhost:6006/test_data/volvox/config.json"
+                    "baseUri": "https://s3.amazonaws.com/jbrowse.org/genomes/volvox/config.json"
                 },
                 "index": {
                     "location": {
                         "uri": "volvox.filtered.vcf.gz.tbi",
-                        "baseUri": "http://localhost:6006/test_data/volvox/config.json"
+                        "baseUri": "https://s3.amazonaws.com/jbrowse.org/genomes/volvox/config.json"
                     }
                 }
             },
@@ -1007,12 +1007,12 @@
                 "type": "BamAdapter",
                 "bamLocation": {
                     "uri": "MM-chebi-volvox.bam",
-                    "baseUri": "http://localhost:6006/test_data/volvox/config.json"
+                    "baseUri": "https://s3.amazonaws.com/jbrowse.org/genomes/volvox/config.json"
                 },
                 "index": {
                     "location": {
                         "uri": "MM-chebi-volvox.bam.bai",
-                        "baseUri": "http://localhost:6006/test_data/volvox/config.json"
+                        "baseUri": "https://s3.amazonaws.com/jbrowse.org/genomes/volvox/config.json"
                     },
                     "indexType": "BAI"
                 },
@@ -1020,7 +1020,7 @@
                     "type": "TwoBitAdapter",
                     "twoBitLocation": {
                         "uri": "volvox.2bit",
-                        "baseUri": "http://localhost:6006/test_data/volvox/config.json"
+                        "baseUri": "https://s3.amazonaws.com/jbrowse.org/genomes/volvox/config.json"
                     }
                 }
             }
@@ -1039,12 +1039,12 @@
                 "type": "BamAdapter",
                 "bamLocation": {
                     "uri": "MM-double-volvox.bam",
-                    "baseUri": "http://localhost:6006/test_data/volvox/config.json"
+                    "baseUri": "https://s3.amazonaws.com/jbrowse.org/genomes/volvox/config.json"
                 },
                 "index": {
                     "location": {
                         "uri": "MM-double-volvox.bam.bai",
-                        "baseUri": "http://localhost:6006/test_data/volvox/config.json"
+                        "baseUri": "https://s3.amazonaws.com/jbrowse.org/genomes/volvox/config.json"
                     },
                     "indexType": "BAI"
                 },
@@ -1052,7 +1052,7 @@
                     "type": "TwoBitAdapter",
                     "twoBitLocation": {
                         "uri": "volvox.2bit",
-                        "baseUri": "http://localhost:6006/test_data/volvox/config.json"
+                        "baseUri": "https://s3.amazonaws.com/jbrowse.org/genomes/volvox/config.json"
                     }
                 }
             }
@@ -1071,12 +1071,12 @@
                 "type": "BamAdapter",
                 "bamLocation": {
                     "uri": "MM-multi-volvox.bam",
-                    "baseUri": "http://localhost:6006/test_data/volvox/config.json"
+                    "baseUri": "https://s3.amazonaws.com/jbrowse.org/genomes/volvox/config.json"
                 },
                 "index": {
                     "location": {
                         "uri": "MM-multi-volvox.bam.bai",
-                        "baseUri": "http://localhost:6006/test_data/volvox/config.json"
+                        "baseUri": "https://s3.amazonaws.com/jbrowse.org/genomes/volvox/config.json"
                     },
                     "indexType": "BAI"
                 },
@@ -1084,7 +1084,7 @@
                     "type": "TwoBitAdapter",
                     "twoBitLocation": {
                         "uri": "volvox.2bit",
-                        "baseUri": "http://localhost:6006/test_data/volvox/config.json"
+                        "baseUri": "https://s3.amazonaws.com/jbrowse.org/genomes/volvox/config.json"
                     }
                 }
             }
@@ -1103,12 +1103,12 @@
                 "type": "BamAdapter",
                 "bamLocation": {
                     "uri": "MM-orient-volvox.bam",
-                    "baseUri": "http://localhost:6006/test_data/volvox/config.json"
+                    "baseUri": "https://s3.amazonaws.com/jbrowse.org/genomes/volvox/config.json"
                 },
                 "index": {
                     "location": {
                         "uri": "MM-orient-volvox.bam.bai",
-                        "baseUri": "http://localhost:6006/test_data/volvox/config.json"
+                        "baseUri": "https://s3.amazonaws.com/jbrowse.org/genomes/volvox/config.json"
                     },
                     "indexType": "BAI"
                 },
@@ -1116,7 +1116,7 @@
                     "type": "TwoBitAdapter",
                     "twoBitLocation": {
                         "uri": "volvox.2bit",
-                        "baseUri": "http://localhost:6006/test_data/volvox/config.json"
+                        "baseUri": "https://s3.amazonaws.com/jbrowse.org/genomes/volvox/config.json"
                     }
                 }
             }
@@ -1135,12 +1135,12 @@
                 "type": "VcfTabixAdapter",
                 "vcfGzLocation": {
                     "uri": "volvox.inv.vcf.gz",
-                    "baseUri": "http://localhost:6006/test_data/volvox/config.json"
+                    "baseUri": "https://s3.amazonaws.com/jbrowse.org/genomes/volvox/config.json"
                 },
                 "index": {
                     "location": {
                         "uri": "volvox.inv.vcf.gz.tbi",
-                        "baseUri": "http://localhost:6006/test_data/volvox/config.json"
+                        "baseUri": "https://s3.amazonaws.com/jbrowse.org/genomes/volvox/config.json"
                     },
                     "indexType": "TBI"
                 }
