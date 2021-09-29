@@ -1,8 +1,8 @@
 # AUTO GENERATED FILE - DO NOT EDIT
 
-dashJbrowse <- function(id=NULL, assembly=NULL, defaultSession=NULL, location=NULL, tracks=NULL) {
+dashJbrowse <- function(id=NULL, aggregateTextSearchAdapters=NULL, assembly=NULL, defaultSession=NULL, location=NULL, tracks=NULL) {
     
-    props <- list(id=id, assembly=assembly, defaultSession=defaultSession, location=location, tracks=tracks)
+    props <- list(id=id, aggregateTextSearchAdapters=aggregateTextSearchAdapters, assembly=assembly, defaultSession=defaultSession, location=location, tracks=tracks)
     if (length(props) > 0) {
         props <- props[!vapply(props, is.null, logical(1))]
     }
@@ -10,7 +10,7 @@ dashJbrowse <- function(id=NULL, assembly=NULL, defaultSession=NULL, location=NU
         props = props,
         type = 'DashJbrowse',
         namespace = 'dash_jbrowse',
-        propNames = c('id', 'assembly', 'defaultSession', 'location', 'tracks'),
+        propNames = c('id', 'aggregateTextSearchAdapters', 'assembly', 'defaultSession', 'location', 'tracks'),
         package = 'dashJbrowse'
         )
 

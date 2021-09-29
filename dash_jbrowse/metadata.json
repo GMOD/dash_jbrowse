@@ -1,6 +1,6 @@
 {
   "src/lib/components/DashJbrowse.react.js": {
-    "description": "ExampleComponent is an example component.\nIt takes a property, `label`, and\ndisplays it.\nIt renders an input with the property `value`\nwhich is editable by the user.",
+    "description": "DashJbrowse renders the JBrowse 2 React Linear Genome View.\nAny JB2 LGV configuration is also valid configuration for this\ncomponent.",
     "displayName": "DashJbrowse",
     "methods": [],
     "props": {
@@ -38,6 +38,13 @@
         },
         "required": false,
         "description": "The location to use for the browser."
+      },
+      "aggregateTextSearchAdapters": {
+        "type": {
+          "name": "array"
+        },
+        "required": false,
+        "description": "The text search adapters to use for the browser"
       },
       "setProps": {
         "type": {

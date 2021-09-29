@@ -46,6 +46,10 @@ DashJbrowse.propTypes = {
     location: PropTypes.string,
 
     /**
+     * The text search adapters to use for the browser
+     */
+    aggregateTextSearchAdapters: PropTypes.array,
+    /**
      * Dash-assigned callback that should be called to report property changes
      * to Dash, to make them available for callbacks.
      */
