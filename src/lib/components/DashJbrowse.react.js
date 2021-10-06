@@ -8,6 +8,8 @@ import {DashJbrowse as RealComponent} from '../LazyLoader';
  * component.
  */
 export default class DashJbrowse extends Component {
+
+    
     render() {
         return (
             <React.Suspense fallback={null}>
@@ -17,14 +19,30 @@ export default class DashJbrowse extends Component {
     }
 }
 
-DashJbrowse.defaultProps = {};
+DashJbrowse.defaultProps = { viewType: 'genome', genome: 'hg19'};
 
 DashJbrowse.propTypes = {
     /**
      * The ID used to identify this component in Dash callbacks.
      */
     id: PropTypes.string,
+    /**
+     * The type of the view
+     */
+    viewType: PropTypes.oneOf(['view', 'JB2config', 'json']),
+    /**
+     * genome for viewtype view
+     */
+    genome: PropTypes.oneOf(['hg19', 'volvox', 'tomato']),
 
+     /**
+     * Path to config file.
+     */
+    path: PropTypes.string,
+     /**
+     * The config object.
+     */
+    data: PropTypes.object,
     /**
      * The configuration for the assembly to use for the browser.
      */
