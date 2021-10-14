@@ -6,6 +6,7 @@ include dash_jbrowse/*-shared.js
 include dash_jbrowse/*-shared.js.map
 include dash_jbrowse/metadata.json
 include dash_jbrowse/package-info.json
+include dash_jbrowse/jbrowse_config.py
 include README.md
 include LICENSE
 include package.json
