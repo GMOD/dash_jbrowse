@@ -6,20 +6,19 @@ export dashjbrowse
     dashjbrowse(;kwargs...)
 
 A DashJbrowse component.
-ExampleComponent is an example component.
-It takes a property, `label`, and
-displays it.
-It renders an input with the property `value`
-which is editable by the user.
+DashJbrowse renders the JBrowse 2 React Linear Genome View.
+Any JB2 LGV configuration is also valid configuration for this
+component.
 Keyword arguments:
 - `id` (String; optional): The ID used to identify this component in Dash callbacks.
+- `aggregateTextSearchAdapters` (Array; optional): The text search adapters to use for the browser
 - `assembly` (Dict; optional): The configuration for the assembly to use for the browser.
 - `defaultSession` (Dict; optional): The default session to use for the browser.
 - `location` (String; optional): The location to use for the browser.
 - `tracks` (Array; optional): The tracks to use for the browser.
 """
 function dashjbrowse(; kwargs...)
-        available_props = Symbol[:id, :assembly, :defaultSession, :location, :tracks]
+        available_props = Symbol[:id, :aggregateTextSearchAdapters, :assembly, :defaultSession, :location, :tracks]
         wild_props = Symbol[]
         return Component("dashjbrowse", "DashJbrowse", "dash_jbrowse", available_props, wild_props; kwargs...)
 end

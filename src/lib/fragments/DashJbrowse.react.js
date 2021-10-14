@@ -13,13 +13,14 @@ import {defaultProps, propTypes} from '../components/DashJbrowse.react';
  */
 export default class DashJbrowse extends Component {
     render() {
-        const {id, assembly, tracks, defaultSession, location} = this.props;
+        const {id, assembly, tracks, defaultSession, location, aggregateTextSearchAdapters } = this.props;
 
         const viewState = createViewState({
             assembly,
             tracks,
             defaultSession,
             location,
+            aggregateTextSearchAdapters,
         });
 
         return (

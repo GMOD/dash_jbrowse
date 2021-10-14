@@ -8,9 +8,9 @@ def test_render_component(dash_duo):
     app = import_app('usage')
     dash_duo.start_server(app)
 
-    # # Get the generated component input with selenium
-    # # The html input will be a children of the #input dash component
-    # my_component = dash_duo.find_element('#input > input')
+    # Get the generated component input with selenium 
+    # The html input will be a children of the #input dash component
+    my_component = dash_duo.find_element('#input')
 
     # assert 'my-value' == my_component.get_attribute('value')
 
