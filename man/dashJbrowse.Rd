@@ -6,16 +6,18 @@
 \title{DashJbrowse component}
 
 \description{
-ExampleComponent is an example component. It takes a property, `label`, and displays it. It renders an input with the property `value` which is editable by the user.
+DashJbrowse renders the JBrowse 2 React Linear Genome View. Any JB2 LGV configuration is also valid configuration for this component.
 }
 
 \usage{
-dashJbrowse(id=NULL, assembly=NULL, defaultSession=NULL, location=NULL,
-tracks=NULL)
+dashJbrowse(id=NULL, aggregateTextSearchAdapters=NULL, assembly=NULL,
+defaultSession=NULL, location=NULL, tracks=NULL)
 }
 
 \arguments{
 \item{id}{Character. The ID used to identify this component in Dash callbacks.}
+
+\item{aggregateTextSearchAdapters}{Unnamed list. The text search adapters to use for the browser}
 
 \item{assembly}{Named list. The configuration for the assembly to use for the browser.}
 
