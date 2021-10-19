@@ -6,7 +6,7 @@ import json
 
 import dash as _dash
 
-from dash_jbrowse.jbrowse_config import JBrowseConfig
+from dash_jbrowse.jbrowse_config import JBrowseConfig, create_jbrowse
 # noinspection PyUnresolvedReferences
 from ._imports_ import *
 from ._imports_ import __all__
