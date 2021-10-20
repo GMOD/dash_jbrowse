@@ -1,17 +1,14 @@
 from dash_jbrowse.DashJbrowse import DashJbrowse
 from dash_jbrowse.utils import *
-import dash_html_components as html
 import json
 
 def create_jbrowse(**kwargs):
     if kwargs['viewType'] == 'view' and kwargs['genome'] == 'hg19':
-        return html.Div([
-            DashJbrowse(
+        return DashJbrowse(
                 id="view-demo",
                 viewType="view",
                 genome='hg19'
             )
-        ])
     if (kwargs['viewType'] == 'JB2config'):
         with open(kwargs['path'], 'r') as file:  
             data = json.load(file)
@@ -19,8 +16,7 @@ def create_jbrowse(**kwargs):
         my_tracks = data['tracks']
         my_location = data['location']
         my_default_session = data['defaultSession']
-        return html.Div([
-            DashJbrowse(
+        return DashJbrowse(
                 id="view-demo",
                 viewType='JB2config',
                 assembly=my_assembly,
@@ -28,9 +24,7 @@ def create_jbrowse(**kwargs):
                 defaultSession=my_default_session,
                 location=my_location,
             )
-        ])
-    return html.Div([
-            DashJbrowse(
+    return DashJbrowse(
                 id="json-demo",
                 viewType='json',
                 assembly=kwargs['assembly'],
@@ -39,7 +33,6 @@ def create_jbrowse(**kwargs):
                 aggregateTextSearchAdapters=kwargs['aggregateTextSearchAdapters'],
                 location=kwargs['location'],
             )
-        ])
 
 class JBrowseConfig:
     def __init__(self):
