@@ -1,6 +1,9 @@
 import dash_jbrowse
 import dash
 import dash_html_components as html
+import sys
+sys.path.append('./python_jbrowse')
+from jbrowse_config import JBrowseConfig
 
 app = dash.Dash(__name__)
 
@@ -99,4 +102,21 @@ app.layout = html.Div(
 )
 
 if __name__ == "__main__":
+
+    jbrowse_conf = JBrowseConfig()
+    aliases = ["hg38"]
+    ref_name_aliases = {
+            "adapter": {
+                "type": "RefNameAliasAdapter",
+                "location": {
+                    "uri": "https://s3.amazonaws.com/jbrowse.org/genomes/GRCh38/hg38_aliases.txt",
+                },
+            },
+        }
+    # print(len("./GRCh38.fa.gz"))
+    # for i in range(0, len("./GRCh38.fa.gz")):
+    #     print("./GRCh38.fa.gz"[i: i + 1])
+    jbrowse_conf.set_assembly("https://s3.amazonaws.com/jbrowse.org/genomes/GRCh38/fasta/GRCh38.fa.gz", aliases, ref_name_aliases, True)
+    print(jbrowse_conf.get_config()["assembly"]["sequence"]["adapter"]["fastaLocation"]["uri"])
+
     app.run_server(debug=True)

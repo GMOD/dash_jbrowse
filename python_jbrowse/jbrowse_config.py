@@ -61,6 +61,7 @@ class JBrowseConfig():
 
     def unzipped_assembly(self, assembly_data, aliases = [], refname_aliases = []):
         name = self.get_name(assembly_data)
+
         self.config['assembly'] = {
             "name": name,
             "sequence":{
@@ -69,10 +70,10 @@ class JBrowseConfig():
                 "adapter": {
                     "type": "BgzipFastaAdapter",
                     "fastaLocation": {
-                        "uri": "https://s3.amazonaws.com/jbrowse.org/genomes/GRCh38/fasta/GRCh38.fa.gz",
+                        "uri": assembly_data,
                     },
                     "faiLocation": {
-                        "uri": "https://s3.amazonaws.com/jbrowse.org/genomes/GRCh38/fasta/GRCh38.fa.gz.fai",
+                        "uri": assembly_data + ".fai",
                     },
                 },
             },
@@ -82,6 +83,7 @@ class JBrowseConfig():
     
     def zipped_assembly(self, assembly_data, aliases, refname_aliases):
         name = self.get_name(assembly_data)
+        print('name:' + name)
         self.config['assembly'] = {
             "name": name,
             "sequence":{
@@ -90,13 +92,13 @@ class JBrowseConfig():
                 "adapter": {
                     "type": "BgzipFastaAdapter",
                     "fastaLocation": {
-                        "uri": "https://s3.amazonaws.com/jbrowse.org/genomes/GRCh38/fasta/GRCh38.fa.gz",
+                        "uri": assembly_data,
                     },
                     "faiLocation": {
-                        "uri": "https://s3.amazonaws.com/jbrowse.org/genomes/GRCh38/fasta/GRCh38.fa.gz.fai",
+                        "uri": assembly_data + "fai",
                     },
                     "gziLocation": {
-                        "uri": "https://s3.amazonaws.com/jbrowse.org/genomes/GRCh38/fasta/GRCh38.fa.gz.gzi",
+                        "uri": assembly_data + ".gzi",
                     },
                 },
             },
@@ -105,19 +107,18 @@ class JBrowseConfig():
         }
     
     def get_name(self, assembly_file):
-        name = ""
         name_end = 0
         name_start = 0
-        for i in range(0, len(assembly_file)):
-            if assembly_file[i: i + 1] == ".":
-                name_end = i
-                break
         for i in range(0, len(assembly_file)):
             if assembly_file[len(assembly_file) - i - 1: len(assembly_file) - i] == "/":
                 name_start = len(assembly_file) - i
                 break
-            
-        return name[name_start:name_end]
+        for i in range(name_start, len(assembly_file)):
+            if assembly_file[i: i + 1] == ".":
+                name_end = i
+                break
+           
+        return assembly_file[name_start:name_end]
     
   
     ########## ASSEMBLIES #############
