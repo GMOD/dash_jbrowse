@@ -109,10 +109,13 @@ class JBrowseConfig():
         name_end = 0
         name_start = 0
         for i in range(0, len(assembly_file)):
-            if assembly_file[len(assembly_file) - i - 1: len(assembly_file) - i] == ".":
-                name_end = len(assembly_file) - i - 1
-            elif assembly_file[len(assembly_file) - i - 1: len(assembly_file) - i] == "/":
+            if assembly_file[i: i + 1] == ".":
+                name_end = i
+                break
+        for i in range(0, len(assembly_file)):
+            if assembly_file[len(assembly_file) - i - 1: len(assembly_file) - i] == "/":
                 name_start = len(assembly_file) - i
+                break
             
         return name[name_start:name_end]
     
