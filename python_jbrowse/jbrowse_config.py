@@ -50,8 +50,76 @@ class JBrowseConfig():
         )
         
         app.run_server(mode="inline")
+    
+    ########## PASS IN FILE ###########
+    def set_assembly (self, assembly_data, aliases, refname_aliases, bgzip= False):
+        if not bgzip:
+            self.unzipped_assembly(assembly_data, aliases, refname_aliases)
+        else:
+            self.zipped_assembly(assembly_data, aliases, refname_aliases)
+    
+
+    def unzipped_assembly(self, assembly_data, aliases = [], refname_aliases = []):
+        name = self.get_name(assembly_data)
+        self.config['assembly'] = {
+            "name": name,
+            "sequence":{
+                "type": "ReferenceSequenceTrack",
+                "trackId": name + "-ReferenceSequenceTrack",
+                "adapter": {
+                    "type": "BgzipFastaAdapter",
+                    "fastaLocation": {
+                        "uri": "https://s3.amazonaws.com/jbrowse.org/genomes/GRCh38/fasta/GRCh38.fa.gz",
+                    },
+                    "faiLocation": {
+                        "uri": "https://s3.amazonaws.com/jbrowse.org/genomes/GRCh38/fasta/GRCh38.fa.gz.fai",
+                    },
+                },
+            },
+            "aliases":aliases,
+            "refNameAliases": refname_aliases
+        }
+    
+    def zipped_assembly(self, assembly_data, aliases, refname_aliases):
+        name = self.get_name(assembly_data)
+        self.config['assembly'] = {
+            "name": name,
+            "sequence":{
+                "type": "ReferenceSequenceTrack",
+                "trackId": name + "-ReferenceSequenceTrack",
+                "adapter": {
+                    "type": "BgzipFastaAdapter",
+                    "fastaLocation": {
+                        "uri": "https://s3.amazonaws.com/jbrowse.org/genomes/GRCh38/fasta/GRCh38.fa.gz",
+                    },
+                    "faiLocation": {
+                        "uri": "https://s3.amazonaws.com/jbrowse.org/genomes/GRCh38/fasta/GRCh38.fa.gz.fai",
+                    },
+                    "gziLocation": {
+                        "uri": "https://s3.amazonaws.com/jbrowse.org/genomes/GRCh38/fasta/GRCh38.fa.gz.gzi",
+                    },
+                },
+            },
+            "aliases":aliases,
+            "refNameAliases": refname_aliases
+        }
+    
+    def get_name(self, assembly_file):
+        name = ""
+        name_end = 0
+        name_start = 0
+        for i in range(0, len(assembly_file)):
+            if assembly_file[len(assembly_file) - i - 1: len(assembly_file) - i] == ".":
+                name_end = len(assembly_file) - i - 1
+            elif assembly_file[len(assembly_file) - i - 1: len(assembly_file) - i] == "/":
+                name_start = len(assembly_file) - i
+            
+        return name[name_start:name_end]
+    
+  
     ########## ASSEMBLIES #############
     # TODO: get rid of all objects and arrays passed in? teresas example only has one function for assem
+    # TODO: bgzip option
     # this can also be used to update, may want to change the name
     def init_assembly(self, name="", sequence={}, aliases=[], ref_name_aliases = {}):
         self.config["assembly"] = {
