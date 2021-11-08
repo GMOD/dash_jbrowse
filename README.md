@@ -2,7 +2,7 @@
 
 # Dash JBrowse Component
 
-Dash JBrowse Component is a Dash component library.
+Dash JBrowse Component is a Dash component.
 
 Get started with:
 1. Install Dash and its dependencies: https://dash.plotly.com/installation

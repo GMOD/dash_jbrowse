@@ -3,3 +3,4 @@
 # pip install -r requirements.txt
 
 dash[dev,testing]>=1.15.0
+pytest[dev,testing]>=6.2.5
