@@ -105,14 +105,15 @@ my_location = "10:29,838,737..29,838,819"
 app.layout = html.Div(
     [
         dash_jbrowse.DashJbrowse(
-            id="input",
+            id="lgv-hg38",
             assembly=my_assembly,
             tracks=my_tracks,
             defaultSession=my_default_session,
             location=my_location,
             aggregateTextSearchAdapters=my_aggregate_text_search_adapters,
         ),
-    ]
+    ],
+    id='test'
 )
 
 if __name__ == "__main__":
