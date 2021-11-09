@@ -101,6 +101,30 @@ my_aggregate_text_search_adapters=[
     }
 ]
 my_location = "10:29,838,737..29,838,819"
+my_theme = {
+      "theme": {
+        "palette": {
+          "primary": {
+            "main": '#311b92',
+          },
+          "secondary": {
+            "main": "#0097a7",
+          },
+          "tertiary": {
+            "main": "#f57c00",
+          },
+          "quaternary": {
+            "main": "#d50000",
+          },
+          "bases": {
+            "A": { "main": "#98FB98" },
+            "C": { "main": "#87CEEB" },
+            "G": { "main": "#DAA520" },
+            "T": { "main": "#DC143C" },
+          },
+        },
+      },
+    }
 
 app.layout = html.Div(
     [
@@ -111,6 +135,7 @@ app.layout = html.Div(
             defaultSession=my_default_session,
             location=my_location,
             aggregateTextSearchAdapters=my_aggregate_text_search_adapters,
+            configuration=my_theme
         ),
     ],
     id='test'
