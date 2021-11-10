@@ -3,6 +3,7 @@ import sys
 sys.path.append('../')
 import dash_jbrowse
 import dash_html_components as html
+import re
 
 # TODO: similar to leaflet
     # get, return everything you're setting, sets everything individually
@@ -106,24 +107,66 @@ class JBrowseConfig():
             "refNameAliases": refname_aliases
         }
     
-    def get_name(self, assembly_file):
-        name_end = 0
-        name_start = 0
-        for i in range(0, len(assembly_file)):
-            if assembly_file[len(assembly_file) - i - 1: len(assembly_file) - i] == "/":
-                name_start = len(assembly_file) - i
-                break
-        for i in range(name_start, len(assembly_file)):
-            if assembly_file[i: i + 1] == ".":
-                name_end = i
-                break
+    # def get_name(self, assembly_file):
+    #     name_end = 0
+    #     name_start = 0
+    #     for i in range(0, len(assembly_file)):
+    #         if assembly_file[len(assembly_file) - i - 1: len(assembly_file) - i] == "/":
+    #             name_start = len(assembly_file) - i
+    #             break
+    #     for i in range(name_start, len(assembly_file)):
+    #         if assembly_file[i: i + 1] == ".":
+    #             name_end = i
+    #             break
            
-        return assembly_file[name_start:name_end]
+    #     return assembly_file[name_start:name_end]
+
+    def get_name(self, assembly_file):
+        return re.search(r'(\w+)\.fa', assembly_file).group(1)
+    ########## CORRECT DEFAULT SESSION ###########
+    def set_default_session(self, assembly, displayed_tracks, display_assembly=True):
+        reference_track = self.get_reference_track(assembly, display_assembly)
+        #tracks = self.get_tracks(assembly, displayed_tracks, display_assembly)
+        self.config["defaultSession"] = {
+            "name": "my session",
+            "view": {
+                "id": "LinearGenomeView",
+                "type": "LinearGenomeView",
+                "tracks": reference_track
+            }
+        }
     
-  
+    #def get_tracks(self, assembly, tracks, display_assembly):
+        #result = []
+        #for i in tracks:
+
+
+    def get_reference_track(self, assembly, display_assembly):
+        assembly_name = self.config[assembly]["name"]
+        configuration = assembly_name + "-ReferenceSequenceTrack"
+        ref = {}
+        if display_assembly:
+            ref = {
+                "type": "ReferenceSequenceTrack",
+                "configuration": configuration,
+                "displays": [
+                    {
+                        "type": "LinearBasicDisplay",
+                        "configuration": configuration + "-LinearBasicDisplay"
+                    }
+                ],
+
+            }
+        return ref
+
+    ########## CORRECT LOCATION ########
+    def set_location(self, location=""):
+        self.config["location"] = location
+            
+
+    # Do not use this code
+
     ########## ASSEMBLIES #############
-    # TODO: get rid of all objects and arrays passed in? teresas example only has one function for assem
-    # TODO: bgzip option
     # this can also be used to update, may want to change the name
     def init_assembly(self, name="", sequence={}, aliases=[], ref_name_aliases = {}):
         self.config["assembly"] = {
