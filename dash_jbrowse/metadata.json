@@ -46,6 +46,13 @@
         "required": false,
         "description": "The text search adapters to use for the browser"
       },
+      "configuration": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "The theme configuration object"
+      },
       "setProps": {
         "type": {
           "name": "func"
