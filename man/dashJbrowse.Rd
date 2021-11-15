@@ -11,7 +11,8 @@ DashJbrowse renders the JBrowse 2 React Linear Genome View. Any JB2 LGV configur
 
 \usage{
 dashJbrowse(id=NULL, aggregateTextSearchAdapters=NULL, assembly=NULL,
-defaultSession=NULL, location=NULL, tracks=NULL)
+configuration=NULL, defaultSession=NULL, location=NULL,
+plugins=NULL, tracks=NULL)
 }
 
 \arguments{
@@ -21,9 +22,13 @@ defaultSession=NULL, location=NULL, tracks=NULL)
 
 \item{assembly}{Named list. The configuration for the assembly to use for the browser.}
 
+\item{configuration}{Named list. The theme configuration object}
+
 \item{defaultSession}{Named list. The default session to use for the browser.}
 
 \item{location}{Character. The location to use for the browser.}
+
+\item{plugins}{Unnamed list. List of plugin(external) configuration objects}
 
 \item{tracks}{Unnamed list. The tracks to use for the browser.}
 }

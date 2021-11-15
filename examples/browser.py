@@ -31,7 +31,7 @@ app.layout = html.Div(
 def return_jbrowse(genome):
     print(genome)
     with open('./test_data/' + genome + '.json', "r") as file:
-            data = json.load(file)
+       data = json.load(file)
     my_assembly = data["assembly"]
     # print(my_assembly)
     my_tracks = data["tracks"]
@@ -51,4 +51,4 @@ def return_jbrowse(genome):
 
 
 if __name__ == "__main__":
-    app.run_server(debug=True)
+    app.run_server(port=8000, debug=True)

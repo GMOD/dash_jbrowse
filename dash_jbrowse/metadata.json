@@ -46,6 +46,20 @@
         "required": false,
         "description": "The text search adapters to use for the browser"
       },
+      "configuration": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "The theme configuration object"
+      },
+      "plugins": {
+        "type": {
+          "name": "array"
+        },
+        "required": false,
+        "description": "List of plugin(external) configuration objects"
+      },
       "setProps": {
         "type": {
           "name": "func"

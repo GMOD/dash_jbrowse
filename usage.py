@@ -51,7 +51,7 @@ my_tracks = [
                 },
             },
         },
-    },
+    }
 ]
 
 my_default_session = {
@@ -84,7 +84,7 @@ my_default_session = {
     },
 }
 
-my_aggregate_text_search_adapters=[
+my_aggregate_text_search_adapters = [
     {
         "type": "TrixTextSearchAdapter",
         "textSearchAdapterId": "hg38-index",
@@ -97,35 +97,40 @@ my_aggregate_text_search_adapters=[
         "metaFilePath": {
             "uri": "https://s3.amazonaws.com/jbrowse.org/genomes/GRCh38/trix/meta.json"
         },
-        "assemblyNames": ['GRCh38'],
+        "assemblyNames": ["GRCh38"],
     }
 ]
 my_location = "10:29,838,737..29,838,819"
 my_theme = {
-      "theme": {
+    "theme": {
         "palette": {
-          "primary": {
-            "main": '#311b92',
-          },
-          "secondary": {
-            "main": "#0097a7",
-          },
-          "tertiary": {
-            "main": "#f57c00",
-          },
-          "quaternary": {
-            "main": "#d50000",
-          },
-          "bases": {
-            "A": { "main": "#98FB98" },
-            "C": { "main": "#87CEEB" },
-            "G": { "main": "#DAA520" },
-            "T": { "main": "#DC143C" },
-          },
+            "primary": {
+                "main": "#311b92",
+            },
+            "secondary": {
+                "main": "#0097a7",
+            },
+            "tertiary": {
+                "main": "#f57c00",
+            },
+            "quaternary": {
+                "main": "#d50000",
+            },
+            "bases": {
+                "A": {"main": "#98FB98"},
+                "C": {"main": "#87CEEB"},
+                "G": {"main": "#DAA520"},
+                "T": {"main": "#DC143C"},
+            },
         },
-      },
+    },
+}
+my_plugins = [
+    {
+    "name": "UCSC",
+    "url": "https://unpkg.com/jbrowse-plugin-ucsc/dist/jbrowse-plugin-ucsc.umd.production.min.js"
     }
-
+]
 app.layout = html.Div(
     [
         dash_jbrowse.DashJbrowse(
@@ -135,11 +140,12 @@ app.layout = html.Div(
             defaultSession=my_default_session,
             location=my_location,
             aggregateTextSearchAdapters=my_aggregate_text_search_adapters,
-            configuration=my_theme
+            configuration=my_theme,
+            plugins=my_plugins,
         ),
     ],
-    id='test'
+    id="test",
 )
 
 if __name__ == "__main__":
-    app.run_server(debug=True)
+    app.run_server(port=8080, debug=True)
