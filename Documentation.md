@@ -222,12 +222,12 @@ On a track configuration.
 !["Dash jbrowse component with a custom theme."](./images/custom_theme.png)
 
 
-## Academic Use
+<!-- ## Academic Use
 
 This package was written with funding from the [NHGRI](https://genome.gov/) as
 part of the JBrowse project. If you use it in an academic project that you
 publish, please cite the most recent JBrowse paper, which will be linked from
-[jbrowse.org](https://jbrowse.org/).
+[jbrowse.org](https://jbrowse.org/). -->
 
 ## Resources 
 * Examples of the `dash_jbrowse` component can be found in the [usage.py](usage.py), and [browser.py](./examples/browser.py)
