@@ -15,6 +15,12 @@ export default class DashJbrowse extends Component {
     render() {
         const {id, assembly, tracks, defaultSession, location, aggregateTextSearchAdapters, configuration } = this.props;
 
+        // console.log("location", location)
+        // let formatted = location
+        // if (typeof location !== 'string' || !(location instanceof String)) {
+        //     const {refName, start, end} = location
+        //    formatted = `${refName}:${start}..${end}`
+        // }
         const viewState = createViewState({
             assembly,
             tracks,

@@ -20,14 +20,44 @@ Keyword arguments:
 - assembly (dict; optional):
     The configuration for the assembly to use for the browser.
 
+    `assembly` is a dict with keys:
+
+    - aliases (list; optional)
+
+    - name (string; required)
+
+    - refNameAliases (dict; optional)
+
+    - sequence (dict; optional)
+
 - configuration (dict; optional):
     The theme configuration object.
+
+    `configuration` is a dict with keys:
+
+    - theme (dict; optional)
 
 - defaultSession (dict; optional):
     The default session to use for the browser.
 
-- location (string; optional):
+    `defaultSession` is a dict with keys:
+
+    - name (string; required)
+
+    - view (dict; optional)
+
+- location (dict; optional):
     The location to use for the browser.
+
+    `location` is a string | dict with keys:
+
+    - assemblyName (string; optional)
+
+    - end (number; optional)
+
+    - refName (string; required)
+
+    - start (number; optional)
 
 - tracks (list; optional):
     The tracks to use for the browser."""

@@ -20,13 +20,28 @@ tracks=NULL)
 
 \item{aggregateTextSearchAdapters}{Unnamed list. The text search adapters to use for the browser}
 
-\item{assembly}{Named list. The configuration for the assembly to use for the browser.}
+\item{assembly}{Lists containing elements 'name', 'aliases', 'sequence', 'refnamealiases'.
+those elements have the following types:
+  - name (character; required)
+  - aliases (unnamed list; optional)
+  - sequence (named list; optional)
+  - refnamealiases (named list; optional). The configuration for the assembly to use for the browser.}
 
-\item{configuration}{Named list. The theme configuration object}
+\item{configuration}{Lists containing elements 'theme'.
+those elements have the following types:
+  - theme (named list; optional). The theme configuration object}
 
-\item{defaultSession}{Named list. The default session to use for the browser.}
+\item{defaultSession}{Lists containing elements 'name', 'view'.
+those elements have the following types:
+  - name (character; required)
+  - view (named list; optional). The default session to use for the browser.}
 
-\item{location}{Character. The location to use for the browser.}
+\item{location}{Character | lists containing elements 'refname', 'start', 'end', 'assemblyname'.
+those elements have the following types:
+  - refname (character; required)
+  - start (numeric; optional)
+  - end (numeric; optional)
+  - assemblyname (character; optional). The location to use for the browser.}
 
 \item{tracks}{Unnamed list. The tracks to use for the browser.}
 }
