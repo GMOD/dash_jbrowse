@@ -1,5 +1,7 @@
-# Dash Jbrowse Component
-`Dash_JBrowse` is a dash component that wraps the [JBrowse React Linear Genome View](https://jbrowse.org/storybook/lgv/main/). This component makes it possible to embed an interactive genome browser in any Python application.
+# Dash JBrowse Component
+[Dash](https://dash.plotly.com/introduction) is an open source library that provides a way to convert React components into dash components which can be used to create web applications in Python, R, Julia, F# and Matlab.
+
+`Dash_JBrowse` is a dash component that wraps the [JBrowse React Linear Genome View](https://jbrowse.org/storybook/lgv/main/) and makes it possible to embed an interactive genome browser in any Python application.
 
 ![Dash JBrowse configured with human data](./images/demo.png)
 ## Quickstart
@@ -124,8 +126,17 @@ A basic example of this component using dash callbacks can be found under the ex
 ```
 Checkout the JBrowse React Linear Genome View storybook docs about creating default sessions [here](https://jbrowse.org/storybook/lgv/main/?path=/story/default-sessions--page)
 
-- `location` (string or object, optional) -  initial [location](https://jbrowse.org/jb2/docs/user_guide/#using-the-location-search-box) for when the browser first loads, e.g '1:500-1000' or  use 0-based coordinates in the location object {refName: 1, start: 500, end: 1000}
+- `location` (string or object, optional) -  initial [location](https://jbrowse.org/jb2/docs/user_guide/#using-the-location-search-box) for when the browser first loads, e.g '1:500-1000' or location object
 
+*location object*
+```json
+{
+    "refName": 1,
+    "start": 500,
+    "end": 1000
+}
+```
+Note: use 0-based coordinates in the location object
 
 ## Advanced Customization
 
@@ -229,6 +240,7 @@ publish, please cite the most recent JBrowse paper, which will be linked from
 [jbrowse.org](https://jbrowse.org/).
 
 ## Resources 
+* More infromation about `Dash` can be found in this [post](https://medium.com/plotly/dash-is-react-for-python-r-and-julia-c75822d1cc24)
 * Examples of the `dash_jbrowse` component can be found in the [usage.py](usage.py), and [browser.py](./examples/browser.py)
 * [JBrowse React Linear Genome View](https://jbrowse.org/storybook/lgv/main/) - documentation and examples of the React LGV component.
 * [Config Guide](https://jbrowse.org/jb2/docs/config_guide/) - a guide to configuring assemblies, tracks, text searching and more.
