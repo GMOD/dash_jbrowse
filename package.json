@@ -24,7 +24,7 @@
   "author": "Elliot Hershberg <eahershberg@gmail.com>",
   "license": "Apache-2.0",
   "dependencies": {
-    "@jbrowse/react-linear-genome-view": "^1.4.4",
+    "@jbrowse/react-linear-genome-view": "^1.5.1",
     "ramda": "^0.26.1"
   },
   "devDependencies": {
