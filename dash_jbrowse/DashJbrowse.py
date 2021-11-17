@@ -20,21 +20,54 @@ Keyword arguments:
 - assembly (dict; optional):
     The configuration for the assembly to use for the browser.
 
+    `assembly` is a dict with keys:
+
+    - aliases (list; optional)
+
+    - name (string; required)
+
+    - refNameAliases (dict; optional)
+
+    - sequence (dict; optional)
+
+- configuration (dict; optional):
+    The theme configuration object.
+
+    `configuration` is a dict with keys:
+
+    - theme (dict; optional)
+
 - defaultSession (dict; optional):
     The default session to use for the browser.
 
-- location (string; optional):
+    `defaultSession` is a dict with keys:
+
+    - name (string; required)
+
+    - view (dict; optional)
+
+- location (dict; optional):
     The location to use for the browser.
+
+    `location` is a string | dict with keys:
+
+    - assemblyName (string; optional)
+
+    - end (number; optional)
+
+    - refName (string; required)
+
+    - start (number; optional)
 
 - tracks (list; optional):
     The tracks to use for the browser."""
     @_explicitize_args
-    def __init__(self, id=Component.UNDEFINED, assembly=Component.UNDEFINED, tracks=Component.UNDEFINED, defaultSession=Component.UNDEFINED, location=Component.UNDEFINED, aggregateTextSearchAdapters=Component.UNDEFINED, **kwargs):
-        self._prop_names = ['id', 'aggregateTextSearchAdapters', 'assembly', 'defaultSession', 'location', 'tracks']
+    def __init__(self, id=Component.UNDEFINED, assembly=Component.UNDEFINED, tracks=Component.UNDEFINED, defaultSession=Component.UNDEFINED, location=Component.UNDEFINED, aggregateTextSearchAdapters=Component.UNDEFINED, configuration=Component.UNDEFINED, **kwargs):
+        self._prop_names = ['id', 'aggregateTextSearchAdapters', 'assembly', 'configuration', 'defaultSession', 'location', 'tracks']
         self._type = 'DashJbrowse'
         self._namespace = 'dash_jbrowse'
         self._valid_wildcard_attributes =            []
-        self.available_properties = ['id', 'aggregateTextSearchAdapters', 'assembly', 'defaultSession', 'location', 'tracks']
+        self.available_properties = ['id', 'aggregateTextSearchAdapters', 'assembly', 'configuration', 'defaultSession', 'location', 'tracks']
         self.available_wildcard_properties =            []
         _explicit_args = kwargs.pop('_explicit_args')
         _locals = locals()

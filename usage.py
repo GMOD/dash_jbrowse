@@ -1,6 +1,6 @@
 import dash_jbrowse
 import dash
-import dash_html_components as html
+from dash import html
 
 app = dash.Dash(__name__)
 
@@ -52,6 +52,7 @@ my_tracks = [
             },
         },
     },
+    
 ]
 
 my_default_session = {
@@ -84,7 +85,7 @@ my_default_session = {
     },
 }
 
-my_aggregate_text_search_adapters=[
+my_aggregate_text_search_adapters = [
     {
         "type": "TrixTextSearchAdapter",
         "textSearchAdapterId": "hg38-index",
@@ -97,11 +98,36 @@ my_aggregate_text_search_adapters=[
         "metaFilePath": {
             "uri": "https://s3.amazonaws.com/jbrowse.org/genomes/GRCh38/trix/meta.json"
         },
-        "assemblyNames": ['GRCh38'],
+        "assemblyNames": ["GRCh38"],
     }
 ]
 my_location = "10:29,838,737..29,838,819"
+# my_location = {"refName": "10", "start": 1, "end": 800}
 
+my_theme = {
+    "theme": {
+        "palette": {
+            "primary": {
+                "main": "#311b92",
+            },
+            "secondary": {
+                "main": "#0097a7",
+            },
+            "tertiary": {
+                "main": "#f57c00",
+            },
+            "quaternary": {
+                "main": "#d50000",
+            },
+            "bases": {
+                "A": {"main": "#98FB98"},
+                "C": {"main": "#87CEEB"},
+                "G": {"main": "#DAA520"},
+                "T": {"main": "#DC143C"},
+            },
+        },
+    },
+}
 app.layout = html.Div(
     [
         dash_jbrowse.DashJbrowse(
@@ -111,10 +137,11 @@ app.layout = html.Div(
             defaultSession=my_default_session,
             location=my_location,
             aggregateTextSearchAdapters=my_aggregate_text_search_adapters,
+            configuration=my_theme
         ),
     ],
-    id='test'
+    id="test",
 )
 
 if __name__ == "__main__":
-    app.run_server(debug=True)
+    app.run_server(port=8080, debug=True)

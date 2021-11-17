@@ -28,7 +28,12 @@ DashJbrowse.propTypes = {
     /**
      * The configuration for the assembly to use for the browser.
      */
-    assembly: PropTypes.object,
+    assembly: PropTypes.shape({
+        name: PropTypes.string.isRequired,
+        aliases: PropTypes.array,
+        sequence: PropTypes.object,
+        refNameAliases: PropTypes.object
+    }),
 
     /**
      * The tracks to use for the browser.
@@ -38,17 +43,35 @@ DashJbrowse.propTypes = {
     /**
      * The default session to use for the browser.
      */
-    defaultSession: PropTypes.object,
+    defaultSession: PropTypes.shape({
+        name: PropTypes.string.isRequired,
+        view: PropTypes.object
+    }),
 
     /**
      * The location to use for the browser.
      */
-    location: PropTypes.string,
+    location: PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.shape({
+            refName: PropTypes.string.isRequired,
+            start: PropTypes.number,
+            end: PropTypes.number,
+            assemblyName: PropTypes.string
+        })
+    ]),
 
     /**
      * The text search adapters to use for the browser
      */
     aggregateTextSearchAdapters: PropTypes.array,
+
+    /**
+     * The theme configuration object
+     */
+    configuration: PropTypes.shape({
+        theme: PropTypes.object
+    }),
     /**
      * Dash-assigned callback that should be called to report property changes
      * to Dash, to make them available for callbacks.

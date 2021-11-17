@@ -11,7 +11,8 @@ DashJbrowse renders the JBrowse 2 React Linear Genome View. Any JB2 LGV configur
 
 \usage{
 dashJbrowse(id=NULL, aggregateTextSearchAdapters=NULL, assembly=NULL,
-defaultSession=NULL, location=NULL, tracks=NULL)
+configuration=NULL, defaultSession=NULL, location=NULL,
+tracks=NULL)
 }
 
 \arguments{
@@ -19,11 +20,28 @@ defaultSession=NULL, location=NULL, tracks=NULL)
 
 \item{aggregateTextSearchAdapters}{Unnamed list. The text search adapters to use for the browser}
 
-\item{assembly}{Named list. The configuration for the assembly to use for the browser.}
+\item{assembly}{Lists containing elements 'name', 'aliases', 'sequence', 'refnamealiases'.
+those elements have the following types:
+  - name (character; required)
+  - aliases (unnamed list; optional)
+  - sequence (named list; optional)
+  - refnamealiases (named list; optional). The configuration for the assembly to use for the browser.}
 
-\item{defaultSession}{Named list. The default session to use for the browser.}
+\item{configuration}{Lists containing elements 'theme'.
+those elements have the following types:
+  - theme (named list; optional). The theme configuration object}
 
-\item{location}{Character. The location to use for the browser.}
+\item{defaultSession}{Lists containing elements 'name', 'view'.
+those elements have the following types:
+  - name (character; required)
+  - view (named list; optional). The default session to use for the browser.}
+
+\item{location}{Character | lists containing elements 'refname', 'start', 'end', 'assemblyname'.
+those elements have the following types:
+  - refname (character; required)
+  - start (numeric; optional)
+  - end (numeric; optional)
+  - assemblyname (character; optional). The location to use for the browser.}
 
 \item{tracks}{Unnamed list. The tracks to use for the browser.}
 }

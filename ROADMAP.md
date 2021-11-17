@@ -8,6 +8,7 @@
 -   Figure out builds/publishing (again Dash has tooling for this)
 
 ## Engineeering Problems/Opportunities
+- Note: the python class system has been moved to a new repository.
 
 -   a Python class system that abstracts away our config from the user (similar in spirit to JBrowseR)
     -   Could we even be smart and do indexing under the hood if just given a FASTA for example

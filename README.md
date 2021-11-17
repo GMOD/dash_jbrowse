@@ -9,6 +9,8 @@ Get started with:
 2. Run `python usage.py`
 3. Visit http://localhost:8050 in your web browser
 
+## Documentation
+Usage and docs can be found in here: [DOCUMENTATION.md](./DOCUMENTATION.md) 
 ## Contributing
 
 See [CONTRIBUTING.md](./CONTRIBUTING.md)
