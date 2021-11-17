@@ -91,10 +91,10 @@ A basic example of this component using dash callbacks can be found under the ex
 *top level assembly config*
 ```json
 {
-    "name":  "assemblyName", /* name of the assembly*/
-    "aliases": [], /* list of name aliases */
-    "sequence": {}, /* config for a ReferenceSequenceTrack */
-    "refNameAliases": {} /* optional refName aliasing configuration */
+    "name":  "assemblyName",
+    "aliases": [],
+    "sequence": {},
+    "refNameAliases": {}
 }
 ```
 
@@ -103,10 +103,10 @@ A basic example of this component using dash callbacks can be found under the ex
 *top level track config*
 ```json
 {   
-    "trackId": "test-id", /* internal track ID, must be unique */
-    "name": "track name", /* displayed track name */
-    "assemblyNames": [], /* an array of assembly names a track is associated with */
-    "category": [], /* optional array of categories to display in a hierarchical track selector */
+    "trackId": "test-id",
+    "name": "track name",
+    "assemblyNames": [],
+    "category": [],
 }
 ```
 
@@ -151,7 +151,6 @@ Aggregate text search adapter to use in the component.
       "uri": "path/to/my/meta.json/file",
       "locationType": "UriLocation"
     }
-  }
 }
 ```
 On a track configuration.
@@ -222,12 +221,12 @@ On a track configuration.
 !["Dash jbrowse component with a custom theme."](./images/custom_theme.png)
 
 
-<!-- ## Academic Use
+## Academic Use
 
 This package was written with funding from the [NHGRI](https://genome.gov/) as
 part of the JBrowse project. If you use it in an academic project that you
 publish, please cite the most recent JBrowse paper, which will be linked from
-[jbrowse.org](https://jbrowse.org/). -->
+[jbrowse.org](https://jbrowse.org/).
 
 ## Resources 
 * Examples of the `dash_jbrowse` component can be found in the [usage.py](usage.py), and [browser.py](./examples/browser.py)
