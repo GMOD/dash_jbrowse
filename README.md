@@ -1,100 +1,256 @@
-⚠️ WARNING: this is still an experimental project, WIP. Not *yet* a published package. ⚠️
-
 # Dash JBrowse Component
+[Dash](https://dash.plotly.com/introduction) is an open source library that provides a way to convert React components into dash components for its use in web applications written in Python, R, Julia, F# and Matlab.
 
-Dash JBrowse Component is a Dash component.
+`Dash_JBrowse` is a dash component that wraps the [JBrowse React Linear Genome View](https://jbrowse.org/storybook/lgv/main/) and makes it possible to embed an interactive genome browser in any Python application.
 
-Get started with:
-1. Install Dash and its dependencies: https://dash.plotly.com/installation
-2. Run `python usage.py`
-3. Visit http://localhost:8050 in your web browser
+![Dash JBrowse configured with human data](./images/demo.png)
+## Quickstart
+```
+$ pip install dash_jbrowse
+```
 
-## Documentation
-Usage and docs can be found in here: [DOCUMENTATION.md](./DOCUMENTATION.md) 
-## Contributing
+Basic linear genome view with an assembly
 
-See [CONTRIBUTING.md](./CONTRIBUTING.md)
+```
+import dash_jbrowse
+import dash
+import dash_html_components as html
 
-### Install dependencies
+app = dash.Dash(__name__)
 
-If you have selected install_dependencies during the prompt, you can skip this part.
+my_assembly = {
+    "name": "GRCh38",
+    "sequence": {
+        "type": "ReferenceSequenceTrack",
+        "trackId": "GRCh38-ReferenceSequenceTrack",
+        "adapter": {
+            "type": "BgzipFastaAdapter",
+            "fastaLocation": {
+                "uri": "https://s3.amazonaws.com/jbrowse.org/genomes/GRCh38/fasta/GRCh38.fa.gz",
+            },
+            "faiLocation": {
+                "uri": "https://s3.amazonaws.com/jbrowse.org/genomes/GRCh38/fasta/GRCh38.fa.gz.fai",
+            },
+            "gziLocation": {
+                "uri": "https://s3.amazonaws.com/jbrowse.org/genomes/GRCh38/fasta/GRCh38.fa.gz.gzi",
+            },
+        },
+    },
+    "aliases": ["hg38"],
+    "refNameAliases": {
+        "adapter": {
+            "type": "RefNameAliasAdapter",
+            "location": {
+                "uri": "https://s3.amazonaws.com/jbrowse.org/genomes/GRCh38/hg38_aliases.txt",
+            },
+        },
+    },
+}
 
-1. Install npm packages
-    ```
-    $ npm install
-    ```
-2. Create a virtual env and activate.
-    ```
-    $ virtualenv venv
-    $ . venv/bin/activate
-    ```
-    _Note: venv\Scripts\activate for windows_
+app.layout = html.Div(
+    [
+        dash_jbrowse.DashJbrowse(
+            id="lgv-hg38",
+            assembly=my_assembly
+        ),
+    ],
+    id='test'
+)
 
-3. Install python packages required to build components.
-    ```
-    $ pip install -r requirements.txt
-    ```
-4. Install the python packages for testing (optional)
-    ```
-    $ pip install -r tests/requirements.txt
-    ```
+if __name__ == "__main__":
+    app.run_server(debug=True)
+```
 
-### Write your component code in `src/lib/components/DashJbrowse.react.js`.
+## Installation
+### PyPI
+```
+$ pip install dash_jbrowse
+```
 
-- The demo app is in `src/demo` and you will import your example component code into your demo app.
-- Test your code in a Python environment:
-    1. Build your code
-        ```
-        $ npm run build
-        ```
-    2. Run and modify the `usage.py` sample dash app:
-        ```
-        $ python usage.py
-        ```
-- Write tests for your component.
-    - A sample test is available in `tests/test_usage.py`, it will load `usage.py` and you can then automate interactions with selenium.
-    - Run the tests with `$ pytest tests`.
-    - The Dash team uses these types of integration tests extensively. Browse the Dash component code on GitHub for more examples of testing (e.g. https://github.com/plotly/dash-core-components)
-- Add custom styles to your component by putting your custom CSS files into your distribution folder (`dash_jbrowse`).
-    - Make sure that they are referenced in `MANIFEST.in` so that they get properly included when you're ready to publish your component.
-    - Make sure the stylesheets are added to the `_css_dist` dict in `dash_jbrowse/__init__.py` so dash will serve them automatically when the component suite is requested.
-- [Review your code](./review_checklist.md)
+### Install with virtual venv
+After cloning this repository, install virtualenv
+```
+$ pip install virtualenv
+```
+```
+$ cd dash_jbrowse
+$ python3 -m venv ./venv
+$ source venv/bin/activate
+$ pip install -r requirements.txt
+```
+Then you can run the example app found in usage.py
+```
+python usage.py
+```
+## User Guide
+The linear genome view can be customized in many ways, but the only properties that are required to launch it are the id required for dash call backs and the assembly.
 
-### Create a production build and publish:
+- `id` (string, required): the id used for dash callbacks. 
+A basic example of this component using dash callbacks can be found under the examples directory)
 
-1. Build your code:
-    ```
-    $ npm run build
-    ```
-2. Create a Python distribution
-    ```
-    $ python setup.py sdist bdist_wheel
-    ```
-    This will create source and wheel distribution in the generated the `dist/` folder.
-    See [PyPA](https://packaging.python.org/guides/distributing-packages-using-setuptools/#packaging-your-project)
-    for more information.
+- `assembly` (object, required): the configuration object of the assembly being used for the browser. More information about the configuration of the assembly can be found [here](https://jbrowse.org/jb2/docs/config_guide/#configuring-assemblies).
 
-3. Test your tarball by copying it into a new environment and installing it locally:
-    ```
-    $ pip install dash_jbrowse-0.0.1.tar.gz
-    ```
+*top level assembly config*
+```json
+{
+    "name":  "assemblyName",
+    "aliases": [],
+    "sequence": {},
+    "refNameAliases": {}
+}
+```
 
-4. If it works, then you can publish the component to NPM and PyPI:
-    1. Publish on PyPI
-        ```
-        $ twine upload dist/*
-        ```
-    2. Cleanup the dist folder (optional)
-        ```
-        $ rm -rf dist
-        ```
-    3. Publish on NPM (Optional if chosen False in `publish_on_npm`)
-        ```
-        $ npm publish
-        ```
-        _Publishing your component to NPM will make the JavaScript bundles available on the unpkg CDN. By default, Dash serves the component library's CSS and JS locally, but if you choose to publish the package to NPM you can set `serve_locally` to `False` and you may see faster load times._
+- `tracks` (list, optional) - list of track configuration objects. 
 
-5. Share your component with the community! https://community.plotly.com/c/dash
-    1. Publish this repository to GitHub
-    2. Tag your GitHub repository with the plotly-dash tag so that it appears here: https://github.com/topics/plotly-dash
-    3. Create a post in the Dash community forum: https://community.plotly.com/c/dash
+*top level track config*
+```json
+{   
+    "trackId": "test-id",
+    "name": "track name",
+    "assemblyNames": [],
+    "category": [],
+}
+```
+
+- `defaultSession` (object, optional) - information about the current app state such as what views are open
+
+*default session config*
+```json
+{
+    "name": "this session",
+    "view": {
+        "id": "linearGenomeView",
+        "type": "LinearGenomeView",
+    },
+}
+```
+Checkout the JBrowse React Linear Genome View storybook docs about creating default sessions [here](https://jbrowse.org/storybook/lgv/main/?path=/story/default-sessions--page)
+
+- `location` (string or object, optional) -  initial [location](https://jbrowse.org/jb2/docs/user_guide/#using-the-location-search-box) for when the browser first loads, e.g '1:500-1000' or location object
+
+*location object*
+```json
+{
+    "refName": 1,
+    "start": 500,
+    "end": 1000
+}
+```
+Note: use 0-based coordinates in the location object
+
+## Advanced Customization
+
+### Text Searching
+Adding text searching to the JBrowse React Linear Genome View is now available but requires a couple of extra steps including creating an index via the [JBrowse CLI tools](https://jbrowse.org/jb2/docs/cli/#jbrowse-text-index) and adding a text search adapter to list of aggregate text search adapters in this component or to the configuration object of a track. 
+
+- `aggregateTextSearchAdapters` (object, optional) - configuration of an index used for text searching
+
+Aggregate text search adapter to use in the component.
+```json
+{
+    "type": "TrixTextSearchAdapter",
+    "textSearchAdapterId": "adapter-id",
+    "ixFilePath": {
+      "uri": "path/to/my/ix/file",
+      "locationType": "UriLocation"
+    },
+    "ixxFilePath": {
+      "uri": "path/to/my/ixx/file",
+      "locationType": "UriLocation"
+    },
+    "metaFilePath": {
+      "uri": "path/to/my/meta.json/file",
+      "locationType": "UriLocation"
+    }
+}
+```
+On a track configuration.
+```json
+{
+  "trackId":"yourtrack",
+  "name":"Track name",
+  "adapter":{
+    "type": "Gff3TabixAdapter",
+    "gffGzLocation": { "uri":"yourfile.gff.gz",
+        "locationType": "UriLocation" },
+    "index": { "location": { "uri":"yourfile.gff.gz.tbi",
+        "locationType": "UriLocation" } }
+  },
+  "textSearching": { 
+    "textSearchAdapter": {
+      "type": "TrixTextSearchAdapter",
+      "textSearchAdapterId": "hg19-index",
+      "ixFilePath": {
+        "uri": "https://jbrowse.org/genomes/hg19/trix/hg19.ix",
+        "locationType": "UriLocation"
+      },
+      "ixxFilePath": {
+        "uri": "https://jbrowse.org/genomes/hg19/trix/hg19.ixx",
+        "locationType": "UriLocation"
+      },
+      "metaFilePath": {
+        "uri": "https://jbrowse.org/genomes/hg19/trix/meta.json",
+        "locationType": "UriLocation"
+      },
+      "assemblyNames": ["hg19"]
+    },
+    "indexingAttributes": ["Name","ID"],
+    "indexingFeatureTypesToExclude": ["CDS","exon"]
+  }
+}
+```
+
+### Custom themes are also available. 
+- `configuration` - (object, optional) - color scheme configuration
+
+```json
+{
+    "theme": {
+        "palette": {
+            "primary": {
+                "main": "#311b92",
+            },
+            "secondary": {
+                "main": "#0097a7",
+            },
+            "tertiary": {
+                "main": "#f57c00",
+            },
+            "quaternary": {
+                "main": "#d50000",
+            },
+            "bases": {
+                "A": {"main": "#98FB98"},
+                "C": {"main": "#87CEEB"},
+                "G": {"main": "#DAA520"},
+                "T": {"main": "#DC143C"},
+            },
+        },
+    },
+}
+```
+!["Dash jbrowse component with a custom theme."](./images/custom_theme.png)
+
+
+## Academic Use
+
+This package was written with funding from the [NHGRI](https://genome.gov/) as
+part of the JBrowse project. If you use it in an academic project that you
+publish, please cite the most recent JBrowse paper, which will be linked from
+[jbrowse.org](https://jbrowse.org/).
+
+## Resources 
+* More infromation about `Dash` can be found in this [post](https://medium.com/plotly/dash-is-react-for-python-r-and-julia-c75822d1cc24)
+* Examples of the `dash_jbrowse` component can be found in the [usage.py](usage.py), and [browser.py](./examples/browser.py)
+* [JBrowse React Linear Genome View](https://jbrowse.org/storybook/lgv/main/) - documentation and examples of the React LGV component.
+* [Config Guide](https://jbrowse.org/jb2/docs/config_guide/) - a guide to configuring assemblies, tracks, text searching and more.
+* [JBrowse CLI tools](https://jbrowse.org/jb2/docs/cli/) - installation and documentation
+
+## Contact us
+
+We **really** love talking to our users. Please reach out with any thoughts you have on what we are building!
+
+- Report a bug or request a feature at
+  https://github.com/GMOD/dash_jbrowse/issues/new
+- Join our developers chat at https://gitter.im/GMOD/jbrowse2
+- Send an email to our mailing list at `gmod-ajax@lists.sourceforge.net`
