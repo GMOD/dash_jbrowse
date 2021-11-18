@@ -22,6 +22,10 @@
     "build:activated": "npm run build:js && npm run build:backends-activated"
   },
   "author": "Elliot Hershberg <eahershberg@gmail.com>",
+  "contributors": [{
+    "name": "Teresa De Jesus Martinez",
+    "email": "tere486martinez@gmail.com"
+  }],
   "license": "Apache-2.0",
   "dependencies": {
     "@jbrowse/react-linear-genome-view": "^1.5.1",
