@@ -5,7 +5,7 @@ It is built on top of ReactJS, and provides a [toolkit](https://dash.plotly.com/
 
 `Dash_JBrowse` is a Dash component that wraps the [JBrowse React Linear Genome View](https://jbrowse.org/storybook/lgv/main/) and makes it possible to embed an interactive genome browser into any Dash application.
 
-![Dash JBrowse configured with human data](./images/demo.png)
+![Dash JBrowse configured with human data](https://raw.githubusercontent.com/GMOD/dash_jbrowse/main/images/demo.png)
 
 ## Quickstart
 
@@ -260,7 +260,7 @@ On a track configuration.
 }
 ```
 
-!["Dash jbrowse component with a custom theme."](./images/custom_theme.png)
+!["Dash jbrowse component with a custom theme."](https://raw.githubusercontent.com/GMOD/dash_jbrowse/main/images/custom_theme.png)
 
 ## Academic Use
 
