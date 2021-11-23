@@ -4,14 +4,14 @@ import {
     JBrowseLinearGenomeView,
 } from '@jbrowse/react-linear-genome-view';
 
-import {defaultProps, propTypes} from '../components/DashJbrowse.react';
+import {defaultProps, propTypes} from '../components/LinearGenomeView.react';
 
 /**
- * DashJbrowse renders the JBrowse 2 React Linear Genome View.
+ * LinearGenomeView renders the JBrowse 2 React Linear Genome View.
  * Any JB2 LGV configuration is also valid configuration for this
  * component.
  */
-export default class DashJbrowse extends Component {
+export default class LinearGenomeView extends Component {
     render() {
         const {id, assembly, tracks, defaultSession, location, aggregateTextSearchAdapters, configuration } = this.props;
 
@@ -38,5 +38,5 @@ export default class DashJbrowse extends Component {
     }
 }
 
-DashJbrowse.defaultProps = defaultProps;
-DashJbrowse.propTypes = propTypes;
+LinearGenomeView.defaultProps = defaultProps;
+LinearGenomeView.propTypes = propTypes;

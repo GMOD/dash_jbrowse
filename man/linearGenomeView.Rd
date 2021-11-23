@@ -1,16 +1,16 @@
 % Auto-generated: do not edit by hand
-\name{dashJbrowse}
+\name{linearGenomeView}
 
-\alias{dashJbrowse}
+\alias{linearGenomeView}
 
-\title{DashJbrowse component}
+\title{LinearGenomeView component}
 
 \description{
-DashJbrowse renders the JBrowse 2 React Linear Genome View. Any JB2 LGV configuration is also valid configuration for this component.
+LinearGenomeView renders the JBrowse 2 React Linear Genome View. Any JB2 LGV configuration is also valid configuration for this component.
 }
 
 \usage{
-dashJbrowse(id=NULL, aggregateTextSearchAdapters=NULL, assembly=NULL,
+linearGenomeView(id=NULL, aggregateTextSearchAdapters=NULL, assembly=NULL,
 configuration=NULL, defaultSession=NULL, location=NULL,
 tracks=NULL)
 }

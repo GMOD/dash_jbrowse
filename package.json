@@ -1,6 +1,6 @@
 {
   "name": "dash_jbrowse",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A Dash component for the JBrowse 2 React Linear Genome View",
   "repository": {
     "type": "git",

@@ -1,7 +1,7 @@
 /* eslint no-magic-numbers: 0 */
 import React, {Component} from 'react';
 
-import { DashJbrowse } from '../lib';
+import { LinearGenomeView } from '../lib';
 
 class App extends Component {
 
@@ -20,7 +20,7 @@ class App extends Component {
     render() {
         return (
             <div>
-                <DashJbrowse
+                <LinearGenomeView
                     setProps={this.setProps}
                     {...this.state}
                 />

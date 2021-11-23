@@ -1,12 +1,12 @@
 # AUTO GENERATED FILE - DO NOT EDIT
 
-export dashjbrowse
+export lineargenomeview
 
 """
-    dashjbrowse(;kwargs...)
+    lineargenomeview(;kwargs...)
 
-A DashJbrowse component.
-DashJbrowse renders the JBrowse 2 React Linear Genome View.
+A LinearGenomeView component.
+LinearGenomeView renders the JBrowse 2 React Linear Genome View.
 Any JB2 LGV configuration is also valid configuration for this
 component.
 Keyword arguments:
@@ -33,9 +33,9 @@ Those elements have the following types:
   - `assemblyName` (String; optional)
 - `tracks` (Array; optional): The tracks to use for the browser.
 """
-function dashjbrowse(; kwargs...)
+function lineargenomeview(; kwargs...)
         available_props = Symbol[:id, :aggregateTextSearchAdapters, :assembly, :configuration, :defaultSession, :location, :tracks]
         wild_props = Symbol[]
-        return Component("dashjbrowse", "DashJbrowse", "dash_jbrowse", available_props, wild_props; kwargs...)
+        return Component("lineargenomeview", "LinearGenomeView", "dash_jbrowse", available_props, wild_props; kwargs...)
 end
 
