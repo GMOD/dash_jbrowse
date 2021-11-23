@@ -1,4 +1,4 @@
-# Dash JBrowse Component
+# Dash JBrowse
 
 [Dash](https://dash.plotly.com/introduction) is a popular open-source framework for building data-driven web apps.
 It is built on top of ReactJS, and provides a [toolkit](https://dash.plotly.com/plugins) for converting React components into dash components that can be used in Dash apps written in Python, R, Julia, F# or Matlab.
