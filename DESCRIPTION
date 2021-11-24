@@ -1,7 +1,7 @@
 Package: dashJbrowse
-Title: A Dash component for the JBrowse 2 React Linear Genome View
+Title: Dash components for JBrowse 2 embeddable components
 Version: 0.0.2
-Description: A Dash component for the JBrowse 2 React Linear Genome View
+Description: Dash components for JBrowse 2 embeddable components
 Depends: R (>= 3.0.2)
 Imports: 
 Suggests: 

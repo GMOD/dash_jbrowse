@@ -1,7 +1,7 @@
 {
   "name": "dash_jbrowse",
   "version": "0.0.2",
-  "description": "Dash components for JBrowse views",
+  "description": "Dash components for JBrowse 2 embeddable components",
   "repository": {
     "type": "git",
     "url": "git://github.com/GMOD/dash_jbrowse.git"
