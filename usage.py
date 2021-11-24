@@ -1,6 +1,6 @@
-import dash_jbrowse
 import dash
 import dash_html_components as html
+from dash_jbrowse import LinearGenomeView
 
 app = dash.Dash(__name__)
 
@@ -130,7 +130,7 @@ my_theme = {
 }
 app.layout = html.Div(
     [
-        dash_jbrowse.DashJbrowse(
+        LinearGenomeView(
             id="lgv-hg38",
             assembly=my_assembly,
             tracks=my_tracks,

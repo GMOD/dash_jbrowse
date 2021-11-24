@@ -1,1 +1,1 @@
-export const DashJbrowse = React.lazy(() => import(/* webpackChunkName: "DashJbrowse" */ './fragments/DashJbrowse.react'));
+export const LinearGenomeView = React.lazy(() => import(/* webpackChunkName: "LinearGenomeView" */ './fragments/LinearGenomeView.react'));

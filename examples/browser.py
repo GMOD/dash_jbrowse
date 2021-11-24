@@ -39,7 +39,7 @@ def return_jbrowse(genome):
     my_default_session = data["defaultSession"]
     return html.Div(
         [
-            dash_jbrowse.DashJbrowse(
+            dash_jbrowse.LinearGenomeView(
                 id='lgv',
                 assembly=my_assembly,
                 tracks=my_tracks,

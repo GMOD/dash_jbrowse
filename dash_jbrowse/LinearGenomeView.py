@@ -3,9 +3,9 @@
 from dash.development.base_component import Component, _explicitize_args
 
 
-class DashJbrowse(Component):
-    """A DashJbrowse component.
-DashJbrowse renders the JBrowse 2 React Linear Genome View.
+class LinearGenomeView(Component):
+    """A LinearGenomeView component.
+LinearGenomeView renders the JBrowse 2 React Linear Genome View.
 Any JB2 LGV configuration is also valid configuration for this
 component.
 
@@ -64,7 +64,7 @@ Keyword arguments:
     @_explicitize_args
     def __init__(self, id=Component.UNDEFINED, assembly=Component.UNDEFINED, tracks=Component.UNDEFINED, defaultSession=Component.UNDEFINED, location=Component.UNDEFINED, aggregateTextSearchAdapters=Component.UNDEFINED, configuration=Component.UNDEFINED, **kwargs):
         self._prop_names = ['id', 'aggregateTextSearchAdapters', 'assembly', 'configuration', 'defaultSession', 'location', 'tracks']
-        self._type = 'DashJbrowse'
+        self._type = 'LinearGenomeView'
         self._namespace = 'dash_jbrowse'
         self._valid_wildcard_attributes =            []
         self.available_properties = ['id', 'aggregateTextSearchAdapters', 'assembly', 'configuration', 'defaultSession', 'location', 'tracks']
@@ -77,4 +77,4 @@ Keyword arguments:
             if k not in args:
                 raise TypeError(
                     'Required argument `' + k + '` was not specified.')
-        super(DashJbrowse, self).__init__(**args)
+        super(LinearGenomeView, self).__init__(**args)

@@ -1,5 +1,5 @@
-from .DashJbrowse import DashJbrowse
+from .LinearGenomeView import LinearGenomeView
 
 __all__ = [
-    "DashJbrowse"
+    "LinearGenomeView"
 ]
