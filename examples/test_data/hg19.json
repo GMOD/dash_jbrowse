@@ -31,6 +31,25 @@
     },
     "tracks": [],
     "location": "1:2,467,681..2,667,681",
+    "aggregateTextSearchAdapters": [
+        {
+            "type": "TrixTextSearchAdapter",
+            "textSearchAdapterId": "test",
+            "ixFilePath": {
+                "uri": "https://jbrowse.org/genomes/hg19/trix/hg19.ix",
+                "locationType": "UriLocation"
+            },
+            "ixxFilePath": {
+                "uri": "https://jbrowse.org/genomes/hg19/trix/hg19.ixx",
+                "locationType": "UriLocation"
+            },
+            "metaFilePath": {
+                "uri": "https://jbrowse.org/genomes/hg19/trix/meta.json",
+                "locationType": "UriLocation"
+            },
+            "assemblyNames": ["hg19"]
+        }
+    ],
     "defaultSession": {
         "name": "Runtime plugins",
         "view": {

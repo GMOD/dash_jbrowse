@@ -37,6 +37,7 @@ def return_jbrowse(genome):
     my_tracks = data["tracks"]
     my_location = data["location"]
     my_default_session = data["defaultSession"]
+    adapters = data["aggregateTextSearchAdapters"]
     return html.Div(
         [
             dash_jbrowse.LinearGenomeView(
@@ -45,6 +46,7 @@ def return_jbrowse(genome):
                 tracks=my_tracks,
                 defaultSession=my_default_session,
                 location=my_location,
+                aggregateTextSearchAdapters=adapters,
             ),
         ]
     )

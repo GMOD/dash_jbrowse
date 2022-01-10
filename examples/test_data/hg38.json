@@ -53,6 +53,7 @@
             }
         }
     ],
+    "aggregateTextSearchAdapters": [],
     "defaultSession": {
         "name": "My session",
         "view": {
