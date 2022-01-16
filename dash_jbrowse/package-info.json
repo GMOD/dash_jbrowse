@@ -30,6 +30,7 @@
   ],
   "license": "Apache-2.0",
   "dependencies": {
+    "@jbrowse/react-circular-genome-view": "^1.5.9",
     "@jbrowse/react-linear-genome-view": "^1.5.9",
     "ramda": "^0.26.1"
   },

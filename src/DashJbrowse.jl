@@ -5,6 +5,7 @@ using Dash
 const resources_path = realpath(joinpath( @__DIR__, "..", "deps"))
 const version = "0.0.9dev"
 
+include("jl/circulargenomeview.jl")
 include("jl/lineargenomeview.jl")
 
 function __init__()
@@ -22,8 +23,22 @@ function __init__()
     type = :js
 ),
 DashBase.Resource(
+    relative_package_path = "async-CircularGenomeView.js",
+    external_url = "https://unpkg.com/dash_jbrowse@0.0.9dev/dash_jbrowse/async-CircularGenomeView.js",
+    dynamic = nothing,
+    async = :true,
+    type = :js
+),
+DashBase.Resource(
     relative_package_path = "async-LinearGenomeView.js.map",
     external_url = "https://unpkg.com/dash_jbrowse@0.0.9dev/dash_jbrowse/async-LinearGenomeView.js.map",
+    dynamic = true,
+    async = nothing,
+    type = :js
+),
+DashBase.Resource(
+    relative_package_path = "async-CircularGenomeView.js.map",
+    external_url = "https://unpkg.com/dash_jbrowse@0.0.9dev/dash_jbrowse/async-CircularGenomeView.js.map",
     dynamic = true,
     async = nothing,
     type = :js
