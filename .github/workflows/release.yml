@@ -1,0 +1,45 @@
+name: Publish Python 🐍 distributions 📦 PyPI
+
+# Controls when the action will run.
+on:
+  # Triggers the workflow when a release is created
+  release:
+    types: [created]
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  build-n-publish:
+    runs-on: ubuntu-latest
+    steps:
+     - uses: actions/checkout@v2
+     - uses: actions/setup-node@v1
+       with:
+        node-version: 12
+     - name: Set up Python
+       uses: actions/setup-python@v2
+       with:
+        python-version: '3.x'
+     - name: Install Python dependencies
+       run: |
+         python3 -m pip install --upgrade pip
+         python3 -m pip install setuptools wheel twine
+         pip install -r requirements.txt
+     - name: Install Node dependencies
+       run: |
+         npm install | echo "npm install error occurred"
+         npm run build
+     - name: Test with pytest
+       run: |
+         pip install -r tests/requirements.txt
+         pytest tests
+     - name: Build and publish to PyPI
+       run: |
+         # Install the package from setup.py
+         python3 setup.py install
+         python3 setup.py sdist bdist_wheel
+         python3 -m twine upload dist/*
+       env:
+          TWINE_USERNAME: __token__
+          TWINE_PASSWORD: ${{ secrets.TWINE_TOKEN }}
