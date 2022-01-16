@@ -1,14 +1,10 @@
-name: Publish Python 🐍 distributions 📦 PyPI
+name: Publish Python 🐍 distributions 📦 TestPyPI
 
-# Controls when the action will run.
 on:
-  # Triggers the workflow when a release is created
-  release:
-    types: [created]
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
+  push:
+    branches:
+      - main
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   build-n-publish:
     runs-on: ubuntu-latest
@@ -34,12 +30,15 @@ jobs:
        run: |
          pip install -r tests/requirements.txt
          pytest tests
-     - name: Build and publish to PyPI
+     - name: Build and publish to TestPyPI
        run: |
          # Install the package from setup.py
          python3 setup.py install
          python3 setup.py sdist bdist_wheel
-         python3 -m twine upload dist/*
+         # python3 -m twine upload dist/*
+         twine upload --skip-existing --repository-url https://test.pypi.org/legacy/ dist/*
        env:
           TWINE_USERNAME: __token__
-          TWINE_PASSWORD: ${{ secrets.TWINE_TOKEN }}
+          TWINE_PASSWORD: ${{ secrets.TWINE_TEST_TOKEN }}
+
+   
