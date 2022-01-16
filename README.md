@@ -3,9 +3,11 @@
 [Dash](https://dash.plotly.com/introduction) is a popular open-source framework for building data-driven web apps.
 It is built on top of ReactJS, and provides a [toolkit](https://dash.plotly.com/plugins) for converting React components into dash components that can be used in Dash apps written in Python, R, Julia, F# or Matlab.
 
-Dash JBrowse's `LinearGenomeView` is a Dash component that wraps the [JBrowse React Linear Genome View](https://jbrowse.org/storybook/lgv/main/) and makes it possible to embed an interactive genome browser into any Dash application.
+Dash JBrowse's `LinearGenomeView` is a Dash component that wraps the [JBrowse React Linear Genome View](https://jbrowse.org/storybook/lgv/main/) and makes it possible to embed an interactive genome browser into any Dash application. Now supporting the `CircularGenomeView` as well. 
 
-![Dash JBrowse configured with human data](https://raw.githubusercontent.com/GMOD/dash_jbrowse/main/images/demo.png)
+![Dash JBrowse LGV configured with human data](https://raw.githubusercontent.com/GMOD/dash_jbrowse/main/images/demo.png)
+
+![Dash JBrowse CGV configured with human data](https://raw.githubusercontent.com/GMOD/dash_jbrowse/main/images/demo2.png)
 
 ## Quickstart
 
@@ -65,6 +67,8 @@ if __name__ == "__main__":
     app.run_server(debug=True)
 ```
 
+An example of the CGV can be found in [usage_cgv.py](usage_cgv.py).
+
 ## Installation
 
 ### PyPI
@@ -96,7 +100,7 @@ python usage.py
 
 ## User Guide
 
-The linear genome view can be customized in many ways, but the only properties that are required to launch it are the id required for dash call backs and the assembly.
+The views can be customized in many ways, but the only properties that are required to launch it are the id required for dash call backs and the assembly.
 
 -   `id` (string, required): the id used for dash callbacks.
     A basic example of this component using dash callbacks can be found under the examples directory)
@@ -140,8 +144,8 @@ _default session config_
     }
 }
 ```
+Note: `"type": "CircularGenomeView"` for CGV
 
-Checkout the JBrowse React Linear Genome View storybook docs about creating default sessions [here](https://jbrowse.org/storybook/lgv/main/?path=/story/default-sessions--page)
 
 -   `location` (string or object, optional) - initial [location](https://jbrowse.org/jb2/docs/user_guide/#using-the-location-search-box) for when the browser first loads, e.g '1:500-1000' or location object
 
@@ -154,14 +158,22 @@ _location object_
     "end": 1000
 }
 ```
+---
+**NOTE**
 
-Note: use 0-based coordinates in the location object
+Use 0-based coordinates in the location object.
+
+The location field is only used for LGV and not CGV.
+
+---
+
+Checkout the storybook [JBrowse React Linear Genome View docs](https://jbrowse.org/storybook/lgv/main/?path=/story/default-sessions--page) or the [JBrowse React Circular Genome View docs](https://jbrowse.org/storybook/cgv/v1.5.9/?path=/story/getting-started--page) for more configuration examples.
 
 ## Advanced Customization
 
 ### Text Searching
 
-Adding text searching to the JBrowse React Linear Genome View is now available but requires a couple of extra steps including creating an index via the [JBrowse CLI tools](https://jbrowse.org/jb2/docs/cli/#jbrowse-text-index) and adding a text search adapter to list of aggregate text search adapters in this component or to the configuration object of a track.
+Adding text searching to the JBrowse React Linear Genome View (not currently available for the CGV) requires a couple of extra steps. We first need to create an index via the [JBrowse CLI tools](https://jbrowse.org/jb2/docs/cli/#jbrowse-text-index). Once an index is created, we can add a text search adapter to the list of aggregate text search adapters in this component or to the configuration object of a track.
 
 -   `aggregateTextSearchAdapters` (object, optional) - configuration of an index used for text searching
 
@@ -172,15 +184,15 @@ Aggregate text search adapter to use in the component.
     "type": "TrixTextSearchAdapter",
     "textSearchAdapterId": "adapter-id",
     "ixFilePath": {
-        "uri": "path/to/my/ix/file",
+        "uri": "url/path/to/my/ix/file",
         "locationType": "UriLocation"
     },
     "ixxFilePath": {
-        "uri": "path/to/my/ixx/file",
+        "uri": "url/path/to/my/ixx/file",
         "locationType": "UriLocation"
     },
     "metaFilePath": {
-        "uri": "path/to/my/meta.json/file",
+        "uri": "url/path/to/my/meta.json/file",
         "locationType": "UriLocation"
     }
 }
@@ -260,7 +272,7 @@ On a track configuration.
 }
 ```
 
-!["Dash jbrowse component with a custom theme."](https://raw.githubusercontent.com/GMOD/dash_jbrowse/main/images/custom_theme.png)
+!["Dash LGV component with a custom theme."](https://raw.githubusercontent.com/GMOD/dash_jbrowse/main/images/custom_theme.png)
 
 ## Academic Use
 
@@ -273,9 +285,12 @@ publish, please cite the most recent JBrowse paper, which will be linked from
 
 -   More infromation about `Dash` can be found in this [post](https://medium.com/plotly/dash-is-react-for-python-r-and-julia-c75822d1cc24)
 -   Examples of the `LinearGenomeView` component can be found in the [usage.py](usage.py), and [browser.py](./examples/browser.py)
+-   Examples of the `CircularGenomeView` component can be found in the [usage.py](usage_cgv.py)
 -   [JBrowse React Linear Genome View](https://jbrowse.org/storybook/lgv/main/) - documentation and examples of the React LGV component.
+-   [JBrowse React Circular Genome View](https://jbrowse.org/storybook/cgv/main/?path=/story/getting-started--page) - documentation and examples of the React CGV component.
 -   [Config Guide](https://jbrowse.org/jb2/docs/config_guide/) - a guide to configuring assemblies, tracks, text searching and more.
 -   [JBrowse CLI tools](https://jbrowse.org/jb2/docs/cli/) - installation and documentation
+-   [TextSearching](https://jbrowse.org/jb2/docs/config_guide/#text-searching) - documentation of text indexing and text search adapters
 
 ## Contact us
 

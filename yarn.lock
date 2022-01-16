@@ -1242,6 +1242,28 @@
     "react-d3-axis" "^0.1.2"
     "react-popper" "^2.0.0"
 
+"@jbrowse/react-circular-genome-view@^1.5.9":
+  "integrity" "sha512-P8BNyVjf3RspXL9zbez5/Y5yHfeRrOaPAH5oxS+6PkdnAVDLmh+ehzJBA5LMJWW412B8cUs3A1pA/KyP5OJolg=="
+  "resolved" "https://registry.npmjs.org/@jbrowse/react-circular-genome-view/-/react-circular-genome-view-1.5.9.tgz"
+  "version" "1.5.9"
+  dependencies:
+    "@jbrowse/core" "^1.5.9"
+    "@jbrowse/plugin-circular-view" "^1.5.9"
+    "@jbrowse/plugin-config" "^1.5.9"
+    "@jbrowse/plugin-data-management" "^1.5.9"
+    "@jbrowse/plugin-sequence" "^1.5.9"
+    "@jbrowse/plugin-variants" "^1.5.9"
+    "@jbrowse/plugin-wiggle" "^1.5.9"
+    "@material-ui/core" "^4.12.2"
+    "@material-ui/icons" "^4.0.0"
+    "@material-ui/lab" "^4.0.0-alpha.45"
+    "mobx" "^5.10.1"
+    "mobx-react" "^6.0.3"
+    "mobx-state-tree" "3.14.1"
+    "prop-types" "^15.0.0"
+    "react-use-dimensions" "^1.2.1"
+    "rxjs" "^6.0.0"
+
 "@jbrowse/react-linear-genome-view@^1.5.9":
   "integrity" "sha512-je1qTyqSHZmCjtmIg5VunRIw1Oo0zyMlISwbX1jvEeIQSbTA4RQ8w85qichFp26Y3vgrjbT4TAF0jZ7IXcL0dw=="
   "resolved" "https://registry.npmjs.org/@jbrowse/react-linear-genome-view/-/react-linear-genome-view-1.5.9.tgz"
