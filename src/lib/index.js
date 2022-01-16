@@ -1,6 +1,6 @@
 /* eslint-disable import/prefer-default-export */
-import DashJbrowse from './components/DashJbrowse.react';
+import LinearGenomeView from './components/LinearGenomeView.react';
 
 export {
-    DashJbrowse
+    LinearGenomeView
 };

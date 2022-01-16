@@ -1,9 +1,9 @@
-# Dash JBrowse Component
+# Dash JBrowse
 
 [Dash](https://dash.plotly.com/introduction) is a popular open-source framework for building data-driven web apps.
 It is built on top of ReactJS, and provides a [toolkit](https://dash.plotly.com/plugins) for converting React components into dash components that can be used in Dash apps written in Python, R, Julia, F# or Matlab.
 
-`Dash_JBrowse` is a Dash component that wraps the [JBrowse React Linear Genome View](https://jbrowse.org/storybook/lgv/main/) and makes it possible to embed an interactive genome browser into any Dash application.
+Dash JBrowse's `LinearGenomeView` is a Dash component that wraps the [JBrowse React Linear Genome View](https://jbrowse.org/storybook/lgv/main/) and makes it possible to embed an interactive genome browser into any Dash application.
 
 ![Dash JBrowse configured with human data](https://raw.githubusercontent.com/GMOD/dash_jbrowse/main/images/demo.png)
 
@@ -53,7 +53,7 @@ my_assembly = {
 
 app.layout = html.Div(
     [
-        dash_jbrowse.DashJbrowse(
+        dash_jbrowse.LinearGenomeView(
             id="lgv-hg38",
             assembly=my_assembly
         ),
@@ -272,7 +272,7 @@ publish, please cite the most recent JBrowse paper, which will be linked from
 ## Resources
 
 -   More infromation about `Dash` can be found in this [post](https://medium.com/plotly/dash-is-react-for-python-r-and-julia-c75822d1cc24)
--   Examples of the `dash_jbrowse` component can be found in the [usage.py](usage.py), and [browser.py](./examples/browser.py)
+-   Examples of the `LinearGenomeView` component can be found in the [usage.py](usage.py), and [browser.py](./examples/browser.py)
 -   [JBrowse React Linear Genome View](https://jbrowse.org/storybook/lgv/main/) - documentation and examples of the React LGV component.
 -   [Config Guide](https://jbrowse.org/jb2/docs/config_guide/) - a guide to configuring assemblies, tracks, text searching and more.
 -   [JBrowse CLI tools](https://jbrowse.org/jb2/docs/cli/) - installation and documentation

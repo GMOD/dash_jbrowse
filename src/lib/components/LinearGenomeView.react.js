@@ -1,13 +1,13 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import {DashJbrowse as RealComponent} from '../LazyLoader';
+import {LinearGenomeView as RealComponent} from '../LazyLoader';
 
 /**
- * DashJbrowse renders the JBrowse 2 React Linear Genome View.
+ * LinearGenomeView renders the JBrowse 2 React Linear Genome View.
  * Any JB2 LGV configuration is also valid configuration for this
  * component.
  */
-export default class DashJbrowse extends Component {
+export default class LinearGenomeView extends Component {
     render() {
         return (
             <React.Suspense fallback={null}>
@@ -17,9 +17,9 @@ export default class DashJbrowse extends Component {
     }
 }
 
-DashJbrowse.defaultProps = {};
+LinearGenomeView.defaultProps = {};
 
-DashJbrowse.propTypes = {
+LinearGenomeView.propTypes = {
     /**
      * The ID used to identify this component in Dash callbacks.
      */
@@ -79,5 +79,5 @@ DashJbrowse.propTypes = {
     setProps: PropTypes.func,
 };
 
-export const defaultProps = DashJbrowse.defaultProps;
-export const propTypes = DashJbrowse.propTypes;
+export const defaultProps = LinearGenomeView.defaultProps;
+export const propTypes = LinearGenomeView.propTypes;

@@ -1,7 +1,7 @@
 {
-  "src/lib/components/DashJbrowse.react.js": {
-    "description": "DashJbrowse renders the JBrowse 2 React Linear Genome View.\nAny JB2 LGV configuration is also valid configuration for this\ncomponent.",
-    "displayName": "DashJbrowse",
+  "src/lib/components/LinearGenomeView.react.js": {
+    "description": "LinearGenomeView renders the JBrowse 2 React Linear Genome View.\nAny JB2 LGV configuration is also valid configuration for this\ncomponent.",
+    "displayName": "LinearGenomeView",
     "methods": [],
     "props": {
       "id": {
