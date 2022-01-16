@@ -1,6 +1,6 @@
 {
   "name": "dash_jbrowse",
-  "version": "0.0.2",
+  "version": "0.0.3dev",
   "description": "Dash components for JBrowse 2 embeddable components",
   "repository": {
     "type": "git",
@@ -22,13 +22,15 @@
     "build:activated": "npm run build:js && npm run build:backends-activated"
   },
   "author": "Elliot Hershberg <eahershberg@gmail.com>",
-  "contributors": [{
-    "name": "Teresa De Jesus Martinez",
-    "email": "tere486martinez@gmail.com"
-  }],
+  "contributors": [
+    {
+      "name": "Teresa De Jesus Martinez",
+      "email": "tere486martinez@gmail.com"
+    }
+  ],
   "license": "Apache-2.0",
   "dependencies": {
-    "@jbrowse/react-linear-genome-view": "^1.5.1",
+    "@jbrowse/react-linear-genome-view": "^1.5.9",
     "ramda": "^0.26.1"
   },
   "devDependencies": {
