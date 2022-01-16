@@ -1,6 +1,9 @@
 name: Publish Python 🐍 distributions 📦 TestPyPI
 
-on: push
+on:
+  pull_request:
+    branches:
+    - main
 
 jobs:
   build-n-publish:
@@ -35,8 +38,8 @@ jobs:
          python3 setup.py sdist bdist_wheel
          # python3 -m twine upload dist/*
          twine upload --repository-url https://test.pypi.org/legacy/ dist/*
-      #  env:
-      #     TWINE_USERNAME: __token__
-      #     TWINE_PASSWORD: ${{ secrets.TWINE_TEST_TOKEN }}
+       env:
+          TWINE_USERNAME: __token__
+          TWINE_PASSWORD: ${{ secrets.TWINE_TEST_TOKEN }}
 
    
