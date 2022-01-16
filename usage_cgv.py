@@ -115,7 +115,6 @@ app.layout = html.Div(
             assembly=my_assembly,
             tracks=my_tracks,
             defaultSession=my_default_session,
-            configuration=my_theme
         ),
     ],
     id="test",
