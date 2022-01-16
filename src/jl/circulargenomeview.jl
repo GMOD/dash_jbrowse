@@ -6,7 +6,9 @@ export circulargenomeview
     circulargenomeview(;kwargs...)
 
 A CircularGenomeView component.
-
+CircularGenomeView renders the JBrowse 2 React Circular Genome View.
+Any JB2 CGV configuration is also valid configuration for this
+component.
 Keyword arguments:
 - `id` (String; optional): The ID used to identify this component in Dash callbacks.
 - `aggregateTextSearchAdapters` (Array; optional): The text search adapters to use for the browser

@@ -1,6 +1,6 @@
 {
   "src/lib/components/CircularGenomeView.react.js": {
-    "description": "",
+    "description": "CircularGenomeView renders the JBrowse 2 React Circular Genome View.\nAny JB2 CGV configuration is also valid configuration for this\ncomponent.",
     "displayName": "CircularGenomeView",
     "methods": [],
     "props": {

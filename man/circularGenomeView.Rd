@@ -6,7 +6,7 @@
 \title{CircularGenomeView component}
 
 \description{
-
+CircularGenomeView renders the JBrowse 2 React Circular Genome View. Any JB2 CGV configuration is also valid configuration for this component.
 }
 
 \usage{

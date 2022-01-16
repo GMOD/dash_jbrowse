@@ -6,6 +6,11 @@ import {
 
 import {defaultProps, propTypes} from '../components/CircularGenomeView.react.js';
 
+/**
+ * CircularGenomeView renders the JBrowse 2 React Circular Genome View.
+ * Any JB2 CGV configuration is also valid configuration for this
+ * component.
+ */
 export default class CircularGenomeView extends Component {
     render() {
         const {id, assembly, tracks, defaultSession, aggregateTextSearchAdapters, configuration } = this.props;

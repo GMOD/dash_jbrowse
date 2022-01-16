@@ -5,7 +5,9 @@ from dash.development.base_component import Component, _explicitize_args
 
 class CircularGenomeView(Component):
     """A CircularGenomeView component.
-
+CircularGenomeView renders the JBrowse 2 React Circular Genome View.
+Any JB2 CGV configuration is also valid configuration for this
+component.
 
 Keyword arguments:
 
