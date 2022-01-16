@@ -66,6 +66,18 @@ my_default_session = {
         "id": "circularView",
         "type": "CircularView",
         "bpPerPx": 5000000, 
+        "tracks": [{
+            "id": 'uPdLKHik1',
+            "type": 'VariantTrack',
+            "configuration": 'pacbio_sv_vcf',
+            "displays": [
+                {
+                    "id": 'v9QVAR3oaB',
+                    "type": 'ChordVariantDisplay',
+                    "configuration": 'pacbio_sv_vcf-ChordVariantDisplay',
+                },
+            ],
+        }],
     },
 }
 
@@ -102,7 +114,8 @@ app.layout = html.Div(
             id="circular-hg19",
             assembly=my_assembly,
             tracks=my_tracks,
-            defaultSession=my_default_session
+            defaultSession=my_default_session,
+            configuration=my_theme
         ),
     ],
     id="test",

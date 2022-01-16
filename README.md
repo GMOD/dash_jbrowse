@@ -156,6 +156,7 @@ _location object_
 ```
 
 Note: use 0-based coordinates in the location object
+Note: location is only used for LGV and not CVG
 
 ## Advanced Customization
 
