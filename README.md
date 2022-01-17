@@ -5,8 +5,6 @@ It is built on top of ReactJS, and provides a [toolkit](https://dash.plotly.com/
 
 Dash JBrowse's `LinearGenomeView` is a Dash component that wraps the [JBrowse React Linear Genome View](https://jbrowse.org/storybook/lgv/main/) and makes it possible to embed an interactive genome browser into any Dash application. Now supporting the `CircularGenomeView` as well. 
 
-The suite enables users to configure and integrate JBrowse's interactive genome browser in any python ecosystem.
-
 ![Dash JBrowse LGV configured with human data](https://raw.githubusercontent.com/GMOD/dash_jbrowse/main/images/demo.png)
 
 ![Dash JBrowse CGV configured with human data](https://raw.githubusercontent.com/GMOD/dash_jbrowse/main/images/demo2.png)
