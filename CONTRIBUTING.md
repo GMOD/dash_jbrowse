@@ -20,7 +20,7 @@ This will start a flask server with a configured dash_jbrowse component. Check o
     ```
     $ npm install
     ```
-2. Create a virtual env and activate.
+2. Create a virtual env and activate (you can also use conda).
     ```
     $ virtualenv venv
     $ . venv/bin/activate
@@ -36,7 +36,7 @@ This will start a flask server with a configured dash_jbrowse component. Check o
     $ pip install -r tests/requirements.txt
     ```
 
-### Write your component code in `src/lib/components/LinearGenomeView.react.js`.
+### Write your component code in `src/`.
 
 - The demo app is in `src/demo` and you will import your example component code into your demo app.
 - Test your code in a Python environment:
@@ -57,9 +57,7 @@ This will start a flask server with a configured dash_jbrowse component. Check o
     - Make sure the stylesheets are added to the `_css_dist` dict in `dash_jbrowse/__init__.py` so dash will serve them automatically when the component suite is requested.
 - [Review your code](./review_checklist.md)
 
-### Peer Review
-Create a pull request on this repo and contact the JBrowse team!
-### Create a production build and publish:
+### Contributing and Peer Review:
 1. Build your code:
     ```
     $ npm run build
@@ -76,20 +74,7 @@ Create a pull request on this repo and contact the JBrowse team!
     ```
     $ pip install dash_jbrowse-<version>.tar.gz
     ```
-4. If it works, then you can publish the component to NPM and PyPI
-    1. Publish on PyPI
-        ```
-        $ twine upload dist/*
-        ```
-    2. Cleanup the dist folder (optional)
-        ```
-        $ rm -rf dist
-        ```
-    3. Publish on NPM (Optional if chosen False in `publish_on_npm`)
-        ```
-        $ npm publish
-        ```
-        _Publishing your component to NPM will make the JavaScript bundles available on the unpkg CDN. By default, Dash serves the component library's CSS and JS locally, but if you choose to publish the package to NPM you can set `serve_locally` to `False` and you may see faster load times._
+4. If it works, create a pull request on this repo to main and contact the JBrowse team!
 
 <!-- 5. Share your component with the community! https://community.plotly.com/c/dash
     1. Publish this repository to GitHub
@@ -97,4 +82,14 @@ Create a pull request on this repo and contact the JBrowse team!
     3. Create a post in the Dash community forum: https://community.plotly.com/c/dash -->
 
 
+
+There are two main workflows in this repo that facilitate the deployments of the package to both test PyPI and production PyPI. The main.yml is a workflow that gets triggered when a PR gets merged into main. This worklfow will create a build and upload the distribution to the test pypi environment. You can then test that build before creating a release. 
+
+### Creating a new release
+You can create a new release of the package by creating a new tag on the repo and publishing it. This will trigger the release.yml workflow which will create a build and publish it to production PyPI
+Steps:
+1. Once main is ready to go, create a new tag with the latest version of the package. You can find this in the [package.json](package.json)
+2. Create a description of your release and publish it.
+3. Checkout the `Publish Python 🐍 distributions 📦 PyPI` workflow. Once that is completed, you can checkout the latest release here https://pypi.org/project/dash-jbrowse/
+4. Verify that you can install your package and you are done! :) 
 
