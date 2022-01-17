@@ -158,14 +158,11 @@ _location object_
     "end": 1000
 }
 ```
----
-**NOTE**
 
-Use 0-based coordinates in the location object.
+Note: 
+* Use 0-based coordinates in the location object.
 
-The location field is only used for LGV and not CGV.
-
----
+* The location field is only used for LGV and not CGV.
 
 Checkout the storybook [JBrowse React Linear Genome View docs](https://jbrowse.org/storybook/lgv/main/?path=/story/default-sessions--page) or the [JBrowse React Circular Genome View docs](https://jbrowse.org/storybook/cgv/v1.5.9/?path=/story/getting-started--page) for more configuration examples.
 

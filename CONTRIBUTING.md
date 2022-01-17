@@ -20,7 +20,7 @@ This will start a flask server with a configured dash_jbrowse component. Check o
     ```
     $ npm install
     ```
-2. Create a virtual env and activate.
+2. Create a virtual env and activate (you can also use conda).
     ```
     $ virtualenv venv
     $ . venv/bin/activate
@@ -36,7 +36,7 @@ This will start a flask server with a configured dash_jbrowse component. Check o
     $ pip install -r tests/requirements.txt
     ```
 
-### Write your component code in `src/lib/components/LinearGenomeView.react.js`.
+### Write your component code in `src/`.
 
 - The demo app is in `src/demo` and you will import your example component code into your demo app.
 - Test your code in a Python environment:
@@ -83,10 +83,10 @@ This will start a flask server with a configured dash_jbrowse component. Check o
 
 
 
-There are two main workflows in this repo that facilitate the deployments of the package to both test PyPI and production PyPI. The main.yml is a workflow that gets triggered when a PR gets merged to main. This worklfow will create a build and upload the distribution to the test pypi environment. You can then test that build before creating a release. 
+There are two main workflows in this repo that facilitate the deployments of the package to both test PyPI and production PyPI. The main.yml is a workflow that gets triggered when a PR gets merged into main. This worklfow will create a build and upload the distribution to the test pypi environment. You can then test that build before creating a release. 
 
 ### Creating a new release
-You can create a new release of the package by creating a new tag on the repo and publishing it. The creation of a new tag will trigger the release github action workflow which will create a build and publish it to production PyPI
+You can create a new release of the package by creating a new tag on the repo and publishing it. This will trigger the release.yml workflow which will create a build and publish it to production PyPI
 Steps:
 1. Once main is ready to go, create a new tag with the latest version of the package. You can find this in the [package.json](package.json)
 2. Create a description of your release and publish it.
