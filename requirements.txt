@@ -1,2 +1,4 @@
 # dash is required to call `build:py`
-dash[dev]>=1.15.0
+dash[dev,testing]==2.3.0
+pytest>=6.2.5
+Werkzeug==2.0.3
