@@ -1,7 +1,8 @@
 import dash
-import dash_html_components as html
-from dash_jbrowse import LinearGenomeView
+import dash_jbrowse
+from dash import html
 
+print(dash_jbrowse.__version__)
 app = dash.Dash(__name__)
 
 my_assembly = {
@@ -130,7 +131,7 @@ my_theme = {
 }
 app.layout = html.Div(
     [
-        LinearGenomeView(
+        dash_jbrowse.LinearGenomeView(
             id="lgv-hg38",
             assembly=my_assembly,
             tracks=my_tracks,

@@ -18,10 +18,11 @@ $ pip install dash_jbrowse
 Basic linear genome view with an assembly
 
 ```
-import dash_jbrowse
 import dash
-import dash_html_components as html
+import dash_jbrowse
+from dash import html
 
+print(dash_jbrowse.__version__)
 app = dash.Dash(__name__)
 
 my_assembly = {

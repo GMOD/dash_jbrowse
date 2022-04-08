@@ -1,6 +1,6 @@
 import dash
-import dash_html_components as html
-from dash_jbrowse import CircularGenomeView 
+import dash_jbrowse
+from dash import html
 
 app = dash.Dash(__name__)
 
@@ -110,7 +110,7 @@ my_theme = {
 
 app.layout = html.Div(
     [
-        CircularGenomeView(
+        dash_jbrowse.CircularGenomeView(
             id="circular-hg19",
             assembly=my_assembly,
             tracks=my_tracks,

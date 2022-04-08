@@ -2,5 +2,6 @@
 # Switch into a virtual environment
 # pip install -r requirements.txt
 
-dash[dev,testing]>=1.15.0
-pytest[dev,testing]>=6.2.5
+dash[dev,testing]==2.3.0
+pytest>=6.2.5
+Werkzeug==2.0.3
