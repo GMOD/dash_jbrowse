@@ -1,6 +1,6 @@
 {
   "name": "dash_jbrowse",
-  "version": "1.0.5",
+  "version": "1.1.0",
   "description": "Dash components for JBrowse 2 embeddable components",
   "repository": {
     "type": "git",
