@@ -1,3 +1,3 @@
-(window.webpackJsonpdash_jbrowse=window.webpackJsonpdash_jbrowse||[]).push([[2],{2611:function(e,n,o){"use strict";var s=function(){if("undefined"!=typeof self)return self;if("undefined"!=typeof window)return window;if(void 0!==s)return s;throw new Error("unable to locate global object")}();e.exports=n=s.fetch,s.fetch&&(n.default=s.fetch.bind(s)),n.Headers=s.Headers,n.Request=s.Request,n.Response=s.Response}}]);
+(window.webpackJsonpdash_jbrowse=window.webpackJsonpdash_jbrowse||[]).push([[2],{2283:function(e,n,o){"use strict";var s=function(){if("undefined"!=typeof self)return self;if("undefined"!=typeof window)return window;if(void 0!==s)return s;throw new Error("unable to locate global object")}();e.exports=n=s.fetch,s.fetch&&(n.default=s.fetch.bind(s)),n.Headers=s.Headers,n.Request=s.Request,n.Response=s.Response}}]);
 //# sourceMappingURL=async-null.js.map
 //# sourceMappingURL=async-null.js.map
