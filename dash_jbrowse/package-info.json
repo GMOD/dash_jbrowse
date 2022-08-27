@@ -1,6 +1,6 @@
 {
   "name": "dash_jbrowse",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Dash components for JBrowse 2 embeddable components",
   "repository": {
     "type": "git",
@@ -58,7 +58,7 @@
     "eslint-plugin-react": "^7.14.2",
     "npm": "^6.1.0",
     "prop-types": "^15.7.2",
-    "react": "^16.8.6",
+    "react": "^18.0.0",
     "react-docgen": "^4.1.1",
     "react-dom": "^16.8.6",
     "style-loader": "^0.23.1",
