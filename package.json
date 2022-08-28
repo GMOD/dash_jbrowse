@@ -63,10 +63,10 @@
     "react-dom": "^16.14.0",
     "style-loader": "^0.23.1",
     "styled-jsx": "^3.4.7",
-    "terser-webpack-plugin": "^2.3.8",
-    "webpack": "^4.36.1",
-    "webpack-cli": "^3.3.6",
-    "webpack-serve": "^3.1.0"
+    "terser-webpack-plugin": "^4.2.3",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12",
+    "webpack-serve": "^3.2.0"
   },
   "engines": {
     "node": ">=8.11.0",
