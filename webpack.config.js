@@ -123,6 +123,9 @@ module.exports = (env, argv) => {
                 filename: '[file].map',
                 exclude: ['async-plotlyjs'],
             }),
+            new webpack.optimize.LimitChunkCountPlugin({
+                maxChunks: 1,
+            }),
         ],
     };
 };
