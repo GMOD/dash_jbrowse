@@ -1416,7 +1416,7 @@
     "react-draggable" "^4.4.5"
     "react-popper" "^2.0.0"
 
-"@jbrowse/react-circular-genome-view@^2.0.0":
+"@jbrowse/react-circular-genome-view@^2.1.5":
   "integrity" "sha512-hSOXqBMjouLWtj0TJDvGNXvm+F+MdR7bj+N6ums4ikKjcL8v9nc05eRplxkS5bEzs257dNAOG7DC7UMDUT6q8g=="
   "resolved" "https://registry.npmjs.org/@jbrowse/react-circular-genome-view/-/react-circular-genome-view-2.1.5.tgz"
   "version" "2.1.5"
@@ -1442,7 +1442,7 @@
     "rxjs" "^6.0.0"
     "tss-react" "^3.7.0"
 
-"@jbrowse/react-linear-genome-view@^2.0.0":
+"@jbrowse/react-linear-genome-view@^2.1.5":
   "integrity" "sha512-uXnjXKlhYvMxpo+8nhpmMkW0WUB/Ff2urgZ17gYNumvRgHoVE3cPeOcWnyfpeCqANE1cJhqBeOWu+k0y9nMZbQ=="
   "resolved" "https://registry.npmjs.org/@jbrowse/react-linear-genome-view/-/react-linear-genome-view-2.1.5.tgz"
   "version" "2.1.5"

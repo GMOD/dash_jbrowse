@@ -1,6 +1,6 @@
 {
   "name": "dash_jbrowse",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Dash components for JBrowse 2 embeddable components",
   "repository": {
     "type": "git",
@@ -30,8 +30,8 @@
   ],
   "license": "Apache-2.0",
   "dependencies": {
-    "@jbrowse/react-circular-genome-view": "^2.0.0",
-    "@jbrowse/react-linear-genome-view": "^2.0.0",
+    "@jbrowse/react-circular-genome-view": "^2.1.5",
+    "@jbrowse/react-linear-genome-view": "^2.1.5",
     "ansi-regex": "^6.0.1",
     "follow-redirects": "^1.14.7",
     "glob-parent": "^6.0.2",
