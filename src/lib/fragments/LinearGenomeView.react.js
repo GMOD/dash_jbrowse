@@ -1,52 +1,110 @@
+/* eslint-disable new-cap */
 import React, {Component} from 'react';
 import {
     createViewState,
     JBrowseLinearGenomeView,
 } from '@jbrowse/react-linear-genome-view';
 import Plugin from '@jbrowse/core/Plugin';
+import { types } from 'mobx-state-tree';
+import { InternetAccount } from '@jbrowse/core/pluggableElementTypes/models';
+import { ConfigurationSchema, ConfigurationReference } from '@jbrowse/core/configuration';
+import InternetAccountType from '@jbrowse/core/pluggableElementTypes/InternetAccountType';
 
 import {defaultProps, propTypes} from '../components/LinearGenomeView.react';
 
-class HighlightRegionPlugin extends Plugin {
-  name = 'HighlightRegionPlugin'
+const notebookColabSchema = ConfigurationSchema(
+  'ColabLocalFileInternetAccount',
+  {},
+  {
+    explicitlyTyped: true
+  }
+)
+const stateModelColabFactory = (
+  configSchema,
+) => {
+  return InternetAccount.named('ColabLocalFileInternetAccount')
+    .props({
+      type: types.literal('ColabLocalFileInternetAccount'),
+      configuration: ConfigurationReference(configSchema),
+    })
+    .actions(self => ({
+      getFetcher(
+          location,
+        ) {
+          return async (
+            input,
+            init,
+          ) => {
+              if (location.uri.startsWith('file://')) {
+                  console.log(location.uri)
+                  // TODO: get data and invoke registered method
+              } else {
+                console.log(location)
+              }
+              console.log("This is a test")
+              const authToken = await self.getToken(location)
+              const newInit = self.addAuthHeaderToInit(init, authToken)
+              return fetch(input, newInit)
+          }
+        },
+    }))
+}
+// class HighlightRegionPlugin extends Plugin {
+//   name = 'HighlightRegionPlugin'
+
+//   install(pluginManager) {
+//     pluginManager.addToExtensionPoint(
+//       'Core-extendPluggableElement',
+      
+//       (pluggableElement) => {
+//         if (pluggableElement.name === 'LinearGenomeView') {
+//           const { stateModel } = pluggableElement
+//           const newStateModel = stateModel.extend(self => {
+//             const superRubberBandMenuItems = self.rubberBandMenuItems
+//             return {
+//               views: {
+//                 rubberBandMenuItems() {
+//                   return [
+//                     ...superRubberBandMenuItems(),
+//                     {
+//                       label: 'Console log selected region',
+//                       onClick: () => {
+//                         const { leftOffset, rightOffset } = self
+//                         const selectedRegions = self.getSelectedRegions(
+//                           leftOffset,
+//                           rightOffset,
+//                         )
+//                         // console log the list of potentially multiple
+//                         // regions that were selected
+//                         console.log(selectedRegions)
+//                       },
+//                     },
+//                   ]
+//                 },
+//               },
+//             }
+//           })
+
+//           pluggableElement.stateModel = newStateModel
+//         }
+//         return pluggableElement
+//       },
+//     )
+//   }
+
+//   configure() {}
+// }
+class NotebookPlugin extends Plugin {
+  name = 'NotebookPlugin'
 
   install(pluginManager) {
-    pluginManager.addToExtensionPoint(
-      'Core-extendPluggableElement',
-      (pluggableElement) => {
-        if (pluggableElement.name === 'LinearGenomeView') {
-          const { stateModel } = pluggableElement
-          const newStateModel = stateModel.extend(self => {
-            const superRubberBandMenuItems = self.rubberBandMenuItems
-            return {
-              views: {
-                rubberBandMenuItems() {
-                  return [
-                    ...superRubberBandMenuItems(),
-                    {
-                      label: 'Console log selected region',
-                      onClick: () => {
-                        const { leftOffset, rightOffset } = self
-                        const selectedRegions = self.getSelectedRegions(
-                          leftOffset,
-                          rightOffset,
-                        )
-                        // console log the list of potentially multiple
-                        // regions that were selected
-                        console.log(selectedRegions)
-                      },
-                    },
-                  ]
-                },
-              },
-            }
-          })
-
-          pluggableElement.stateModel = newStateModel
-        }
-        return pluggableElement
-      },
-    )
+    pluginManager.addInternetAccountType(() => {
+      return new InternetAccountType({
+        name: 'ColabLocalFileInternetAccount',
+        configSchema: notebookColabSchema,
+        stateModel: stateModelColabFactory(notebookColabSchema),
+      })
+    })
   }
 
   configure() {}
@@ -74,7 +132,7 @@ export default class LinearGenomeView extends Component {
             location,
             aggregateTextSearchAdapters,
             configuration,
-            plugins: [HighlightRegionPlugin],
+            plugins: [NotebookPlugin],
         });
 
         return (

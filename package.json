@@ -31,7 +31,7 @@
   "license": "Apache-2.0",
   "dependencies": {
     "@jbrowse/react-circular-genome-view": "^2.1.5",
-    "@jbrowse/react-linear-genome-view": "^2.1.5",
+    "@jbrowse/react-linear-genome-view": "file:///Users/teresamartinez/Desktop/JBrowse2/dash_jbrowse/jbrowse-react-linear-genome-view-v2.1.7.tgz",
     "ansi-regex": "^6.0.1",
     "follow-redirects": "^1.14.7",
     "glob-parent": "^6.0.2",
