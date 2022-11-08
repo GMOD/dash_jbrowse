@@ -31,10 +31,11 @@ Those elements have the following types:
   - `start` (Real; optional)
   - `end` (Real; optional)
   - `assemblyName` (String; optional)
+- `plugins` (Array; optional): The inline plugins to use for the browser
 - `tracks` (Array; optional): The tracks to use for the browser.
 """
 function lineargenomeview(; kwargs...)
-        available_props = Symbol[:id, :aggregateTextSearchAdapters, :assembly, :configuration, :defaultSession, :location, :tracks]
+        available_props = Symbol[:id, :aggregateTextSearchAdapters, :assembly, :configuration, :defaultSession, :location, :plugins, :tracks]
         wild_props = Symbol[]
         return Component("lineargenomeview", "LinearGenomeView", "dash_jbrowse", available_props, wild_props; kwargs...)
 end

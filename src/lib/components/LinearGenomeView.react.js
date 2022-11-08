@@ -67,6 +67,10 @@ LinearGenomeView.propTypes = {
     aggregateTextSearchAdapters: PropTypes.array,
 
     /**
+     * The inline plugins to use for the browser
+     */
+    plugins: PropTypes.array,
+    /**
      * The theme configuration object
      */
     configuration: PropTypes.shape({

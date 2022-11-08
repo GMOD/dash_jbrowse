@@ -53,7 +53,10 @@ CircularGenomeView.propTypes = {
      * The text search adapters to use for the browser
      */
     aggregateTextSearchAdapters: PropTypes.array,
-
+    /**
+     * The inline plugins to use for the browser
+     */
+    plugins: PropTypes.array,
     /**
      * The theme configuration object
      */

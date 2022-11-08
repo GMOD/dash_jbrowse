@@ -1,6 +1,6 @@
 Package: dashJbrowse
 Title: Dash components for JBrowse 2 embeddable components
-Version: 1.1.3
+Version: 1.2.0
 Description: Dash components for JBrowse 2 embeddable components
 Depends: R (>= 3.0.2)
 Imports: 

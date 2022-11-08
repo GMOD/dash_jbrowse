@@ -13,7 +13,7 @@ import {defaultProps, propTypes} from '../components/CircularGenomeView.react.js
  */
 export default class CircularGenomeView extends Component {
     render() {
-        const {id, assembly, tracks, defaultSession, aggregateTextSearchAdapters, configuration } = this.props;
+        const {id, assembly, tracks, defaultSession, aggregateTextSearchAdapters, configuration, plugins } = this.props;
 
         const viewState = createViewState({
             assembly,
@@ -21,6 +21,7 @@ export default class CircularGenomeView extends Component {
             defaultSession,
             aggregateTextSearchAdapters,
             configuration,
+            plugins
         });
 
         return (

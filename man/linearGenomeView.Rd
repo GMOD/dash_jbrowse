@@ -12,7 +12,7 @@ LinearGenomeView renders the JBrowse 2 React Linear Genome View. Any JB2 LGV con
 \usage{
 linearGenomeView(id=NULL, aggregateTextSearchAdapters=NULL, assembly=NULL,
 configuration=NULL, defaultSession=NULL, location=NULL,
-tracks=NULL)
+plugins=NULL, tracks=NULL)
 }
 
 \arguments{
@@ -42,6 +42,8 @@ those elements have the following types:
   - start (numeric; optional)
   - end (numeric; optional)
   - assemblyname (character; optional). The location to use for the browser.}
+
+\item{plugins}{Unnamed list. The inline plugins to use for the browser}
 
 \item{tracks}{Unnamed list. The tracks to use for the browser.}
 }

@@ -67,6 +67,13 @@
         "required": false,
         "description": "The text search adapters to use for the browser"
       },
+      "plugins": {
+        "type": {
+          "name": "array"
+        },
+        "required": false,
+        "description": "The inline plugins to use for the browser"
+      },
       "configuration": {
         "type": {
           "name": "shape",
@@ -189,6 +196,13 @@
         },
         "required": false,
         "description": "The text search adapters to use for the browser"
+      },
+      "plugins": {
+        "type": {
+          "name": "array"
+        },
+        "required": false,
+        "description": "The inline plugins to use for the browser"
       },
       "configuration": {
         "type": {

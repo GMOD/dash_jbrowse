@@ -59,15 +59,18 @@ Keyword arguments:
 
     - start (number; optional)
 
+- plugins (list; optional):
+    The inline plugins to use for the browser.
+
 - tracks (list; optional):
     The tracks to use for the browser."""
     @_explicitize_args
-    def __init__(self, id=Component.UNDEFINED, assembly=Component.UNDEFINED, tracks=Component.UNDEFINED, defaultSession=Component.UNDEFINED, location=Component.UNDEFINED, aggregateTextSearchAdapters=Component.UNDEFINED, configuration=Component.UNDEFINED, **kwargs):
-        self._prop_names = ['id', 'aggregateTextSearchAdapters', 'assembly', 'configuration', 'defaultSession', 'location', 'tracks']
+    def __init__(self, id=Component.UNDEFINED, assembly=Component.UNDEFINED, tracks=Component.UNDEFINED, defaultSession=Component.UNDEFINED, location=Component.UNDEFINED, aggregateTextSearchAdapters=Component.UNDEFINED, plugins=Component.UNDEFINED, configuration=Component.UNDEFINED, **kwargs):
+        self._prop_names = ['id', 'aggregateTextSearchAdapters', 'assembly', 'configuration', 'defaultSession', 'location', 'plugins', 'tracks']
         self._type = 'LinearGenomeView'
         self._namespace = 'dash_jbrowse'
         self._valid_wildcard_attributes =            []
-        self.available_properties = ['id', 'aggregateTextSearchAdapters', 'assembly', 'configuration', 'defaultSession', 'location', 'tracks']
+        self.available_properties = ['id', 'aggregateTextSearchAdapters', 'assembly', 'configuration', 'defaultSession', 'location', 'plugins', 'tracks']
         self.available_wildcard_properties =            []
         _explicit_args = kwargs.pop('_explicit_args')
         _locals = locals()
