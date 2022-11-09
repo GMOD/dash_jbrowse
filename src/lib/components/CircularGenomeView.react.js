@@ -48,7 +48,10 @@ CircularGenomeView.propTypes = {
         name: PropTypes.string.isRequired,
         view: PropTypes.object
     }),
-
+    /**
+     * The internet accounts to use for the browser
+     */
+    internetAccounts: PropTypes.array,
     /**
      * The text search adapters to use for the browser
      */

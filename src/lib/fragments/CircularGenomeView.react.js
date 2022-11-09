@@ -15,18 +15,19 @@ import {defaultProps, propTypes} from '../components/CircularGenomeView.react.js
 export default class CircularGenomeView extends Component {
     render() {
         // eslint-disable-next-line no-unused-vars
-        const {id, assembly, tracks, defaultSession, aggregateTextSearchAdapters, configuration, plugins } = this.props;
+        const {id, assembly, tracks, defaultSession, aggregateTextSearchAdapters, configuration, internetAccounts, plugins } = this.props;
         const viewState = createViewState({
             assembly,
             tracks,
             defaultSession,
             aggregateTextSearchAdapters,
             configuration,
+            internetAccounts,
             plugins: [NotebookPlugin],
         });
 
         return (
-            <div id={"cgv-id" || id}>
+            <div id={id || "cgv-id"}>
                 <JBrowseCircularGenomeView viewState={viewState} />
             </div>
         );

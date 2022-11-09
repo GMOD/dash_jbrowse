@@ -11,8 +11,8 @@ CircularGenomeView renders the JBrowse 2 React Circular Genome View. Any JB2 CGV
 
 \usage{
 circularGenomeView(id=NULL, aggregateTextSearchAdapters=NULL, assembly=NULL,
-configuration=NULL, defaultSession=NULL, plugins=NULL,
-tracks=NULL)
+configuration=NULL, defaultSession=NULL,
+internetAccounts=NULL, plugins=NULL, tracks=NULL)
 }
 
 \arguments{
@@ -35,6 +35,8 @@ those elements have the following types:
 those elements have the following types:
   - name (character; required)
   - view (named list; optional). The default session to use for the browser.}
+
+\item{internetAccounts}{Unnamed list. The internet accounts to use for the browser}
 
 \item{plugins}{Unnamed list. The inline plugins to use for the browser}
 

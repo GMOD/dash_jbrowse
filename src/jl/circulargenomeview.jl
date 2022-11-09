@@ -25,11 +25,12 @@ Those elements have the following types:
 Those elements have the following types:
   - `name` (String; required)
   - `view` (Dict; optional)
+- `internetAccounts` (Array; optional): The internet accounts to use for the browser
 - `plugins` (Array; optional): The inline plugins to use for the browser
 - `tracks` (Array; optional): The tracks to use for the browser.
 """
 function circulargenomeview(; kwargs...)
-        available_props = Symbol[:id, :aggregateTextSearchAdapters, :assembly, :configuration, :defaultSession, :plugins, :tracks]
+        available_props = Symbol[:id, :aggregateTextSearchAdapters, :assembly, :configuration, :defaultSession, :internetAccounts, :plugins, :tracks]
         wild_props = Symbol[]
         return Component("circulargenomeview", "CircularGenomeView", "dash_jbrowse", available_props, wild_props; kwargs...)
 end
