@@ -197,6 +197,13 @@
         "required": false,
         "description": "The text search adapters to use for the browser"
       },
+      "internetAccounts": {
+        "type": {
+          "name": "array"
+        },
+        "required": false,
+        "description": "The internet accounts to use for the browser"
+      },
       "plugins": {
         "type": {
           "name": "array"

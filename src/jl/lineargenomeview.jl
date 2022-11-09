@@ -25,6 +25,7 @@ Those elements have the following types:
 Those elements have the following types:
   - `name` (String; required)
   - `view` (Dict; optional)
+- `internetAccounts` (Array; optional): The internet accounts to use for the browser
 - `location` (optional): The location to use for the browser.. location has the following type: String | lists containing elements 'refName', 'start', 'end', 'assemblyName'.
 Those elements have the following types:
   - `refName` (String; required)
@@ -35,7 +36,7 @@ Those elements have the following types:
 - `tracks` (Array; optional): The tracks to use for the browser.
 """
 function lineargenomeview(; kwargs...)
-        available_props = Symbol[:id, :aggregateTextSearchAdapters, :assembly, :configuration, :defaultSession, :location, :plugins, :tracks]
+        available_props = Symbol[:id, :aggregateTextSearchAdapters, :assembly, :configuration, :defaultSession, :internetAccounts, :location, :plugins, :tracks]
         wild_props = Symbol[]
         return Component("lineargenomeview", "LinearGenomeView", "dash_jbrowse", available_props, wild_props; kwargs...)
 end
