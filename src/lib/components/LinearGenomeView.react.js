@@ -67,6 +67,10 @@ LinearGenomeView.propTypes = {
     aggregateTextSearchAdapters: PropTypes.array,
 
     /**
+     * The internet accounts to use for the browser
+     */
+     internetAccounts: PropTypes.array,
+    /**
      * The inline plugins to use for the browser
      */
     plugins: PropTypes.array,

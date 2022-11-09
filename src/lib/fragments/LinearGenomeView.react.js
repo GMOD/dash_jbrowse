@@ -6,7 +6,7 @@ import {
 } from '@jbrowse/react-linear-genome-view';
 import Plugin from '@jbrowse/core/Plugin';
 import { types } from 'mobx-state-tree';
-import { InternetAccount } from '@jbrowse/core/pluggableElementTypes/models';
+import { InternetAccount, BaseInternetAccountConfig } from '@jbrowse/core/pluggableElementTypes/models';
 import { ConfigurationSchema, ConfigurationReference } from '@jbrowse/core/configuration';
 import InternetAccountType from '@jbrowse/core/pluggableElementTypes/InternetAccountType';
 
@@ -15,8 +15,9 @@ import {defaultProps, propTypes} from '../components/LinearGenomeView.react';
 const notebookColabSchema = ConfigurationSchema(
   'ColabLocalFileInternetAccount',
   {},
-  {
-    explicitlyTyped: true
+  { 
+    baseConfiguration: BaseInternetAccountConfig,
+    explicitlyTyped: true,
   }
 )
 const stateModelColabFactory = (
@@ -27,7 +28,10 @@ const stateModelColabFactory = (
       type: types.literal('ColabLocalFileInternetAccount'),
       configuration: ConfigurationReference(configSchema),
     })
-    .actions(self => ({
+    .actions(() => ({
+      getTokenFromUser(resolve) {
+        resolve('')
+      },
       getFetcher(
           location,
         ) {
@@ -42,9 +46,7 @@ const stateModelColabFactory = (
                 console.log(location)
               }
               console.log("This is a test")
-              const authToken = await self.getToken(location)
-              const newInit = self.addAuthHeaderToInit(init, authToken)
-              return fetch(input, newInit)
+              return fetch(input, init)
           }
         },
     }))
@@ -117,7 +119,7 @@ class NotebookPlugin extends Plugin {
 export default class LinearGenomeView extends Component {
     render() {
         // eslint-disable-next-line no-unused-vars
-        const {id, assembly, tracks, defaultSession, location, aggregateTextSearchAdapters, configuration, plugins } = this.props;
+        const {id, assembly, tracks, defaultSession, location, aggregateTextSearchAdapters, configuration, internetAccounts, plugins } = this.props;
 
         // console.log("location", location)
         // let formatted = location
@@ -132,6 +134,7 @@ export default class LinearGenomeView extends Component {
             location,
             aggregateTextSearchAdapters,
             configuration,
+            internetAccounts,
             plugins: [NotebookPlugin],
         });
 
