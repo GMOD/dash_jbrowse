@@ -34,12 +34,11 @@ const stateModelColabFactory = (
                     init,
                 ) => {
                     console.log("ColabPlugin", location)
+                    console.log("window.google", window.google)
                     const isColab =  window.google !== undefined && window.google.colab
                     console.log("isColab: ", isColab)
-                    if (location.uri.startsWith('file://') && isColab) {
-                        if (isColab) {
-                            console.log("IAMMMMM in colabbbbb")
-                        }
+                    if (isColab) {
+                        console.log("IAMMMMM in colabbbbb")
                         console.log(location.uri)
                         // TODO: get data and invoke registered method
                         // eslint-disable-next-line no-undefined
