@@ -14,12 +14,18 @@ my_assembly = {
             "type": "BgzipFastaAdapter",
             "fastaLocation": {
                 "uri": "https://s3.amazonaws.com/jbrowse.org/genomes/GRCh38/fasta/GRCh38.fa.gz",
+                "locationType": "UriLocation",
+                "internetAccountId": "jupyterLocalFile"
             },
             "faiLocation": {
                 "uri": "https://s3.amazonaws.com/jbrowse.org/genomes/GRCh38/fasta/GRCh38.fa.gz.fai",
+                "locationType": "UriLocation",
+                "internetAccountId": "jupyterLocalFile"
             },
             "gziLocation": {
                 "uri": "https://s3.amazonaws.com/jbrowse.org/genomes/GRCh38/fasta/GRCh38.fa.gz.gzi",
+                "locationType": "UriLocation",
+                "internetAccountId": "jupyterLocalFile"
             },
         },
     },
@@ -96,6 +102,12 @@ my_internet_accounts = [
       "internetAccountId": "colabLocalFile",
       "name": "Colab",
       "description": "Account to access local files in Colab",
+    },
+    {
+      "type": "JupyterNotebookLocalFileInternetAccount",
+      "internetAccountId": "jupyterLocalFile",
+      "name": "Jupyter",
+      "description": "Account to access local files in Jupyter notebook",
     },
 ]
 
