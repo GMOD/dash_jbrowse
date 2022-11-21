@@ -49,7 +49,7 @@ const stateModelColabFactory = (
 
                         // eslint-disable-next-line no-undef
                         const result = await google.colab.kernel.invokeFunction(
-                            'ReadFile',
+                            'ColabLocalFile',
                             args,
                             {})
                         const data = result.data["text/plain"]
