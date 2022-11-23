@@ -6,6 +6,8 @@ import { InternetAccount, BaseInternetAccountConfig } from '@jbrowse/core/plugga
 import { ConfigurationSchema, ConfigurationReference } from '@jbrowse/core/configuration';
 import InternetAccountType from '@jbrowse/core/pluggableElementTypes/InternetAccountType';
 
+const google = window.google
+
 const ColabNotebookSchema = ConfigurationSchema(
     'ColabLocalFileInternetAccount',
     {},
@@ -37,6 +39,8 @@ const stateModelColabFactory = (
                 ) => {
                     console.log("ColabPlugin", location)
                     console.log("window", window)
+                    // eslint-disable-next-line no-magic-numbers
+                    await new Promise(r => setTimeout(r, 2000))
                     // const isColab =  window.google !== undefined && window.google.colab
                     // console.log("isColab: ", isColab)
                     // if (isColab) {
@@ -50,7 +54,7 @@ const stateModelColabFactory = (
 
                     // eslint-disable-next-line no-undef
                     
-                    const result = await window.google.colab.kernel.invokeFunction(
+                    const result = await google.colab.kernel.invokeFunction(
                         'ColabLocalFile',
                         args,
                         {})
