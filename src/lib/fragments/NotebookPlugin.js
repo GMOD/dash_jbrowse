@@ -52,7 +52,6 @@ const stateModelColabFactory = (
                         [this.path, this.start.toString(), this.end.toString()]
 
                     // eslint-disable-next-line no-undef
-                    
                     const result = await google.colab.kernel.invokeFunction(
                         'ColabLocalFile',
                         args,
