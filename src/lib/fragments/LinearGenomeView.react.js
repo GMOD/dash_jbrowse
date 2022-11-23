@@ -17,7 +17,7 @@ export default class LinearGenomeView extends Component {
     render() {
         // eslint-disable-next-line no-unused-vars
         const {id, assembly, tracks, defaultSession, location, aggregateTextSearchAdapters, configuration, internetAccounts, plugins } = this.props;
-        console.log(window)
+        console.log("the window", window)
         const viewState = createViewState({
             assembly,
             tracks,

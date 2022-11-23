@@ -6,7 +6,6 @@ import { InternetAccount, BaseInternetAccountConfig } from '@jbrowse/core/plugga
 import { ConfigurationSchema, ConfigurationReference } from '@jbrowse/core/configuration';
 import InternetAccountType from '@jbrowse/core/pluggableElementTypes/InternetAccountType';
 
-const google = window.google
 
 const ColabNotebookSchema = ConfigurationSchema(
     'ColabLocalFileInternetAccount',
