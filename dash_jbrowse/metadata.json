@@ -231,18 +231,12 @@
         "required": false,
         "description": "The theme configuration object"
       },
-      "window": {
+      "windowObject": {
         "type": {
-          "name": "shape",
-          "value": {
-            "google": {
-              "name": "object",
-              "required": false
-            }
-          }
+          "name": "object"
         },
         "required": false,
-        "description": ""
+        "description": "The windo object"
       },
       "setProps": {
         "type": {
