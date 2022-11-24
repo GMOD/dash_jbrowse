@@ -2,7 +2,7 @@
 name = "DashJbrowse"
 uuid = "1b08a953-4be3-4667-9a23-799537a232d7"
 authors = ["Elliot Hershberg <eahershberg@gmail.com>"]
-version = "1.2.0-devv3"
+version = "1.2.0-dev10"
 
 [deps]
 Dash = "1b08a953-4be3-4667-9a23-3db579824955"
