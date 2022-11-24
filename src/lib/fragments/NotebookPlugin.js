@@ -41,34 +41,38 @@ const stateModelColabFactory = (
                     init,
                 ) => {
                     console.log("ColabPlugin", location)
-                    console.log("new window", new window)
-                    // eslint-disable-next-line no-magic-numbers
-                    await new Promise(r => setTimeout(r, 2000))
-                    // const isColab =  window.google !== undefined && window.google.colab
-                    // console.log("isColab: ", isColab)
-                    // if (isColab) {
-                    console.log("IAMMMMM in colabbbbb")
-                    console.log(location.uri)
-                    // TODO: get data and invoke registered method
-                    // eslint-disable-next-line no-undefined
-                    const args = (this.start === undefined) ?
-                        [this.path] :
-                        [this.path, this.start.toString(), this.end.toString()]
+                    console.log("1 window", window)
+                    window.location.reload()
+                    console.log("2 window", window)
+                    if (window.google) {
+                        // eslint-disable-next-line no-magic-numbers
+                        await new Promise(r => setTimeout(r, 2000))
+                        // const isColab =  window.google !== undefined && window.google.colab
+                        // console.log("isColab: ", isColab)
+                        // if (isColab) {
+                        console.log("IAMMMMM in colabbbbb")
+                        console.log(location.uri)
+                        // TODO: get data and invoke registered method
+                        // eslint-disable-next-line no-undefined
+                        const args = (this.start === undefined) ?
+                            [this.path] :
+                            [this.path, this.start.toString(), this.end.toString()]
 
-                    // eslint-disable-next-line no-undef
-                    const result = await new window.google.colab.kernel.invokeFunction(
-                        'ColabLocalFile',
-                        args,
-                        {})
-                    const data = result.data["text/plain"]
-                    const dataString = Buffer.from(data.substring(2, data.length - 1), 'base64')
-                    // const dataString = atob(data.substring(2, data.length - 1))
-                    const bytes = new Uint8Array(dataString.length)
-                    for (var i = 0; i < dataString.length; i++) {
-                        bytes[i] = dataString.charCodeAt(i)
-                    }
-                    return new Response(bytes.buffer)
-                    // return fetch(input, init)
+                        // eslint-disable-next-line no-undef
+                        const result = await window.google.colab.kernel.invokeFunction(
+                            'ColabLocalFile',
+                            args,
+                            {})
+                        const data = result.data["text/plain"]
+                        const dataString = Buffer.from(data.substring(2, data.length - 1), 'base64')
+                        // const dataString = atob(data.substring(2, data.length - 1))
+                        const bytes = new Uint8Array(dataString.length)
+                        for (var i = 0; i < dataString.length; i++) {
+                            bytes[i] = dataString.charCodeAt(i)
+                        }
+                        return new Response(bytes.buffer)
+                    } 
+                    return fetch(input, init) 
                 }
             },
         }))
