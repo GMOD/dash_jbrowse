@@ -34,10 +34,9 @@ Those elements have the following types:
   - `assemblyName` (String; optional)
 - `plugins` (Array; optional): The inline plugins to use for the browser
 - `tracks` (Array; optional): The tracks to use for the browser.
-- `windowObject` (Dict; optional): The windo object
 """
 function lineargenomeview(; kwargs...)
-        available_props = Symbol[:id, :aggregateTextSearchAdapters, :assembly, :configuration, :defaultSession, :internetAccounts, :location, :plugins, :tracks, :windowObject]
+        available_props = Symbol[:id, :aggregateTextSearchAdapters, :assembly, :configuration, :defaultSession, :internetAccounts, :location, :plugins, :tracks]
         wild_props = Symbol[]
         return Component("lineargenomeview", "LinearGenomeView", "dash_jbrowse", available_props, wild_props; kwargs...)
 end

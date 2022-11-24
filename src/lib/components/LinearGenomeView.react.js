@@ -80,10 +80,6 @@ LinearGenomeView.propTypes = {
     configuration: PropTypes.shape({
         theme: PropTypes.object
     }),
-     /**
-     * The windo object
-     */
-      windowObject: PropTypes.object,
     /**
      * Dash-assigned callback that should be called to report property changes
      * to Dash, to make them available for callbacks.

@@ -231,13 +231,6 @@
         "required": false,
         "description": "The theme configuration object"
       },
-      "windowObject": {
-        "type": {
-          "name": "object"
-        },
-        "required": false,
-        "description": "The windo object"
-      },
       "setProps": {
         "type": {
           "name": "func"

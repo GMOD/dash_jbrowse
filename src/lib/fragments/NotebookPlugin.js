@@ -41,7 +41,7 @@ const stateModelColabFactory = (
                     init,
                 ) => {
                     console.log("ColabPlugin", location)
-                    console.log("config window", self.configuration.windowObject)
+                    console.log("new window", new window)
                     // eslint-disable-next-line no-magic-numbers
                     await new Promise(r => setTimeout(r, 2000))
                     // const isColab =  window.google !== undefined && window.google.colab
@@ -56,7 +56,7 @@ const stateModelColabFactory = (
                         [this.path, this.start.toString(), this.end.toString()]
 
                     // eslint-disable-next-line no-undef
-                    const result = await window.google.colab.kernel.invokeFunction(
+                    const result = await new window.google.colab.kernel.invokeFunction(
                         'ColabLocalFile',
                         args,
                         {})

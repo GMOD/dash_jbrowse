@@ -15,9 +15,7 @@ import {defaultProps, propTypes} from '../components/LinearGenomeView.react';
  */
 export default class LinearGenomeView extends Component {
     render() {
-        // eslint-disable-next-line no-unused-vars
-        const {id, assembly, tracks, defaultSession, location, aggregateTextSearchAdapters, configuration, internetAccounts, plugins, windowObject } = this.props;
-        console.log(windowObject)
+        const {id, assembly, tracks, defaultSession, location, aggregateTextSearchAdapters, configuration, internetAccounts } = this.props;
         const viewState = createViewState({
             assembly,
             tracks,
@@ -26,11 +24,7 @@ export default class LinearGenomeView extends Component {
             aggregateTextSearchAdapters,
             configuration,
             internetAccounts,
-            plugins: [NotebookPlugin( {
-                'windowObject':  {
-                    'google': {'hello': 'test'} }
-                }
-            )],
+            plugins: [NotebookPlugin],
         });
 
         return (
