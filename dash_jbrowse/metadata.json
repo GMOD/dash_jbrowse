@@ -231,6 +231,19 @@
         "required": false,
         "description": "The theme configuration object"
       },
+      "window": {
+        "type": {
+          "name": "shape",
+          "value": {
+            "google": {
+              "name": "object",
+              "required": false
+            }
+          }
+        },
+        "required": false,
+        "description": ""
+      },
       "setProps": {
         "type": {
           "name": "func"

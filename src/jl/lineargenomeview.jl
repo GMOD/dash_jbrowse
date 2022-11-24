@@ -34,9 +34,12 @@ Those elements have the following types:
   - `assemblyName` (String; optional)
 - `plugins` (Array; optional): The inline plugins to use for the browser
 - `tracks` (Array; optional): The tracks to use for the browser.
+- `window` (optional): . window has the following type: lists containing elements 'google'.
+Those elements have the following types:
+  - `google` (Dict; optional)
 """
 function lineargenomeview(; kwargs...)
-        available_props = Symbol[:id, :aggregateTextSearchAdapters, :assembly, :configuration, :defaultSession, :internetAccounts, :location, :plugins, :tracks]
+        available_props = Symbol[:id, :aggregateTextSearchAdapters, :assembly, :configuration, :defaultSession, :internetAccounts, :location, :plugins, :tracks, :window]
         wild_props = Symbol[]
         return Component("lineargenomeview", "LinearGenomeView", "dash_jbrowse", available_props, wild_props; kwargs...)
 end

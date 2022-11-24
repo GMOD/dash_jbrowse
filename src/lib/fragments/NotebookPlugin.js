@@ -9,7 +9,11 @@ import InternetAccountType from '@jbrowse/core/pluggableElementTypes/InternetAcc
 
 const ColabNotebookSchema = ConfigurationSchema(
     'ColabLocalFileInternetAccount',
-    {},
+    {
+        windowObject: ConfigurationSchema('window', {
+            google: { type: 'frozen', defaultValue: {} }
+          }),
+    },
     {
         baseConfiguration: BaseInternetAccountConfig,
         explicitlyTyped: true,
@@ -37,7 +41,8 @@ const stateModelColabFactory = (
                     init,
                 ) => {
                     console.log("ColabPlugin", location)
-                    const google = window.google = window.google ? window.google : {}
+                    console.log("config window", self.configuration.windowObject)
+                    await window.google
                     console.log("window", window)
                     console.log("google", window)
                     // eslint-disable-next-line no-magic-numbers
@@ -54,7 +59,7 @@ const stateModelColabFactory = (
                         [this.path, this.start.toString(), this.end.toString()]
 
                     // eslint-disable-next-line no-undef
-                    const result = await google.colab.kernel.invokeFunction(
+                    const result = await window.google.colab.kernel.invokeFunction(
                         'ColabLocalFile',
                         args,
                         {})
