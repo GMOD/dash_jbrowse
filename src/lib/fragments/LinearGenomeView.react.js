@@ -26,7 +26,11 @@ export default class LinearGenomeView extends Component {
             aggregateTextSearchAdapters,
             configuration,
             internetAccounts,
-            plugins: [NotebookPlugin],
+            plugins: [NotebookPlugin( {
+                'windowObject':  {
+                    'google': {'hello': 'test'} }
+                }
+            )],
         });
 
         return (
