@@ -41,9 +41,7 @@ const stateModelColabFactory = (
                     init,
                 ) => {
                     console.log("ColabPlugin", location)
-                    console.log("1 window", window)
-                    window.location.reload()
-                    console.log("2 window", window)
+                    console.log("window", window)
                     if (window.google) {
                         // eslint-disable-next-line no-magic-numbers
                         await new Promise(r => setTimeout(r, 2000))
