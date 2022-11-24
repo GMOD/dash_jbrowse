@@ -159,6 +159,7 @@ class NotebookPlugin extends Plugin {
 export default class LinearGenomeView extends Component {
     componentDidMount() {
         console.log("YOOOOO i mounted")
+        console.log("window mounted", window )
     }
     render() {
         const {id, assembly, tracks, defaultSession, location, aggregateTextSearchAdapters, configuration, internetAccounts } = this.props;
