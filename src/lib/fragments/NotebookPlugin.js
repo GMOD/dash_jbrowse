@@ -37,7 +37,9 @@ const stateModelColabFactory = (
                     init,
                 ) => {
                     console.log("ColabPlugin", location)
+                    const google = window.google = window.google ? window.google : {}
                     console.log("window", window)
+                    console.log("google", window)
                     // eslint-disable-next-line no-magic-numbers
                     await new Promise(r => setTimeout(r, 2000))
                     // const isColab =  window.google !== undefined && window.google.colab
