@@ -158,10 +158,6 @@ export default class LinearGenomeView extends Component {
     render() {
         const {id, assembly, tracks, defaultSession, location, aggregateTextSearchAdapters, configuration, internetAccounts } = this.props;
         console.log("WINDOWWW", window)
-        window.onload((e) => {
-            console.log(e)
-            console.log("on load", window)
-        })
         const viewState = createViewState({
             assembly,
             tracks,
