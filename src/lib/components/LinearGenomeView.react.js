@@ -69,7 +69,7 @@ LinearGenomeView.propTypes = {
     /**
      * The internet accounts to use for the browser
      */
-     internetAccounts: PropTypes.array,
+    internetAccounts: PropTypes.array,
     /**
      * The inline plugins to use for the browser
      */

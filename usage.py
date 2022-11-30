@@ -62,8 +62,7 @@ my_tracks = [
                 },
             },
         },
-    },
-    
+    }
 ]
 
 my_default_session = {
@@ -97,18 +96,13 @@ my_default_session = {
 }
 
 my_internet_accounts = [
-    {
-      "type": "ColabLocalFileInternetAccount",
-      "internetAccountId": "colabLocalFile",
-      "name": "Colab",
-      "description": "Account to access local files in Colab",
-    },
-    {
-      "type": "JupyterNotebookLocalFileInternetAccount",
-      "internetAccountId": "jupyterLocalFile",
-      "name": "Jupyter",
-      "description": "Account to access local files in Jupyter notebook",
-    },
+   {
+      "type": "ExternalTokenInternetAccount",
+      "internetAccountId": "manualGoogleEntry",
+      "name": "Google Drive Manual Token Entry",
+      "description": "Manually enter a token to access Google Drive files",
+      "tokenType": "Bearer"
+    }
 ]
 
 my_aggregate_text_search_adapters = [
@@ -162,6 +156,7 @@ app.layout = html.Div(
             tracks=my_tracks,
             defaultSession=my_default_session,
             location=my_location,
+            plugins=[],
             aggregateTextSearchAdapters=my_aggregate_text_search_adapters,
             internetAccounts=my_internet_accounts,
             configuration=my_theme

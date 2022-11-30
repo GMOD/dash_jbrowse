@@ -21,6 +21,7 @@ class App extends Component {
         return (
             <div>
                 <LinearGenomeView
+                    key={"linear-genome-view-test"}
                     setProps={this.setProps}
                     {...this.state}
                 />

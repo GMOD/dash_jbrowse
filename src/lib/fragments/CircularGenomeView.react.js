@@ -3,8 +3,6 @@ import {
     createViewState,
     JBrowseCircularGenomeView,
 } from '@jbrowse/react-circular-genome-view';
-import NotebookPlugin from './NotebookPlugin';
-
 import {defaultProps, propTypes} from '../components/CircularGenomeView.react.js';
 
 /**
@@ -14,7 +12,6 @@ import {defaultProps, propTypes} from '../components/CircularGenomeView.react.js
  */
 export default class CircularGenomeView extends Component {
     render() {
-        // eslint-disable-next-line no-unused-vars
         const {id, assembly, tracks, defaultSession, aggregateTextSearchAdapters, configuration, internetAccounts, plugins } = this.props;
         const viewState = createViewState({
             assembly,
@@ -23,7 +20,7 @@ export default class CircularGenomeView extends Component {
             aggregateTextSearchAdapters,
             configuration,
             internetAccounts,
-            plugins: [NotebookPlugin],
+            plugins,
         });
 
         return (
