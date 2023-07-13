@@ -306,7 +306,7 @@ publish, please cite the most recent JBrowse paper, which will be linked from
 
 ## Resources
 
-- More infromation about `Dash` can be found in this
+- More information about `Dash` can be found in this
   [post](https://medium.com/plotly/dash-is-react-for-python-r-and-julia-c75822d1cc24)
 - Examples of the `LinearGenomeView` component can be found in the
   [usage.py](usage.py), and [browser.py](./examples/browser.py)

@@ -108,7 +108,7 @@ out our [README](./README.md) for documentation.
 
 There are two main workflows in this repo that facilitate the deployments of the
 package to both test PyPI and production PyPI. The main.yml is a workflow that
-gets triggered when a PR gets merged into main. This worklfow will create a
+gets triggered when a PR gets merged into main. This workflow will create a
 build and upload the distribution to the test pypi environment. You can then
 test that build before creating a release.
 
