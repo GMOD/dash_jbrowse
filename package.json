@@ -1,15 +1,8 @@
 {
   "name": "dash_jbrowse",
-  "version": "1.1.3",
-  "description": "Dash components for JBrowse 2 embeddable components",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/GMOD/dash_jbrowse.git"
-  },
-  "bugs": {
-    "url": "https://github.com/GMOD/dash_jbrowse/issues"
-  },
-  "homepage": "https://github.com/GMOD/dash_jbrowse",
+  "version": "1.2.0",
+  "description": "Dash components for JBrowse 2",
+  "repository": "GMOD/dash_jbrowse",
   "main": "build/index.js",
   "scripts": {
     "start": "webpack --mode development --watch",
@@ -39,7 +32,6 @@
   },
   "devDependencies": {
     "@babel/core": "^7.5.4",
-    "@babel/plugin-proposal-object-rest-spread": "^7.5.4",
     "@babel/preset-env": "^7.5.4",
     "@babel/preset-react": "^7.0.0",
     "@plotly/dash-component-plugins": "^1.2.0",
@@ -48,7 +40,7 @@
     "node-polyfill-webpack-plugin": "^2.0.1",
     "prop-types": "^15.7.2",
     "react": "^17.0.2",
-    "react-docgen": "^6.0.1",
+    "react-docgen": "^4.0.1",
     "react-dom": "^17.0.0",
     "style-loader": "^0.23.1",
     "webpack": "^5.85.0",
