@@ -11,5 +11,5 @@ def test_render_component(dash_duo):
     # The html input will be a children of the #input dash component.
     # dash_duo.find_element( By.ID, 'test')
     # dash_duo.wait_for_element_by_id('lgv-hg38')
-    #  shoudl contain no errors
+    #  should contain no errors
     assert dash_duo.get_logs() == []

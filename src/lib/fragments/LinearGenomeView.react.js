@@ -1,10 +1,10 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react'
 import {
-    createViewState,
-    JBrowseLinearGenomeView,
-} from '@jbrowse/react-linear-genome-view';
+  createViewState,
+  JBrowseLinearGenomeView,
+} from '@jbrowse/react-linear-genome-view'
 
-import {defaultProps, propTypes} from '../components/LinearGenomeView.react';
+import { defaultProps, propTypes } from '../components/LinearGenomeView.react'
 
 /**
  * LinearGenomeView renders the JBrowse 2 React Linear Genome View.
@@ -12,31 +12,39 @@ import {defaultProps, propTypes} from '../components/LinearGenomeView.react';
  * component.
  */
 export default class LinearGenomeView extends Component {
-    render() {
-        const {id, assembly, tracks, defaultSession, location, aggregateTextSearchAdapters, configuration } = this.props;
+  render() {
+    const {
+      id,
+      assembly,
+      tracks,
+      defaultSession,
+      location,
+      aggregateTextSearchAdapters,
+      configuration,
+    } = this.props
 
-        // console.log("location", location)
-        // let formatted = location
-        // if (typeof location !== 'string' || !(location instanceof String)) {
-        //     const {refName, start, end} = location
-        //    formatted = `${refName}:${start}..${end}`
-        // }
-        const viewState = createViewState({
-            assembly,
-            tracks,
-            defaultSession,
-            location,
-            aggregateTextSearchAdapters,
-            configuration,
-        });
+    // console.log("location", location)
+    // let formatted = location
+    // if (typeof location !== 'string' || !(location instanceof String)) {
+    //     const {refName, start, end} = location
+    //    formatted = `${refName}:${start}..${end}`
+    // }
+    const viewState = createViewState({
+      assembly,
+      tracks,
+      defaultSession,
+      location,
+      aggregateTextSearchAdapters,
+      configuration,
+    })
 
-        return (
-            <div id={id}>
-                <JBrowseLinearGenomeView viewState={viewState} />
-            </div>
-        );
-    }
+    return (
+      <div id={id}>
+        <JBrowseLinearGenomeView viewState={viewState} />
+      </div>
+    )
+  }
 }
 
-LinearGenomeView.defaultProps = defaultProps;
-LinearGenomeView.propTypes = propTypes;
+LinearGenomeView.defaultProps = defaultProps
+LinearGenomeView.propTypes = propTypes

@@ -1,10 +1,13 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react'
 import {
-    createViewState,
-    JBrowseCircularGenomeView,
-} from '@jbrowse/react-circular-genome-view';
+  createViewState,
+  JBrowseCircularGenomeView,
+} from '@jbrowse/react-circular-genome-view'
 
-import {defaultProps, propTypes} from '../components/CircularGenomeView.react.js';
+import {
+  defaultProps,
+  propTypes,
+} from '../components/CircularGenomeView.react.js'
 
 /**
  * CircularGenomeView renders the JBrowse 2 React Circular Genome View.
@@ -12,24 +15,31 @@ import {defaultProps, propTypes} from '../components/CircularGenomeView.react.js
  * component.
  */
 export default class CircularGenomeView extends Component {
-    render() {
-        const {id, assembly, tracks, defaultSession, aggregateTextSearchAdapters, configuration } = this.props;
+  render() {
+    const {
+      id,
+      assembly,
+      tracks,
+      defaultSession,
+      aggregateTextSearchAdapters,
+      configuration,
+    } = this.props
 
-        const viewState = createViewState({
-            assembly,
-            tracks,
-            defaultSession,
-            aggregateTextSearchAdapters,
-            configuration,
-        });
+    const viewState = createViewState({
+      assembly,
+      tracks,
+      defaultSession,
+      aggregateTextSearchAdapters,
+      configuration,
+    })
 
-        return (
-            <div id={id}>
-                <JBrowseCircularGenomeView viewState={viewState} />
-            </div>
-        );
-    }
+    return (
+      <div id={id}>
+        <JBrowseCircularGenomeView viewState={viewState} />
+      </div>
+    )
+  }
 }
 
-CircularGenomeView.defaultProps = defaultProps;
-CircularGenomeView.propTypes = propTypes;
+CircularGenomeView.defaultProps = defaultProps
+CircularGenomeView.propTypes = propTypes

@@ -4,19 +4,19 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-     - uses: actions/checkout@v2
-     - uses: actions/setup-node@v1
-       with:
-        node-version: 12
-     - name: Set up Python
-       uses: actions/setup-python@v2
-       with:
-        python-version: '3.x'
-     - name: Install Python dependencies
-       run: |
-         python -m pip install --upgrade pip
-         pip install -r requirements.txt
-     - name: Test with pytest
-       run: |
-         pip install -r tests/requirements.txt
-         pytest tests
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+      - name: Install Python dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      - name: Test with pytest
+        run: |
+          pip install -r tests/requirements.txt
+          pytest tests
