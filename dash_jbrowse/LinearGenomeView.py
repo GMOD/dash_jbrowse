@@ -61,20 +61,19 @@ Keyword arguments:
 
 - tracks (list; optional):
     The tracks to use for the browser."""
+    _children_props = []
+    _base_nodes = ['children']
+    _namespace = 'dash_jbrowse'
+    _type = 'LinearGenomeView'
     @_explicitize_args
     def __init__(self, id=Component.UNDEFINED, assembly=Component.UNDEFINED, tracks=Component.UNDEFINED, defaultSession=Component.UNDEFINED, location=Component.UNDEFINED, aggregateTextSearchAdapters=Component.UNDEFINED, configuration=Component.UNDEFINED, **kwargs):
         self._prop_names = ['id', 'aggregateTextSearchAdapters', 'assembly', 'configuration', 'defaultSession', 'location', 'tracks']
-        self._type = 'LinearGenomeView'
-        self._namespace = 'dash_jbrowse'
         self._valid_wildcard_attributes =            []
         self.available_properties = ['id', 'aggregateTextSearchAdapters', 'assembly', 'configuration', 'defaultSession', 'location', 'tracks']
         self.available_wildcard_properties =            []
         _explicit_args = kwargs.pop('_explicit_args')
         _locals = locals()
-        _locals.update(kwargs)  # For wildcard attrs
-        args = {k: _locals[k] for k in _explicit_args if k != 'children'}
-        for k in []:
-            if k not in args:
-                raise TypeError(
-                    'Required argument `' + k + '` was not specified.')
+        _locals.update(kwargs)  # For wildcard attrs and excess named props
+        args = {k: _locals[k] for k in _explicit_args}
+
         super(LinearGenomeView, self).__init__(**args)
