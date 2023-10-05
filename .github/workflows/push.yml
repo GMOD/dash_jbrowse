@@ -1,4 +1,4 @@
-name: Run pytest
+name: Test
 on: [push]
 jobs:
   build:
@@ -20,3 +20,14 @@ jobs:
         run: |
           pip install -r tests/requirements.txt
           pytest tests
+      - name: Install build
+        run: |
+          pip install build
+      - name: Build and publish to TestPyPI
+        run: |
+          # Install the package from setup.py
+          python3 -m build
+          python3 -m twine upload --skip-existing --repository-url https://test.pypi.org/legacy/ dist/* --verbose
+        env:
+          TWINE_USERNAME: __token__
+          TWINE_PASSWORD: ${{ secrets.TWINE_TEST_TOKEN }}
