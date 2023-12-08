@@ -3,6 +3,7 @@ from setuptools import setup
 
 # read the contents of your README file
 from pathlib import Path
+
 this_directory = Path(__file__).parent
 long_description = (this_directory / "README.md").read_text()
 
@@ -26,10 +27,10 @@ setup(
     url=package["homepage"],
     project_urls={
         "Tracker": "https://github.com/GMOD/dash_jbrowse/issues",
-        "Source": "https://github.com/GMOD/dash_jbrowse/"
+        "Source": "https://github.com/GMOD/dash_jbrowse/",
     },
     long_description=long_description,
-    long_description_content_type='text/markdown',
+    long_description_content_type="text/markdown",
     install_requires=[
         "dash>=1.15.0",
     ],

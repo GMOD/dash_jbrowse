@@ -39,6 +39,7 @@
     "@plotly/webpack-dash-dynamic-import": "^1.2.0",
     "babel-loader": "^9.1.2",
     "node-polyfill-webpack-plugin": "^2.0.1",
+    "prettier": "^3.1.0",
     "prop-types": "^15.7.2",
     "react": "^17.0.2",
     "react-docgen": "^4.0.1",

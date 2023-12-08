@@ -14,15 +14,15 @@ my_assembly = {
             "type": "BgzipFastaAdapter",
             "fastaLocation": {
                 "uri": "https://jbrowse.org/genomes/hg19/fasta/hg19.fa.gz",
-                "locationType": 'UriLocation',
+                "locationType": "UriLocation",
             },
             "faiLocation": {
                 "uri": "https://jbrowse.org/genomes/hg19/fasta/hg19.fa.gz.fai",
-                "locationType": 'UriLocation',
+                "locationType": "UriLocation",
             },
             "gziLocation": {
                 "uri": "https://jbrowse.org/genomes/hg19/fasta/hg19.fa.gz.gzi",
-                "locationType": 'UriLocation',
+                "locationType": "UriLocation",
             },
         },
     },
@@ -31,7 +31,7 @@ my_assembly = {
             "type": "RefNameAliasAdapter",
             "location": {
                 "uri": "https://s3.amazonaws.com/jbrowse.org/genomes/hg19/hg19_aliases.txt",
-                "locationType": 'UriLocation',
+                "locationType": "UriLocation",
             },
         },
     },
@@ -47,13 +47,13 @@ my_tracks = [
         "adapter": {
             "type": "VcfTabixAdapter",
             "vcfGzLocation": {
-                "uri": 'https://s3.amazonaws.com/jbrowse.org/genomes/hg19/pacbio/hs37d5.HG002-SequelII-CCS.bnd-only.sv.vcf.gz',
-                "locationType": 'UriLocation',
+                "uri": "https://s3.amazonaws.com/jbrowse.org/genomes/hg19/pacbio/hs37d5.HG002-SequelII-CCS.bnd-only.sv.vcf.gz",
+                "locationType": "UriLocation",
             },
             "index": {
                 "location": {
-                    "uri": 'https://s3.amazonaws.com/jbrowse.org/genomes/hg19/pacbio/hs37d5.HG002-SequelII-CCS.bnd-only.sv.vcf.gz.tbi',
-                    "locationType": 'UriLocation',
+                    "uri": "https://s3.amazonaws.com/jbrowse.org/genomes/hg19/pacbio/hs37d5.HG002-SequelII-CCS.bnd-only.sv.vcf.gz.tbi",
+                    "locationType": "UriLocation",
                 },
             },
         },
@@ -65,19 +65,21 @@ my_default_session = {
     "view": {
         "id": "circularView",
         "type": "CircularView",
-        "bpPerPx": 5000000, 
-        "tracks": [{
-            "id": 'uPdLKHik1',
-            "type": 'VariantTrack',
-            "configuration": 'pacbio_sv_vcf',
-            "displays": [
-                {
-                    "id": 'v9QVAR3oaB',
-                    "type": 'ChordVariantDisplay',
-                    "configuration": 'pacbio_sv_vcf-ChordVariantDisplay',
-                },
-            ],
-        }],
+        "bpPerPx": 5000000,
+        "tracks": [
+            {
+                "id": "uPdLKHik1",
+                "type": "VariantTrack",
+                "configuration": "pacbio_sv_vcf",
+                "displays": [
+                    {
+                        "id": "v9QVAR3oaB",
+                        "type": "ChordVariantDisplay",
+                        "configuration": "pacbio_sv_vcf-ChordVariantDisplay",
+                    },
+                ],
+            }
+        ],
     },
 }
 

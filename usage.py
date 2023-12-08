@@ -53,7 +53,6 @@ my_tracks = [
             },
         },
     },
-    
 ]
 
 my_default_session = {
@@ -138,7 +137,7 @@ app.layout = html.Div(
             defaultSession=my_default_session,
             location=my_location,
             aggregateTextSearchAdapters=my_aggregate_text_search_adapters,
-            configuration=my_theme
+            configuration=my_theme,
         ),
     ],
     id="test",
