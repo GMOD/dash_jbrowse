@@ -1,5 +1,4 @@
 /* eslint-disable import/prefer-default-export */
-import LinearGenomeView from './components/LinearGenomeView.react'
-import CircularGenomeView from './components/CircularGenomeView.react'
 
-export { LinearGenomeView, CircularGenomeView }
+export {default as LinearGenomeView} from './components/LinearGenomeView.react'
+export {default as CircularGenomeView} from './components/CircularGenomeView.react'
