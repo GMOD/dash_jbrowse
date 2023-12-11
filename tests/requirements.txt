@@ -2,5 +2,5 @@
 # Switch into a virtual environment
 # pip install -r requirements.txt
 
-dash[dev,testing]==2.3.0
+dash[dev,testing]>=2.11.1
 pytest>=6.2.5
