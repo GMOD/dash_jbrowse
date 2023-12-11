@@ -1824,11 +1824,6 @@
   resolved "https://registry.yarnpkg.com/@plotly/dash-component-plugins/-/dash-component-plugins-1.2.3.tgz#3694ea3abeb5af11cbab9cb78e06c21efb60d437"
   integrity sha512-BjcGvqS+sbp15rnETIWyuPg8imvxboSrHyOlEBGBUurF5v1nHZpfbk4PAYpk8Q6K20ofScbNf1aXp/lOLHAemA==
 
-"@plotly/webpack-dash-dynamic-import@^1.2.0":
-  version "1.3.0"
-  resolved "https://registry.yarnpkg.com/@plotly/webpack-dash-dynamic-import/-/webpack-dash-dynamic-import-1.3.0.tgz#9ad60974601caef92d15bc2b0f6637c68f0edaf3"
-  integrity sha512-JuleFNu/DqpzjYABv54j2eJ9+bCUut2EjTrEbyPCvAnjdhabOLnJmGl3Tf6ChDadIfao2Q5yH/R1K2q6dElroQ==
-
 "@popperjs/core@^2.11.0", "@popperjs/core@^2.11.8":
   version "2.11.8"
   resolved "https://registry.yarnpkg.com/@popperjs/core/-/core-2.11.8.tgz#6b79032e760a0899cd4204710beede972a3a185f"

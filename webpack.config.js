@@ -1,7 +1,6 @@
 const path = require('path')
 const NodePolyfillPlugin = require('node-polyfill-webpack-plugin')
 const webpack = require('webpack')
-const WebpackDashDynamicImport = require('@plotly/webpack-dash-dynamic-import')
 const packagejson = require('./package.json')
 
 const dashLibraryName = packagejson.name.replace(/-/g, '_')
@@ -23,12 +22,11 @@ module.exports = (env, argv) => {
       react: 'React',
       'react-dom': 'ReactDOM',
       'plotly.js': 'Plotly',
-      'prop-types': 'PropTypes',
     },
     module: {
       rules: [
         {
-          test: /\.jsx?$/,
+          test: /\.(t|j)sx?$/,
           exclude: /node_modules/,
           use: {
             loader: 'babel-loader',
@@ -38,7 +36,6 @@ module.exports = (env, argv) => {
     },
 
     plugins: [
-      new WebpackDashDynamicImport(),
       new NodePolyfillPlugin({
         excludeAliases: ['console'],
       }),

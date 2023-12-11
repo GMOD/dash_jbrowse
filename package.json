@@ -38,7 +38,6 @@
     "@babel/preset-react": "^7.0.0",
     "@babel/preset-typescript": "^7.23.0",
     "@plotly/dash-component-plugins": "^1.2.0",
-    "@plotly/webpack-dash-dynamic-import": "^1.2.0",
     "@typescript-eslint/eslint-plugin": "^6.7.0",
     "@typescript-eslint/parser": "^6.7.0",
     "babel-loader": "^9.1.2",
