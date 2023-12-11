@@ -1,7 +1,7 @@
 # AUTO GENERATED FILE - DO NOT EDIT
 
 #' @export
-linearGenomeView <- function(id=NULL, aggregateTextSearchAdapters=NULL, assembly=NULL, configuration=NULL, defaultSession=NULL, location=NULL, tracks=NULL) {
+RLinearGenomeView <- function(id=NULL, aggregateTextSearchAdapters=NULL, assembly=NULL, configuration=NULL, defaultSession=NULL, location=NULL, tracks=NULL) {
     
     props <- list(id=id, aggregateTextSearchAdapters=aggregateTextSearchAdapters, assembly=assembly, configuration=configuration, defaultSession=defaultSession, location=location, tracks=tracks)
     if (length(props) > 0) {

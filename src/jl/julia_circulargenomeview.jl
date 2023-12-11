@@ -1,9 +1,9 @@
 # AUTO GENERATED FILE - DO NOT EDIT
 
-export circulargenomeview
+export julia_circulargenomeview
 
 """
-    circulargenomeview(;kwargs...)
+    julia_circulargenomeview(;kwargs...)
 
 A CircularGenomeView component.
 CircularGenomeView renders the JBrowse 2 React Circular Genome View.
@@ -27,9 +27,9 @@ Those elements have the following types:
   - `view` (Dict; optional)
 - `tracks` (Array; optional): The tracks to use for the browser.
 """
-function circulargenomeview(; kwargs...)
+function julia_circulargenomeview(; kwargs...)
         available_props = Symbol[:id, :aggregateTextSearchAdapters, :assembly, :configuration, :defaultSession, :tracks]
         wild_props = Symbol[]
-        return Component("circulargenomeview", "CircularGenomeView", "dash_jbrowse", available_props, wild_props; kwargs...)
+        return Component("julia_circulargenomeview", "CircularGenomeView", "dash_jbrowse", available_props, wild_props; kwargs...)
 end
 

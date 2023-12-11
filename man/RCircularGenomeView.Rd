@@ -1,7 +1,7 @@
 % Auto-generated: do not edit by hand
-\name{circularGenomeView}
+\name{RCircularGenomeView}
 
-\alias{circularGenomeView}
+\alias{RCircularGenomeView}
 
 \title{CircularGenomeView component}
 
@@ -10,7 +10,7 @@ CircularGenomeView renders the JBrowse 2 React Circular Genome View. Any JB2 CGV
 }
 
 \usage{
-circularGenomeView(id=NULL, aggregateTextSearchAdapters=NULL, assembly=NULL,
+RCircularGenomeView(id=NULL, aggregateTextSearchAdapters=NULL, assembly=NULL,
 configuration=NULL, defaultSession=NULL, tracks=NULL)
 }
 

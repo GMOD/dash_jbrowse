@@ -1,7 +1,7 @@
 # AUTO GENERATED FILE - DO NOT EDIT
 
 #' @export
-circularGenomeView <- function(id=NULL, aggregateTextSearchAdapters=NULL, assembly=NULL, configuration=NULL, defaultSession=NULL, tracks=NULL) {
+RCircularGenomeView <- function(id=NULL, aggregateTextSearchAdapters=NULL, assembly=NULL, configuration=NULL, defaultSession=NULL, tracks=NULL) {
     
     props <- list(id=id, aggregateTextSearchAdapters=aggregateTextSearchAdapters, assembly=assembly, configuration=configuration, defaultSession=defaultSession, tracks=tracks)
     if (length(props) > 0) {

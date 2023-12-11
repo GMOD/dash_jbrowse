@@ -276,3 +276,9 @@ bh_unicode_properties.cache
 GitHub.sublime-settings
 dash_jbrowse/dash_jbrowse.dev.js
 
+bin/
+etc/
+lib/
+lib64
+pyvenv.cfg
+share

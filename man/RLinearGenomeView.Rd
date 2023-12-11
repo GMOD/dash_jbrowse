@@ -1,7 +1,7 @@
 % Auto-generated: do not edit by hand
-\name{linearGenomeView}
+\name{RLinearGenomeView}
 
-\alias{linearGenomeView}
+\alias{RLinearGenomeView}
 
 \title{LinearGenomeView component}
 
@@ -10,7 +10,7 @@ LinearGenomeView renders the JBrowse 2 React Linear Genome View. Any JB2 LGV con
 }
 
 \usage{
-linearGenomeView(id=NULL, aggregateTextSearchAdapters=NULL, assembly=NULL,
+RLinearGenomeView(id=NULL, aggregateTextSearchAdapters=NULL, assembly=NULL,
 configuration=NULL, defaultSession=NULL, location=NULL,
 tracks=NULL)
 }
