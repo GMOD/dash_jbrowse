@@ -1,6 +1,4 @@
 # AUTO GENERATED FILE - DO NOT EDIT
 
-export(CircularGenomeView)
-export(LinearGenomeView)
-export(linearGenomeView)
-export(circularGenomeView)
+export(RCircularGenomeView)
+export(RLinearGenomeView)
