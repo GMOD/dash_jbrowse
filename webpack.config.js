@@ -1,16 +1,15 @@
-const path = require('path')
-const NodePolyfillPlugin = require('node-polyfill-webpack-plugin')
-const webpack = require('webpack')
-const packagejson = require('./package.json')
+import NodePolyfillPlugin from 'node-polyfill-webpack-plugin'
+import path from 'path'
+import webpack from 'webpack'
 
-const dashLibraryName = packagejson.name.replace(/-/g, '_')
+const dashLibraryName = 'dash_jbrowse'
 
-module.exports = (env, argv) => {
+export default function (env, argv) {
   return {
     mode: argv?.mode,
-    entry: { main: './src/lib/index.js' },
+    entry: { main: './src/lib/index.tsx' },
     output: {
-      path: path.resolve(__dirname, dashLibraryName),
+      path: path.resolve(dashLibraryName),
       chunkFilename: '[name].js',
       filename: `${dashLibraryName}.${
         argv.mode === 'development' ? 'dev' : 'min'
