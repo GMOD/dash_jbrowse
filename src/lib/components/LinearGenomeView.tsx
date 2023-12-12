@@ -4,12 +4,6 @@ import {
   JBrowseLinearGenomeView,
 } from '@jbrowse/react-linear-genome-view'
 
-
-/**
- * LinearGenomeView renders the JBrowse 2 React Linear Genome View.
- * Any JB2 LGV configuration is also valid configuration for this
- * component.
- */
 export default function LinearGenomeView({
   id,
   assembly,
@@ -18,8 +12,7 @@ export default function LinearGenomeView({
   location,
   aggregateTextSearchAdapters,
   configuration,
-}: Record<string, unknown>) {
-
+}: Parameters<typeof createViewState>[0] & { id: string }) {
   const viewState = createViewState({
     assembly,
     tracks,
@@ -35,4 +28,3 @@ export default function LinearGenomeView({
     </div>
   )
 }
-

@@ -7,6 +7,7 @@ import json
 import dash as _dash
 
 # noinspection PyUnresolvedReferences
+from ._imports_ import *
 from ._imports_ import __all__
 
 if not hasattr(_dash, "__plotly_dash") and not hasattr(_dash, "development"):
@@ -51,9 +52,9 @@ _js_dist.extend(
     [
         {
             "relative_package_path": "async-{}.js.map".format(async_resource),
-            "external_url": (
-                "https://unpkg.com/{0}@{2}" "/{1}/async-{3}.js.map"
-            ).format(package_name, __name__, __version__, async_resource),
+            "external_url": ("https://unpkg.com/{0}@{2}/{1}/async-{3}.js.map").format(
+                package_name, __name__, __version__, async_resource
+            ),
             "namespace": package_name,
             "dynamic": True,
         }

@@ -4,7 +4,6 @@ import {
   JBrowseCircularGenomeView,
 } from '@jbrowse/react-circular-genome-view'
 
-
 /**
  * CircularGenomeView renders the JBrowse 2 React Circular Genome View.
  * Any JB2 CGV configuration is also valid configuration for this
@@ -17,9 +16,7 @@ export default function CircularGenomeView({
   defaultSession,
   aggregateTextSearchAdapters,
   configuration,
-}: Record<string, unknown>) {
-
-
+}: Parameters<typeof createViewState>[0] & { id: string }) {
   const viewState = createViewState({
     assembly,
     tracks,
@@ -34,4 +31,3 @@ export default function CircularGenomeView({
     </div>
   )
 }
-
