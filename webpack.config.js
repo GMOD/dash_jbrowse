@@ -25,13 +25,17 @@ export default function (env, argv) {
     module: {
       rules: [
         {
-          test: /\.(t|j)sx?$/,
+          test: /\.m?[tj]sx?$/,
           exclude: /node_modules/,
           use: {
             loader: 'babel-loader',
           },
         },
       ],
+    },
+
+    resolve: {
+      extensions: ['.ts', '.js', '.tsx', '.jsx'],
     },
 
     plugins: [
