@@ -32,19 +32,15 @@ out our [README](./README.md) for documentation.
 2. Create a virtual env and activate (you can also use conda).
 
    ```
-   $ virtualenv venv
-   $ . venv/bin/activate
+   $ python3 -m venv venv
+   $ source venv/bin/activate
    ```
-
-   _Note: venv\Scripts\activate for windows_
 
 3. Install python packages required to build components.
+
    ```
    $ pip install -r requirements.txt
-   ```
-4. Install the python packages for testing (optional)
-   ```
-   $ pip install -r tests/requirements.txt
+   $ pip install -r tests/requirements.txt #optional testing
    ```
 
 ### Write your component code in `src/`.
@@ -74,40 +70,3 @@ out our [README](./README.md) for documentation.
   - Make sure the stylesheets are added to the `_css_dist` dict in
     `dash_jbrowse/__init__.py` so dash will serve them automatically when the
     component suite is requested.
-- [Review your code](./review_checklist.md)
-
-### Contributing and Peer Review:
-
-1. Build your code:
-   ```
-   $ npm run build
-   ```
-2. Create a Python distribution
-
-   ```
-   $ python setup.py sdist bdist_wheel
-   ```
-
-   This will create source and wheel distribution in the generated the `dist/`
-   folder. See
-   [PyPA](https://packaging.python.org/guides/distributing-packages-using-setuptools/#packaging-your-project)
-   for more information.
-
-3. Test your tarball by copying it into a new environment and installing it
-   locally:
-   ```
-   $ pip install dash_jbrowse-<version>.tar.gz
-   ```
-4. If it works, create a pull request on this repo to main and contact the
-   JBrowse team!
-
-<!-- 5. Share your component with the community! https://community.plotly.com/c/dash
-    1. Publish this repository to GitHub
-    2. Tag your GitHub repository with the plotly-dash tag so that it appears here: https://github.com/topics/plotly-dash
-    3. Create a post in the Dash community forum: https://community.plotly.com/c/dash -->
-
-There are two main workflows in this repo that facilitate the deployments of the
-package to both test PyPI and production PyPI. The main.yml is a workflow that
-gets triggered when a PR gets merged into main. This workflow will create a
-build and upload the distribution to the test pypi environment. You can then
-test that build before creating a release.
