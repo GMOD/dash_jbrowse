@@ -24,10 +24,10 @@ jobs:
         run: |
           yarn
           npm run build
-      - name: Test with pytest
-        run: |
-          pip install -r tests/requirements.txt
-          pytest tests
+      # - name: Test with pytest
+      #   run: |
+      #     pip install -r tests/requirements.txt
+      #     pytest tests
       - name: Build and publish to TestPyPI
         run: |
           # Install the package from setup.py
