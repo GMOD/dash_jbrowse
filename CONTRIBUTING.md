@@ -13,8 +13,11 @@ will help you get started.
 ```
 git clone https://github.com/GMOD/dash_jbrowse
 cd dash_jbrowse
-npm install
+yarn
+python3 -m venv venv
+source venv/bin/activate
 pip install -r requirements.txt
+pip install -r tests/requirements.txt #optional testing
 python usage.py
 ```
 
