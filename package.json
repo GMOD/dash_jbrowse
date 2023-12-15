@@ -1,6 +1,5 @@
 {
   "name": "dash_jbrowse",
-  "type": "module",
   "version": "1.4.0",
   "description": "Dash components for JBrowse 2",
   "repository": "GMOD/dash_jbrowse",
