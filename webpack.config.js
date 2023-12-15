@@ -1,10 +1,10 @@
-import NodePolyfillPlugin from 'node-polyfill-webpack-plugin'
-import path from 'path'
-import webpack from 'webpack'
+const NodePolyfillPlugin = require('node-polyfill-webpack-plugin')
+const path = require('path')
+const webpack = require('webpack')
 
 const dashLibraryName = 'dash_jbrowse'
 
-export default function (env, argv) {
+module.exports = function (env, argv) {
   return {
     mode: argv?.mode,
     entry: { main: './src/lib/index.tsx' },
