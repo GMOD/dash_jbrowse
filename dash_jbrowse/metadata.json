@@ -1,215 +1,338 @@
 {
-  "src/lib/components/CircularGenomeView.react.js": {
-    "description": "CircularGenomeView renders the JBrowse 2 React Circular Genome View.\nAny JB2 CGV configuration is also valid configuration for this\ncomponent.",
+  "src/lib/components/CircularGenomeView.tsx": {
     "displayName": "CircularGenomeView",
-    "methods": [],
+    "description": "CircularGenomeView renders the JBrowse 2 React Circular Genome View.\nAny JB2 CGV configuration is also valid configuration for this\ncomponent.",
     "props": {
-      "id": {
-        "type": {
-          "name": "string"
-        },
-        "required": false,
-        "description": "The ID used to identify this component in Dash callbacks."
-      },
       "assembly": {
+        "description": "",
+        "required": true,
         "type": {
-          "name": "shape",
-          "value": {
-            "name": {
-              "name": "string",
-              "required": true
-            },
-            "aliases": {
-              "name": "array",
-              "required": false
-            },
-            "sequence": {
-              "name": "object",
-              "required": false
-            },
-            "refNameAliases": {
-              "name": "object",
-              "required": false
-            }
-          }
-        },
-        "required": false,
-        "description": "The configuration for the assembly to use for the browser."
+          "name": "any",
+          "raw": "ModelCreationType<ExtractCFromProps<Record<string, any>>> | undefined"
+        }
       },
       "tracks": {
-        "type": {
-          "name": "array"
-        },
-        "required": false,
-        "description": "The tracks to use for the browser."
-      },
-      "defaultSession": {
-        "type": {
-          "name": "shape",
-          "value": {
-            "name": {
-              "name": "string",
-              "required": true
-            },
-            "view": {
-              "name": "object",
-              "required": false
-            }
-          }
-        },
-        "required": false,
-        "description": "The default session to use for the browser."
-      },
-      "aggregateTextSearchAdapters": {
-        "type": {
-          "name": "array"
-        },
-        "required": false,
-        "description": "The text search adapters to use for the browser"
-      },
-      "configuration": {
-        "type": {
-          "name": "shape",
-          "value": {
-            "theme": {
-              "name": "object",
-              "required": false
-            }
-          }
-        },
-        "required": false,
-        "description": "The theme configuration object"
-      },
-      "setProps": {
-        "type": {
-          "name": "func"
-        },
-        "required": false,
-        "description": "Dash-assigned callback that should be called to report property changes\nto Dash, to make them available for callbacks."
-      }
-    }
-  },
-  "src/lib/components/LinearGenomeView.react.js": {
-    "description": "LinearGenomeView renders the JBrowse 2 React Linear Genome View.\nAny JB2 LGV configuration is also valid configuration for this\ncomponent.",
-    "displayName": "LinearGenomeView",
-    "methods": [],
-    "props": {
-      "id": {
-        "type": {
-          "name": "string"
-        },
-        "required": false,
-        "description": "The ID used to identify this component in Dash callbacks."
-      },
-      "assembly": {
-        "type": {
-          "name": "shape",
-          "value": {
-            "name": {
-              "name": "string",
-              "required": true
-            },
-            "aliases": {
-              "name": "array",
-              "required": false
-            },
-            "sequence": {
-              "name": "object",
-              "required": false
-            },
-            "refNameAliases": {
-              "name": "object",
-              "required": false
-            }
-          }
-        },
-        "required": false,
-        "description": "The configuration for the assembly to use for the browser."
-      },
-      "tracks": {
-        "type": {
-          "name": "array"
-        },
-        "required": false,
-        "description": "The tracks to use for the browser."
-      },
-      "defaultSession": {
-        "type": {
-          "name": "shape",
-          "value": {
-            "name": {
-              "name": "string",
-              "required": true
-            },
-            "view": {
-              "name": "object",
-              "required": false
-            }
-          }
-        },
-        "required": false,
-        "description": "The default session to use for the browser."
-      },
-      "location": {
+        "description": "",
+        "required": true,
         "type": {
           "name": "union",
           "value": [
             {
-              "name": "string"
-            },
-            {
-              "name": "shape",
+              "name": "arrayOf",
               "value": {
-                "refName": {
-                  "name": "string",
-                  "required": true
-                },
-                "start": {
-                  "name": "number",
-                  "required": false
-                },
-                "end": {
-                  "name": "number",
-                  "required": false
-                },
-                "assemblyName": {
-                  "name": "string",
-                  "required": false
-                }
-              }
+                "name": "any",
+                "raw": "any"
+              },
+              "raw": "readonly any[]"
             }
-          ]
-        },
+          ],
+          "raw": "readonly any[] | undefined"
+        }
+      },
+      "internetAccounts": {
+        "description": "",
         "required": false,
-        "description": "The location to use for the browser."
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "arrayOf",
+              "value": {
+                "name": "any",
+                "raw": "any"
+              },
+              "raw": "readonly any[]"
+            }
+          ],
+          "raw": "readonly any[] | undefined"
+        }
       },
       "aggregateTextSearchAdapters": {
-        "type": {
-          "name": "array"
-        },
+        "description": "",
         "required": false,
-        "description": "The text search adapters to use for the browser"
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "arrayOf",
+              "value": {
+                "name": "any",
+                "raw": "any"
+              },
+              "raw": "readonly any[]"
+            }
+          ],
+          "raw": "readonly any[] | undefined"
+        }
       },
       "configuration": {
-        "type": {
-          "name": "shape",
-          "value": {
-            "theme": {
-              "name": "object",
-              "required": false
-            }
-          }
-        },
+        "description": "",
         "required": false,
-        "description": "The theme configuration object"
+        "type": {
+          "name": "any",
+          "raw": "Record<string, unknown> | undefined"
+        }
       },
-      "setProps": {
-        "type": {
-          "name": "func"
-        },
+      "plugins": {
+        "description": "",
         "required": false,
-        "description": "Dash-assigned callback that should be called to report property changes\nto Dash, to make them available for callbacks."
+        "type": {
+          "name": "any",
+          "raw": "PluginConstructor[] | undefined"
+        }
+      },
+      "makeWorkerInstance": {
+        "description": "",
+        "required": false,
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "func",
+              "raw": "() => Worker"
+            }
+          ],
+          "raw": "(() => Worker) | undefined"
+        }
+      },
+      "hydrateFn": {
+        "description": "",
+        "required": false,
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "func",
+              "raw": "(container: Element | Document, initialChildren: ReactNode) => any"
+            }
+          ],
+          "raw": "((container: Element | Document, initialChildren: ReactNode) => any) | undefined"
+        }
+      },
+      "createRootFn": {
+        "description": "",
+        "required": false,
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "func",
+              "raw": "(elt: Element | DocumentFragment) => { render: (node: ReactElement<any, string | JSXElementConstructor<any>>) => unknown; }"
+            }
+          ],
+          "raw": "((elt: Element | DocumentFragment) => { render: (node: ReactElement<any, string | JSXElementConstructor<any>>) => unknown; }) | undefined"
+        }
+      },
+      "defaultSession": {
+        "description": "",
+        "required": false,
+        "type": {
+          "name": "any",
+          "raw": "ModelCreationType<ExtractCFromProps<{ id: IOptionalIType<ISimpleType<string>, [undefined]>; name: ISimpleType<string>; margin: IType<number | undefined, number, number>; } & { ...; } & { ...; } & { ...; }>> | undefined"
+        }
+      },
+      "onChange": {
+        "description": "",
+        "required": false,
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "func",
+              "raw": "(patch: IJsonPatch, reversePatch: IJsonPatch) => void"
+            }
+          ],
+          "raw": "((patch: IJsonPatch, reversePatch: IJsonPatch) => void) | undefined"
+        }
+      },
+      "id": {
+        "description": "",
+        "required": true,
+        "type": {
+          "name": "string",
+          "raw": "string"
+        }
       }
-    }
+    },
+    "isContext": false
+  },
+  "src/lib/components/LinearGenomeView.tsx": {
+    "displayName": "LinearGenomeView",
+    "description": "",
+    "props": {
+      "assembly": {
+        "description": "",
+        "required": true,
+        "type": {
+          "name": "any",
+          "raw": "any"
+        }
+      },
+      "tracks": {
+        "description": "",
+        "required": true,
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "arrayOf",
+              "value": {
+                "name": "any",
+                "raw": "any"
+              },
+              "raw": "readonly any[]"
+            }
+          ],
+          "raw": "readonly any[] | undefined"
+        }
+      },
+      "internetAccounts": {
+        "description": "",
+        "required": false,
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "arrayOf",
+              "value": {
+                "name": "any",
+                "raw": "any"
+              },
+              "raw": "readonly any[]"
+            }
+          ],
+          "raw": "readonly any[] | undefined"
+        }
+      },
+      "aggregateTextSearchAdapters": {
+        "description": "",
+        "required": false,
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "arrayOf",
+              "value": {
+                "name": "any",
+                "raw": "any"
+              },
+              "raw": "readonly any[]"
+            }
+          ],
+          "raw": "readonly any[] | undefined"
+        }
+      },
+      "configuration": {
+        "description": "",
+        "required": false,
+        "type": {
+          "name": "any",
+          "raw": "Record<string, unknown> | undefined"
+        }
+      },
+      "plugins": {
+        "description": "",
+        "required": false,
+        "type": {
+          "name": "any",
+          "raw": "PluginConstructor[] | undefined"
+        }
+      },
+      "location": {
+        "description": "",
+        "required": false,
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "string",
+              "raw": "string"
+            }
+          ],
+          "raw": "string | Location | undefined"
+        }
+      },
+      "defaultSession": {
+        "description": "",
+        "required": false,
+        "type": {
+          "name": "any",
+          "raw": "ModelCreationType<ExtractCFromProps<{ id: IOptionalIType<ISimpleType<string>, [undefined]>; name: ISimpleType<string>; margin: IType<number | undefined, number, number>; } & { ...; } & { ...; } & { ...; } & { ...; }>> | undefined"
+        }
+      },
+      "disableAddTracks": {
+        "description": "",
+        "required": false,
+        "type": {
+          "name": "any",
+          "raw": "boolean | undefined"
+        }
+      },
+      "onChange": {
+        "description": "",
+        "required": false,
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "func",
+              "raw": "(patch: IJsonPatch, reversePatch: IJsonPatch) => void"
+            }
+          ],
+          "raw": "((patch: IJsonPatch, reversePatch: IJsonPatch) => void) | undefined"
+        }
+      },
+      "makeWorkerInstance": {
+        "description": "",
+        "required": false,
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "func",
+              "raw": "() => Worker"
+            }
+          ],
+          "raw": "(() => Worker) | undefined"
+        }
+      },
+      "hydrateFn": {
+        "description": "",
+        "required": false,
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "func",
+              "raw": "(container: Element | Document, initialChildren: ReactNode) => any"
+            }
+          ],
+          "raw": "((container: Element | Document, initialChildren: ReactNode) => any) | undefined"
+        }
+      },
+      "createRootFn": {
+        "description": "",
+        "required": false,
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "func",
+              "raw": "(elt: Element | DocumentFragment) => { render: (node: ReactElement<any, string | JSXElementConstructor<any>>) => unknown; }"
+            }
+          ],
+          "raw": "((elt: Element | DocumentFragment) => { render: (node: ReactElement<any, string | JSXElementConstructor<any>>) => unknown; }) | undefined"
+        }
+      },
+      "id": {
+        "description": "",
+        "required": true,
+        "type": {
+          "name": "string",
+          "raw": "string"
+        }
+      }
+    },
+    "isContext": false
   }
 }

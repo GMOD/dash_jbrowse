@@ -1,0 +1,8 @@
+{
+  // dash tries to use tsconfig to generate some docs, but doesn't get
+  // moduleResolution, so this is in a separate file from tsconfig to avoid
+  // dash trying to parse it https://github.com/seek-oss/playroom/issues/236
+  "compilerOptions": {
+    "moduleResolution": "node"
+  }
+}
