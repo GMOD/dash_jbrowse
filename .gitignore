@@ -4,3 +4,4 @@ node_modules/
 .eslintcache
 venv
 dash_jbrowse/dash_jbrowse.dev.js
+.vscode

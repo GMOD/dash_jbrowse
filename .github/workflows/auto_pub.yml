@@ -1,0 +1,43 @@
+name: Receive dispatch (publish)
+
+on:
+  repository_dispatch:
+    types:
+      - auto_publish
+
+jobs:
+  upgrade: # upgrades package files with new JBrowse version
+    runs-on: ubuntu-latest
+    outputs:
+      vers: ${{ steps.bump.outputs.next_version }}
+    steps:
+      - name: Upgrade JBrowse version
+        uses: actions/checkout@v4
+      - run: |
+          sed -i 's|.*@jbrowse/react-circular-genome-view.*|    "@jbrowse/react-circular-genome-view": "^${{github.event.client_payload.version}}",|' package.json
+          sed -i 's|.*@jbrowse/react-linear-genome-view.*|    "@jbrowse/react-linear-genome-view": "^${{github.event.client_payload.version}}",|' package.json
+      - name: Commit and push changes
+        run : |
+          git config --global user.name "cmdcolin"
+          git config --global user.email "colin.diesh@gmail.com"
+          git add -A
+          git commit -m "Upgrading JBrowse version"
+          git push
+      - name: Bump version
+        id: bump
+        uses: MeilCli/bump-release-action@v1
+        with:
+          config_path: '.github/bump.yml'
+          bump: 'patch'
+  release: # invokes the release process
+    uses: ./.github/workflows/release.yml
+  dispatch:
+    needs: [ release, upgrade ]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Internal repository dispatch for release event
+        uses: peter-evans/repository-dispatch@v1
+        with:
+          token: ${{ secrets.ACTIONS_KEY }}
+          event-type: request_dispatch
+          client-payload: '{"version": "${{ needs.upgrade.outputs.vers }}"}'
