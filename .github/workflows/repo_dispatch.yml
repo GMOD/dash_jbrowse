@@ -1,0 +1,23 @@
+name: Repository dispatch (publish)
+
+on:
+  repository_dispatch:
+    types:
+      - request_dispatch
+
+jobs:
+  repo_dispatch:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        repo:
+          - 'GMOD/jbrowse-jupyter'
+          - 'GMOD/jbrowseR'
+    steps:
+      - name: Dispatch dash_jbrowse release event to dependent GMOD repositories
+        uses: peter-evans/repository-dispatch@v1
+        with:
+          token: ${{ secrets.ACTIONS_KEY }}
+          repository: ${{ matrix.repo }}
+          event-type: auto_publish
+          client-payload: '{"version": "${{ github.event.client_payload.version }}"}'
