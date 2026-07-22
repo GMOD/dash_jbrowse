@@ -1,5 +1,10 @@
 # Dash JBrowse
 
+> **This project is archived and no longer maintained.** We recommend
+> [jbrowse-anywidget](https://github.com/GMOD/jbrowse-anywidget) instead, which
+> works across Jupyter, Dash, Marimo, Streamlit, and other anywidget-compatible
+> environments.
+
 [Dash](https://dash.plotly.com/introduction) is a popular open-source framework
 for building data-driven web apps. It is built on top of ReactJS, and provides a
 [toolkit](https://dash.plotly.com/plugins) for converting React components into
